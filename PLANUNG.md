@@ -14,12 +14,33 @@ Die Lehrkraft hat gesagt:
 - **Danach** wählen wir den Webshop-Anbieter aus (Abschnitt 5).
 
 **To-do bis 13:45 Uhr:**
-- [ ] Geschäftsidee festlegen (Abschnitt 1)
-- [ ] Firmenname + Markenname festlegen (Abschnitt 2)
-- [ ] Rechtsform festlegen und Begründung lernen (Abschnitt 3)
-- [ ] Logo mit KI erstellen (Abschnitt 4)
+- [x] Geschäftsidee festlegen (Abschnitt 1)
+- [x] Firmenname + Markenname festlegen (Abschnitt 2)
+- [x] Rechtsform festlegen (Abschnitt 3)
+- [ ] Geschäftsführer bestimmen
+- [ ] Logo mit ChatGPT erstellen – fertiger Prompt in Abschnitt 4
 - [ ] Folie 1 bauen (Abschnitt 7)
-- [ ] Alle aus der Gruppe können den Spickzettel auswendig
+- [ ] Alle aus der Gruppe können die Spickzettel (Abschnitte 2 und 3)
+
+---
+
+## ✅ Unsere Firma auf einen Blick
+
+| | |
+|---|---|
+| **Firmenname** | **LootLager UG (haftungsbeschränkt)** |
+| **Markenname** | **LootLager** (gleich wie die Firma) |
+| **Rechtsform** | **Unternehmergesellschaft (haftungsbeschränkt)** |
+| **Slogan** | „Level up dein Setup.“ |
+| Was wir verkaufen | Gaming-Zubehör fürs Setup: XXL-Mauspads, Headset-Halter, LED-Leisten, Controller-Ständer, Kabelmanagement |
+| Zielgruppe | Gamer und Streamer, 16–30 Jahre |
+| Was uns besonders macht | Alles fürs Gaming-Setup in einem Shop, fertige Setup-Bundles, schneller Versand aus Deutschland |
+| Gesellschafter | alle Gruppenmitglieder, gleiche Anteile |
+| Stammkapital | 1.000 € (fiktiv), jeder zahlt gleich viel ein |
+| Geschäftsführer | ________________ (in der Gruppe festlegen) |
+| Farben | Violett `#7C3AED` · Türkis `#22D3EE` · Dunkelblau `#111827` |
+
+**Was der Name bedeutet:** „Loot“ ist in Videospielen die Beute, also die Belohnung, die man findet. „Lager“ steht für unseren Shop, in dem alles bereitliegt. **LootLager ist das Lager voller Beute für dein Gaming-Setup.** Das doppelte L macht den Namen leicht merkbar.
 
 ---
 
@@ -56,7 +77,7 @@ Leitfragen: *Was verkaufen wir? An wen? Warum bei uns und nicht bei Amazon?*
 
 Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2.
 
-**Unsere Entscheidung:** ______________________________________________
+**Unsere Entscheidung:** Gaming-Zubehör. Wir verkaufen alles, was Gamer und Streamer (16–30) für ihr Setup brauchen.
 
 ---
 
@@ -73,9 +94,9 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 - [ ] Marken – ist der Name geschützt? (DPMAregister auf dpma.de, EUIPO eSearch)
 - [ ] Domain – ist die .de-Domain frei? (Domainabfrage auf denic.de)
 - [ ] Social Media – sind Instagram- und TikTok-Namen frei?
-- [ ] Kurze Google-Suche nach dem Namen
+- [x] Kurze Websuche nach dem Namen (06.10.2026: kein Shop „LootLager“ gefunden)
 
-**Vollständiger Firmenname:** `________________ UG (haftungsbeschränkt)`
+**Vollständiger Firmenname:** `LootLager UG (haftungsbeschränkt)`
 
 ### Firmenname oder Markenname – was ist der Unterschied?
 
@@ -88,9 +109,20 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 | Beispiel | Henkel AG & Co. KGaA | Persil |
 | Beispiel | dm-drogerie markt GmbH + Co. KG | Balea |
 
-**Für uns:** Am einfachsten heißt die Marke genauso wie die Firma, z. B. Firma „Bohnenwerk UG (haftungsbeschränkt)“ und Marke „Bohnenwerk“. Das ist laut Lehrkraft ausdrücklich in Ordnung.
+**Für uns:** Die Marke heißt genauso wie die Firma, nur ohne Rechtsformzusatz. Das ist laut Lehrkraft ausdrücklich in Ordnung.
 
-**Unser Markenname:** ________________
+**Unser Markenname:** `LootLager`
+
+### Spickzettel: Fragen zu Name, Marke und Logo
+
+**„Warum heißt ihr LootLager?“**
+> „Loot“ ist in Videospielen die Beute, die man als Belohnung bekommt. „Lager“ steht für unseren Shop, in dem alles für dein Gaming-Setup bereitliegt. Der Name ist kurz, passt zu unserer Zielgruppe und ist durch das doppelte L leicht zu merken.
+
+**„Was ist der Unterschied zwischen Firma und Marke?“**
+> Die Firma ist der rechtliche Name unseres Unternehmens. Sie steht im Handelsregister und enthält die Rechtsform: LootLager UG (haftungsbeschränkt). Die Marke ist der Name, unter dem die Kunden unseren Shop und unsere Produkte kennen: LootLager. Bei uns heißen beide gleich, so erkennt man uns leichter wieder.
+
+**„Was bedeutet euer Logo?“**
+> Die Truhe ist eine Loot-Kiste wie in Videospielen: Wer bei uns bestellt, bekommt seine Belohnung. Violett und Türkis sind typische Gaming-Farben. Das Logo haben wir mit ChatGPT erstellt.
 
 ---
 
@@ -106,7 +138,7 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 | **UG (haftungsbeschränkt)** | ≥ 1 | ab 1 €, komplett bar einzuzahlen | nur Gesellschaftsvermögen | ✓ |
 | AG | ≥ 1 | 50.000 € | nur Gesellschaftsvermögen | ✗ zu aufwendig |
 
-### Empfehlung: UG (haftungsbeschränkt)
+### Unsere Wahl: UG (haftungsbeschränkt)
 
 **Argumente für die Präsentation:**
 1. **Beschränkte Haftung** – Risiken im Onlinehandel (Abmahnungen, Retouren, unverkaufte Lagerware) treffen nicht unser Privatvermögen.
@@ -143,6 +175,9 @@ Jedes Gruppenmitglied muss diese Antworten in eigenen Worten sagen können.
 **„Hat die UG auch Nachteile?“**
 > Ja. Wir müssen jedes Jahr 25 % vom Gewinn zurücklegen, bis wir 25.000 € erreicht haben. Für die Gründung brauchen wir einen Notar und den Eintrag ins Handelsregister, das kostet Geld. Und manche Lieferanten und Banken vertrauen einer UG weniger als einer GmbH.
 
+**„Wie viel Stammkapital habt ihr und wer sind die Gesellschafter?“**
+> Unser Stammkapital beträgt 1.000 €. Alle aus unserer Gruppe sind Gesellschafter und zahlen gleich viel ein.
+
 **„Wer führt die Geschäfte?“**
 > Ein Geschäftsführer, den wir Gesellschafter bestimmen. Bei uns ist das: ________________
 
@@ -153,19 +188,40 @@ Jedes Gruppenmitglied muss diese Antworten in eigenen Worten sagen können.
 
 ## 4. Logo (KI)
 
-**Tools** (je nachdem, was in der Schule erlaubt ist): ChatGPT, Microsoft Copilot / Designer, Adobe Firefly, Canva (Magic Media)
+**Tool:** ChatGPT. Falls das Bild-Limit erreicht ist, geht derselbe Prompt auch in Microsoft Copilot.
 
-**Prompt-Vorlage** (die Klammern ausfüllen):
+### Unser Prompt für ChatGPT (komplett kopieren und einfügen)
 
 ```text
-Minimalistisches, flaches Vektor-Logo für einen Onlineshop namens „[NAME]“,
-der [SORTIMENT] verkauft. Zielgruppe: [ZIELGRUPPE].
-Stil: modern, klar, [2–3 ADJEKTIVE, z. B. freundlich, nachhaltig, verspielt].
-Farben: [FARBE 1] und [FARBE 2].
-Einfaches Symbol plus Schriftzug, weißer Hintergrund,
-auch in kleiner Größe gut erkennbar (App-Icon / Favicon).
-Kein Fotorealismus, keine Farbverläufe, kein zusätzlicher Text.
+Erstelle ein Logo für unseren Onlineshop „LootLager“.
+Wir verkaufen Gaming-Zubehör (Mauspads, Headset-Halter, LED-Leisten,
+Controller-Ständer) an Gamer und Streamer zwischen 16 und 30 Jahren.
+
+Symbol: eine stilisierte, leicht geöffnete Schatztruhe wie eine
+„Loot-Kiste“ aus Videospielen, aus der helles Licht nach oben strahlt.
+Schriftzug: „LootLager“ rechts neben dem Symbol, in einer fetten,
+abgerundeten, modernen Schrift. „Loot“ in Violett (#7C3AED),
+„Lager“ in Türkis (#22D3EE).
+
+Stil: flaches Vektor-Design, klare Formen, wenige Details,
+modern und verspielt, aber professionell.
+Hintergrund: reines Weiß.
+Das Symbol muss auch ganz klein (als App-Icon) erkennbar sein.
+Kein Fotorealismus, kein 3D, kein Slogan, kein weiterer Text,
+keine Wasserzeichen. Schreibe den Namen genau so: LootLager
 ```
+
+### Folge-Prompts (danach im selben Chat eingeben)
+
+| Wenn … | dann eingeben: |
+|---|---|
+| der Name falsch geschrieben ist | `Der Schriftzug ist falsch. Schreibe exakt: LootLager (L-o-o-t-L-a-g-e-r). Sonst nichts ändern.` |
+| ihr eine andere Variante wollt | `Erstelle eine Variante mit denselben Farben, aber die Truhe im Pixel-Art-Stil wie in einem Retro-Videospiel.` |
+| ihr eine dunkle Version wollt | `Erstelle dasselbe Logo auf dunklem Hintergrund (#111827) mit leichtem Neon-Leuchten um Symbol und Schrift.` |
+| ihr nur das Symbol braucht | `Erstelle nur das Truhen-Symbol ohne Schrift, quadratisch, als App-Icon.` |
+| der Hintergrund weg soll | `Gib mir das Logo als PNG mit transparentem Hintergrund.` |
+
+Klappt der transparente Hintergrund nicht, entfernt ihr ihn in PowerPoint: Bild anklicken → **Bildformat** → **Freistellen**.
 
 **Tipps:**
 - KI schreibt Text oft fehlerhaft. Im Zweifel nur das **Symbol** generieren und den Schriftzug selbst in Canva oder PowerPoint setzen.
@@ -267,18 +323,19 @@ Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewicht
 │                                                                │
 │                            [ LOGO ]                            │
 │                                                                │
-│               Firmenname UG (haftungsbeschränkt)               │
+│               LootLager UG (haftungsbeschränkt)                │
 │                                                                │
-│                  Marke: Markenname · „Slogan“                  │
+│           Marke: LootLager · „Level up dein Setup.“            │
 │    Rechtsform: Unternehmergesellschaft (haftungsbeschränkt)    │
 │                                                                │
 │                Gruppe _: Name, Name, Name, Name                │
 └────────────────────────────────────────────────────────────────┘
 ```
 
-Wenn Marke und Firma gleich heißen, reicht die Zeile „Marke“ mit dem Slogan.
+**Vorstellen von Folie 1 (ca. 30 Sekunden):**
+> Wir sind die **LootLager UG (haftungsbeschränkt)**. Wir verkaufen Gaming-Zubehör für Gamer und Streamer, also alles, was man für sein Setup braucht. Unsere Marke heißt genauso: LootLager. Unser Slogan ist „Level up dein Setup.“ Als Rechtsform haben wir die UG gewählt: Wir haften nicht mit unserem Privatvermögen und brauchen kein großes Startkapital.
 
-Beim Vorstellen von Folie 1 sagen wir in drei Sätzen: Wie heißen wir und was verkaufen wir? Was bedeutet unser Logo? Warum diese Rechtsform? Danach kommen die Nachfragen der Lehrkraft (siehe Spickzettel in Abschnitt 3).
+Danach kommen die Nachfragen der Lehrkraft (siehe Spickzettel in den Abschnitten 2 und 3).
 
 **Tipps:**
 - Höchstens ca. 6 Stichpunkte pro Folie, keine ganzen Sätze.
@@ -305,12 +362,12 @@ Bei 3–4 Personen werden Rollen zusammengelegt (z. B. Branding + Design).
 ## 9. Offene Entscheidungen
 
 **Bis nächste Stunde 13:45 Uhr:**
-- [ ] Geschäftsidee / Sortiment
-- [ ] Firmenname
-- [ ] Markenname (darf gleich dem Firmennamen sein)
-- [ ] Rechtsform (Empfehlung: UG (haftungsbeschränkt))
+- [x] Geschäftsidee / Sortiment → Gaming-Zubehör
+- [x] Firmenname → LootLager UG (haftungsbeschränkt)
+- [x] Markenname → LootLager
+- [x] Rechtsform → UG (haftungsbeschränkt)
 - [ ] Geschäftsführer bestimmen (für die Frage „Wer führt die Geschäfte?“)
-- [ ] Logo-Variante
+- [ ] Logo-Variante auswählen (mit dem ChatGPT-Prompt aus Abschnitt 4)
 
 **Danach:**
 - [ ] Webshop-Anbieter (Shopsystem)
