@@ -18,8 +18,9 @@ Die Lehrkraft hat gesagt:
 - [x] Firmenname + Markenname festlegen (Abschnitt 2)
 - [x] Rechtsform festlegen (Abschnitt 3)
 - [ ] Geschäftsführer bestimmen
-- [ ] Logo mit ChatGPT erstellen – fertiger Prompt in Abschnitt 4
-- [ ] Folie 1 bauen (Abschnitt 7)
+- [x] Logo mit ChatGPT erstellen → [`assets/logo-lootlager.png`](assets/logo-lootlager.png)
+- [x] Folie 1 bauen → [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx)
+- [ ] Auf Folie 1 Gruppennummer und eure Namen eintragen
 - [ ] Alle aus der Gruppe können die Spickzettel (Abschnitte 2 und 3)
 
 ---
@@ -32,9 +33,9 @@ Die Lehrkraft hat gesagt:
 | **Markenname** | **LootLager** (gleich wie die Firma) |
 | **Rechtsform** | **Unternehmergesellschaft (haftungsbeschränkt)** |
 | **Slogan** | „Level up dein Setup.“ |
-| Was wir verkaufen | Gaming-Zubehör fürs Setup: XXL-Mauspads, Headset-Halter, LED-Leisten, Controller-Ständer, Kabelmanagement |
+| Was wir verkaufen | Gaming-Zubehör mit **Custom Designs**: XXL-Mauspads, Controller-Skins, Custom Keycaps, LED-Schilder |
 | Zielgruppe | Gamer und Streamer, 16–30 Jahre |
-| Was uns besonders macht | Alles fürs Gaming-Setup in einem Shop, fertige Setup-Bundles, schneller Versand aus Deutschland |
+| Was uns besonders macht | Jedes Produkt mit eigenem Design: Kunden laden ihr Motiv hoch oder lassen es von uns gestalten. Schneller Versand aus Deutschland |
 | Gesellschafter | alle Gruppenmitglieder, gleiche Anteile |
 | Stammkapital | 1.000 € (fiktiv), jeder zahlt gleich viel ein |
 | Geschäftsführer | ________________ (in der Gruppe festlegen) |
@@ -77,7 +78,7 @@ Leitfragen: *Was verkaufen wir? An wen? Warum bei uns und nicht bei Amazon?*
 
 Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2.
 
-**Unsere Entscheidung:** Gaming-Zubehör. Wir verkaufen alles, was Gamer und Streamer (16–30) für ihr Setup brauchen.
+**Unsere Entscheidung:** Gaming-Zubehör mit Custom Designs. Gamer und Streamer (16–30) bekommen bei uns Zubehör mit ihrem eigenen Design, selbst hochgeladen oder von uns gestaltet.
 
 ---
 
@@ -187,6 +188,12 @@ Jedes Gruppenmitglied muss diese Antworten in eigenen Worten sagen können.
 ---
 
 ## 4. Logo (KI)
+
+### Unser Logo ✅
+
+![LootLager-Logo](assets/logo-lootlager.png)
+
+Dateien: [`assets/logo-lootlager.png`](assets/logo-lootlager.png) (komplett) und [`assets/logo-lootlager-symbol.png`](assets/logo-lootlager-symbol.png) (nur die Truhe, z. B. als App-Icon)
 
 **Tool:** ChatGPT. Falls das Bild-Limit erreicht ist, geht derselbe Prompt auch in Microsoft Copilot.
 
@@ -306,9 +313,11 @@ Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewicht
 
 ## 7. Präsentation – Folienplan
 
+> **Fertig:** Folien 1–4 in [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx). Die Sprechtexte und Antworten auf Nachfragen stehen in den **Notizen** unter jeder Folie. Pflicht für nächste Stunde ist nur Folie 1, die Folien 2–4 sind Backup für Nachfragen.
+
 | Folie | Inhalt |
 |---|---|
-| **1** | **Firmenlogo, Firmenname, Rechtsform** (Pflicht laut Lehrkraft) + Markenname, optional Slogan und Gruppenmitglieder |
+| **1** | **Firmenlogo, Firmenname, Rechtsform** (Pflicht laut Lehrkraft) + Markenname, Slogan und Gruppenmitglieder |
 | 2 | Geschäftsidee: Sortiment, Zielgruppe, was uns besonders macht |
 | 3 | Name & Logo: Bedeutung des Namens, Namensprüfung, KI-Tool + Prompt |
 | 4 | Rechtsform: Entscheidung, Vor- und Nachteile, Alternative |
@@ -333,7 +342,7 @@ Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewicht
 ```
 
 **Vorstellen von Folie 1 (ca. 30 Sekunden):**
-> Wir sind die **LootLager UG (haftungsbeschränkt)**. Wir verkaufen Gaming-Zubehör für Gamer und Streamer, also alles, was man für sein Setup braucht. Unsere Marke heißt genauso: LootLager. Unser Slogan ist „Level up dein Setup.“ Als Rechtsform haben wir die UG gewählt: Wir haften nicht mit unserem Privatvermögen und brauchen kein großes Startkapital.
+> Wir sind die **LootLager UG (haftungsbeschränkt)**. Wir verkaufen Gaming-Zubehör mit Custom Designs: Unsere Kunden bekommen ihr eigenes Design, entweder selbst hochgeladen oder von uns gestaltet. Unsere Marke heißt genauso: LootLager. Unser Slogan ist „Level up dein Setup.“ Als Rechtsform haben wir die UG gewählt: Wir haften nicht mit unserem Privatvermögen und brauchen kein großes Startkapital.
 
 Danach kommen die Nachfragen der Lehrkraft (siehe Spickzettel in den Abschnitten 2 und 3).
 
@@ -367,7 +376,7 @@ Bei 3–4 Personen werden Rollen zusammengelegt (z. B. Branding + Design).
 - [x] Markenname → LootLager
 - [x] Rechtsform → UG (haftungsbeschränkt)
 - [ ] Geschäftsführer bestimmen (für die Frage „Wer führt die Geschäfte?“)
-- [ ] Logo-Variante auswählen (mit dem ChatGPT-Prompt aus Abschnitt 4)
+- [x] Logo → [`assets/logo-lootlager.png`](assets/logo-lootlager.png)
 
 **Danach:**
 - [ ] Webshop-Anbieter (Shopsystem)
