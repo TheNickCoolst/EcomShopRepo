@@ -17,11 +17,11 @@ Die Lehrkraft hat gesagt:
 - [x] Geschäftsidee festlegen (Abschnitt 1)
 - [x] Firmenname + Markenname festlegen (Abschnitt 2)
 - [x] Rechtsform festlegen (Abschnitt 3)
-- [ ] Geschäftsführer bestimmen
+- [x] Geschäftsführung bestimmen → Nick und Luca
 - [x] Logo mit ChatGPT erstellen → [`assets/logo-lootlager.png`](assets/logo-lootlager.png)
 - [x] Folie 1 bauen → [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx)
-- [ ] Auf Folie 1 Gruppennummer und eure Namen eintragen
-- [ ] Alle aus der Gruppe können die Spickzettel (Abschnitte 2 und 3)
+- [x] Auf Folie 1 Gruppennummer und Namen eintragen → Gruppe 4, Nick und Luca (Gruppennummer bitte noch einmal prüfen)
+- [ ] Nick und Luca können beide die Spickzettel (Abschnitte 2 und 3)
 
 ---
 
@@ -36,9 +36,10 @@ Die Lehrkraft hat gesagt:
 | Was wir verkaufen | Gaming-Zubehör mit **Custom Designs**: XXL-Mauspads, Controller-Skins, Custom Keycaps, LED-Schilder |
 | Zielgruppe | Gamer und Streamer, 16–30 Jahre |
 | Was uns besonders macht | Jedes Produkt mit eigenem Design: Kunden laden ihr Motiv hoch oder lassen es von uns gestalten. Schneller Versand aus Deutschland |
-| Gesellschafter | alle Gruppenmitglieder, gleiche Anteile |
-| Stammkapital | 1.000 € (fiktiv), jeder zahlt gleich viel ein |
-| Geschäftsführer | ________________ (in der Gruppe festlegen) |
+| Gruppe | Gruppe 4: Nick und Luca |
+| Gesellschafter | Nick und Luca, je 50 % |
+| Stammkapital | 1.000 € (fiktiv), je 500 € von Nick und Luca |
+| Geschäftsführung | Nick und Luca (gemeinsam) |
 | Farben | Violett `#7C3AED` · Türkis `#22D3EE` · Dunkelblau `#111827` |
 
 **Was der Name bedeutet:** „Loot“ ist in Videospielen die Beute, also die Belohnung, die man findet. „Lager“ steht für unseren Shop, in dem alles bereitliegt. **LootLager ist das Lager voller Beute für dein Gaming-Setup.** Das doppelte L macht den Namen leicht merkbar.
@@ -131,7 +132,7 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 
 | Rechtsform | Gründer | Mindestkapital | Haftung | Für uns? |
 |---|---|---|---|---|
-| Einzelunternehmen | 1 | keins | unbeschränkt, mit Privatvermögen | ✗ wir sind mehrere |
+| Einzelunternehmen | 1 | keins | unbeschränkt, mit Privatvermögen | ✗ wir sind zu zweit |
 | GbR | ≥ 2 | keins | unbeschränkt, persönlich, jeder für alles | ✗ zu riskant |
 | OHG | ≥ 2 | keins | unbeschränkt, persönlich | ✗ zu riskant |
 | KG | ≥ 2 | keins | Komplementär unbeschränkt, Kommanditist bis zur Einlage | ~ möglich, aber ungleich |
@@ -144,7 +145,7 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 **Argumente für die Präsentation:**
 1. **Beschränkte Haftung** – Risiken im Onlinehandel (Abmahnungen, Retouren, unverkaufte Lagerware) treffen nicht unser Privatvermögen.
 2. **Geringes Startkapital** – realistisch für Gründer ohne großes Vermögen.
-3. **Alle Gruppenmitglieder** können Gesellschafter werden; wir bestimmen eine Geschäftsführung.
+3. **Zwei Gesellschafter** – Nick und Luca halten je 50 % und führen gemeinsam die Geschäfte.
 4. **Wachstum möglich** – später Umwandlung in eine GmbH, sobald 25.000 € Stammkapital erreicht sind.
 
 **Nachteile (ehrlich nennen – das macht die Präsentation stärker):**
@@ -159,7 +160,7 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 Jedes Gruppenmitglied muss diese Antworten in eigenen Worten sagen können.
 
 **„Warum habt ihr die UG gewählt?“**
-> Wir sind mehrere Gründer und wollen nicht mit unserem Privatvermögen haften. Für eine GmbH fehlen uns aber die 25.000 € Stammkapital. Die UG gibt uns die beschränkte Haftung schon ab 1 € Stammkapital.
+> Wir sind zwei Gründer und wollen nicht mit unserem Privatvermögen haften. Für eine GmbH fehlen uns aber die 25.000 € Stammkapital. Die UG gibt uns die beschränkte Haftung schon ab 1 € Stammkapital.
 
 **„Was heißt ‚haftungsbeschränkt‘?“**
 > Wenn die Firma Schulden hat, haftet nur das Vermögen der Gesellschaft. Unser privates Geld ist geschützt.
@@ -171,16 +172,16 @@ Jedes Gruppenmitglied muss diese Antworten in eigenen Worten sagen können.
 > Dort haftet jeder Gesellschafter unbeschränkt mit seinem Privatvermögen, und zwar auch für die Schulden der anderen. Im Onlinehandel ist das zu riskant, z. B. bei Abmahnungen oder wenn wir auf Ware sitzen bleiben.
 
 **„Warum kein Einzelunternehmen?“**
-> Ein Einzelunternehmen hat nur einen Inhaber, wir sind aber mehrere. Außerdem haftet der Inhaber unbeschränkt.
+> Ein Einzelunternehmen hat nur einen Inhaber, wir sind aber zu zweit. Außerdem haftet der Inhaber unbeschränkt.
 
 **„Hat die UG auch Nachteile?“**
 > Ja. Wir müssen jedes Jahr 25 % vom Gewinn zurücklegen, bis wir 25.000 € erreicht haben. Für die Gründung brauchen wir einen Notar und den Eintrag ins Handelsregister, das kostet Geld. Und manche Lieferanten und Banken vertrauen einer UG weniger als einer GmbH.
 
 **„Wie viel Stammkapital habt ihr und wer sind die Gesellschafter?“**
-> Unser Stammkapital beträgt 1.000 €. Alle aus unserer Gruppe sind Gesellschafter und zahlen gleich viel ein.
+> Unser Stammkapital beträgt 1.000 €. Nick und Luca sind die Gesellschafter und zahlen je 500 € ein.
 
 **„Wer führt die Geschäfte?“**
-> Ein Geschäftsführer, den wir Gesellschafter bestimmen. Bei uns ist das: ________________
+> Wir beide: Nick und Luca sind gemeinsam Geschäftsführer. Die Geschäftsführung bestimmen die Gesellschafter, und das sind bei uns auch wir zwei.
 
 **„Wie gründet man eine UG?“**
 > Gesellschaftsvertrag beim Notar beurkunden lassen → Stammkapital einzahlen → Eintrag ins Handelsregister → Gewerbe anmelden → beim Finanzamt anmelden.
@@ -337,7 +338,7 @@ Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewicht
 │           Marke: LootLager · „Level up dein Setup.“            │
 │    Rechtsform: Unternehmergesellschaft (haftungsbeschränkt)    │
 │                                                                │
-│                Gruppe _: Name, Name, Name, Name                │
+│                   Gruppe 4  ·  Nick und Luca                   │
 └────────────────────────────────────────────────────────────────┘
 ```
 
@@ -364,7 +365,7 @@ Danach kommen die Nachfragen der Lehrkraft (siehe Spickzettel in den Abschnitten
 | Recherche | Anbietervergleich, Nutzwertanalyse | |
 | Design | Homepage-Entwurf, Folienlayout | |
 
-Bei 3–4 Personen werden Rollen zusammengelegt (z. B. Branding + Design).
+Wir sind zu zweit (Nick und Luca), deshalb übernimmt jeder mehrere Rollen.
 
 ---
 
@@ -375,7 +376,7 @@ Bei 3–4 Personen werden Rollen zusammengelegt (z. B. Branding + Design).
 - [x] Firmenname → LootLager UG (haftungsbeschränkt)
 - [x] Markenname → LootLager
 - [x] Rechtsform → UG (haftungsbeschränkt)
-- [ ] Geschäftsführer bestimmen (für die Frage „Wer führt die Geschäfte?“)
+- [x] Geschäftsführung → Nick und Luca
 - [x] Logo → [`assets/logo-lootlager.png`](assets/logo-lootlager.png)
 
 **Danach:**
