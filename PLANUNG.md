@@ -4,6 +4,23 @@
 >
 > Tafel-Skizze: *Suche Anbieter → HP* – wir suchen einen Anbieter, mit dem wir unsere Homepage bzw. unseren Onlineshop bauen.
 
+## ⏰ Jetzt dran: Folie 1 – Abgabe nächste Stunde, 13:45 Uhr
+
+Die Lehrkraft hat gesagt:
+- **Folie 1 ist der Anfang der Präsentation.** Darauf müssen stehen: **Firmenlogo, Firmenname, Rechtsform.**
+- Zusätzlich überlegen wir uns einen **Markennamen**. Er darf genauso heißen wie die Firma.
+- Die Lehrkraft lässt **irgendein Gruppenmitglied** vorstellen und fragt nach, z. B. **„Warum habt ihr diese Rechtsform gewählt?“**. Deshalb muss **jede und jeder** die Begründung können (siehe [Spickzettel](#spickzettel-fragen-der-lehrkraft-zur-rechtsform)).
+- Bis nächste Stunde 13:45 Uhr ist das unsere Aufgabe. In der nächsten Stunde gibt es noch **15 Minuten extra**, um alles zusammenzustellen.
+- **Danach** wählen wir den Webshop-Anbieter aus (Abschnitt 5).
+
+**To-do bis 13:45 Uhr:**
+- [ ] Geschäftsidee festlegen (Abschnitt 1)
+- [ ] Firmenname + Markenname festlegen (Abschnitt 2)
+- [ ] Rechtsform festlegen und Begründung lernen (Abschnitt 3)
+- [ ] Logo mit KI erstellen (Abschnitt 4)
+- [ ] Folie 1 bauen (Abschnitt 7)
+- [ ] Alle aus der Gruppe können den Spickzettel auswendig
+
 ---
 
 ## 0. Überblick – Arbeitspakete
@@ -20,6 +37,9 @@
 
 **Reihenfolge:** 1 → 2 und 3 parallel → 4 → 5 → 6 → 7
 (Das Logo kommt erst nach dem Namen, weil der Name meist im Logo steht.)
+
+**Phase 1 (bis nächste Stunde 13:45 Uhr):** Pakete 1–4 → Folie 1
+**Phase 2 (danach):** Pakete 5–7 → Webshop-Anbieter auswählen, restliche Folien
 
 ---
 
@@ -57,6 +77,21 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 
 **Vollständiger Firmenname:** `________________ UG (haftungsbeschränkt)`
 
+### Firmenname oder Markenname – was ist der Unterschied?
+
+| | Firmenname (Firma) | Markenname (Marke) |
+|---|---|---|
+| Was ist das? | Der **rechtliche Name des Unternehmens**, unter dem es Geschäfte macht (§ 17 HGB) | Ein **Kennzeichen für Produkte**, das sie von denen anderer Anbieter unterscheidet (§ 3 MarkenG) |
+| Wo steht er? | im Handelsregister, Impressum, auf Rechnungen und Verträgen | auf Produkten, Verpackungen, im Shop und in der Werbung |
+| Rechtsformzusatz? | **ja, Pflicht** (z. B. „UG (haftungsbeschränkt)“) | nein |
+| Schutz | durch Eintrag ins Handelsregister | durch Eintragung beim DPMA, 10 Jahre, verlängerbar |
+| Beispiel | Henkel AG & Co. KGaA | Persil |
+| Beispiel | dm-drogerie markt GmbH + Co. KG | Balea |
+
+**Für uns:** Am einfachsten heißt die Marke genauso wie die Firma, z. B. Firma „Bohnenwerk UG (haftungsbeschränkt)“ und Marke „Bohnenwerk“. Das ist laut Lehrkraft ausdrücklich in Ordnung.
+
+**Unser Markenname:** ________________
+
 ---
 
 ## 3. Rechtsform
@@ -85,6 +120,34 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 - Bei Lieferanten und Banken gilt die UG als weniger kreditwürdig als eine GmbH.
 
 **Alternative:** Eine **GmbH**, wenn wir mit fiktivem Startkapital ab 25.000 € planen, denn sie wirkt seriöser.
+
+### Spickzettel: Fragen der Lehrkraft zur Rechtsform
+
+Jedes Gruppenmitglied muss diese Antworten in eigenen Worten sagen können.
+
+**„Warum habt ihr die UG gewählt?“**
+> Wir sind mehrere Gründer und wollen nicht mit unserem Privatvermögen haften. Für eine GmbH fehlen uns aber die 25.000 € Stammkapital. Die UG gibt uns die beschränkte Haftung schon ab 1 € Stammkapital.
+
+**„Was heißt ‚haftungsbeschränkt‘?“**
+> Wenn die Firma Schulden hat, haftet nur das Vermögen der Gesellschaft. Unser privates Geld ist geschützt.
+
+**„Warum keine GmbH?“**
+> Für eine GmbH braucht man 25.000 € Stammkapital, bei der Anmeldung mindestens 12.500 €. Das haben wir als junge Gründer nicht. Sobald die UG 25.000 € Stammkapital hat, können wir sie zur GmbH machen.
+
+**„Warum keine GbR oder OHG?“**
+> Dort haftet jeder Gesellschafter unbeschränkt mit seinem Privatvermögen, und zwar auch für die Schulden der anderen. Im Onlinehandel ist das zu riskant, z. B. bei Abmahnungen oder wenn wir auf Ware sitzen bleiben.
+
+**„Warum kein Einzelunternehmen?“**
+> Ein Einzelunternehmen hat nur einen Inhaber, wir sind aber mehrere. Außerdem haftet der Inhaber unbeschränkt.
+
+**„Hat die UG auch Nachteile?“**
+> Ja. Wir müssen jedes Jahr 25 % vom Gewinn zurücklegen, bis wir 25.000 € erreicht haben. Für die Gründung brauchen wir einen Notar und den Eintrag ins Handelsregister, das kostet Geld. Und manche Lieferanten und Banken vertrauen einer UG weniger als einer GmbH.
+
+**„Wer führt die Geschäfte?“**
+> Ein Geschäftsführer, den wir Gesellschafter bestimmen. Bei uns ist das: ________________
+
+**„Wie gründet man eine UG?“**
+> Gesellschaftsvertrag beim Notar beurkunden lassen → Stammkapital einzahlen → Eintrag ins Handelsregister → Gewerbe anmelden → beim Finanzamt anmelden.
 
 ---
 
@@ -189,7 +252,7 @@ Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewicht
 
 | Folie | Inhalt |
 |---|---|
-| **1** | **Titelfolie:** Logo, Firmenname mit Rechtsform, Slogan, Gruppenmitglieder |
+| **1** | **Firmenlogo, Firmenname, Rechtsform** (Pflicht laut Lehrkraft) + Markenname, optional Slogan und Gruppenmitglieder |
 | 2 | Geschäftsidee: Sortiment, Zielgruppe, was uns besonders macht |
 | 3 | Name & Logo: Bedeutung des Namens, Namensprüfung, KI-Tool + Prompt |
 | 4 | Rechtsform: Entscheidung, Vor- und Nachteile, Alternative |
@@ -197,7 +260,25 @@ Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewicht
 | 6 | Entscheidung + Homepage-Entwurf |
 | 7 | Fazit / Ausblick + Quellen |
 
-> Was genau auf Folie 1 soll, war an der Tafel noch nicht fertig („1. Folie (…“). Bitte bei der Lehrkraft nachfragen und hier eintragen: ______________
+### Folie 1 – Aufbau
+
+```text
+┌────────────────────────────────────────────────────────────────┐
+│                                                                │
+│                            [ LOGO ]                            │
+│                                                                │
+│               Firmenname UG (haftungsbeschränkt)               │
+│                                                                │
+│                  Marke: Markenname · „Slogan“                  │
+│    Rechtsform: Unternehmergesellschaft (haftungsbeschränkt)    │
+│                                                                │
+│                Gruppe _: Name, Name, Name, Name                │
+└────────────────────────────────────────────────────────────────┘
+```
+
+Wenn Marke und Firma gleich heißen, reicht die Zeile „Marke“ mit dem Slogan.
+
+Beim Vorstellen von Folie 1 sagen wir in drei Sätzen: Wie heißen wir und was verkaufen wir? Was bedeutet unser Logo? Warum diese Rechtsform? Danach kommen die Nachfragen der Lehrkraft (siehe Spickzettel in Abschnitt 3).
 
 **Tipps:**
 - Höchstens ca. 6 Stichpunkte pro Folie, keine ganzen Sätze.
@@ -223,10 +304,13 @@ Bei 3–4 Personen werden Rollen zusammengelegt (z. B. Branding + Design).
 
 ## 9. Offene Entscheidungen
 
+**Bis nächste Stunde 13:45 Uhr:**
 - [ ] Geschäftsidee / Sortiment
 - [ ] Firmenname
+- [ ] Markenname (darf gleich dem Firmennamen sein)
 - [ ] Rechtsform (Empfehlung: UG (haftungsbeschränkt))
+- [ ] Geschäftsführer bestimmen (für die Frage „Wer führt die Geschäfte?“)
 - [ ] Logo-Variante
-- [ ] Shopsystem
-- [ ] Inhalt von Folie 1 (bei der Lehrkraft nachfragen)
-- [ ] Präsentationstermin: ____________
+
+**Danach:**
+- [ ] Webshop-Anbieter (Shopsystem)
