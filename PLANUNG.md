@@ -23,6 +23,18 @@ Die Lehrkraft hat gesagt:
 - [x] Auf Folie 1 Gruppennummer und Namen eintragen → Gruppe 4, Nick und Luca (Gruppennummer bitte noch einmal prüfen)
 - [ ] Nick und Luca können beide die Spickzettel (Abschnitte 2 und 3)
 
+**Phase 2 (danach):**
+- [x] Webshop-Anbieter auswählen → **Shopify** (Nutzwertanalyse in Abschnitt 5)
+- [x] Homepage-Entwurf → Abschnitt 6 und Folie 6
+- [x] Folien 5–7 bauen (Anbietersuche, Entscheidung + Startseite, Fazit + Quellen)
+- [x] Rollen verteilen → Vorschlag in Abschnitt 8
+
+**Was ihr selbst noch machen müsst** (ging von hier aus nicht):
+- [ ] Namensprüfung in Handelsregister, DPMA, Domain und Social Media (Links in Abschnitt 2, ca. 5 Minuten)
+- [ ] Preise kurz auf den Anbieterseiten gegenprüfen (Abschnitt 5)
+- [ ] Spickzettel lernen: Rechtsform (Abschnitt 3) und Anbieter (Abschnitt 5)
+- [ ] Probelauf mit Stoppuhr, danach Rollen in Abschnitt 8 bestätigen
+
 ---
 
 ## ✅ Unsere Firma auf einen Blick
@@ -40,6 +52,8 @@ Die Lehrkraft hat gesagt:
 | Gesellschafter | Nick und Luca, je 50 % |
 | Stammkapital | 1.000 € (fiktiv), je 500 € von Nick und Luca |
 | Geschäftsführung | Nick und Luca (gemeinsam) |
+| Shopsystem | **Shopify**, Basic-Tarif (siehe Abschnitt 5) |
+| Wunsch-Domain | `lootlager.de` (noch prüfen, siehe Abschnitt 2) |
 | Farben | Violett `#7C3AED` · Türkis `#22D3EE` · Dunkelblau `#111827` |
 
 **Was der Name bedeutet:** „Loot“ ist in Videospielen die Beute, also die Belohnung, die man findet. „Lager“ steht für unseren Shop, in dem alles bereitliegt. **LootLager ist das Lager voller Beute für dein Gaming-Setup.** Das doppelte L macht den Namen leicht merkbar.
@@ -50,13 +64,13 @@ Die Lehrkraft hat gesagt:
 
 | # | Arbeitspaket | Ergebnis | Verantwortlich | Status |
 |---|---|---|---|---|
-| 1 | Geschäftsidee | Sortiment + Zielgruppe in einem Satz | | ☐ |
-| 2 | Firmenname | Name inkl. Rechtsformzusatz, geprüft | | ☐ |
-| 3 | Rechtsform | Entscheidung + Begründung | | ☐ |
-| 4 | Logo (KI) | Logo als PNG, Tool + Prompt notiert | | ☐ |
-| 5 | Anbietersuche | Vergleich von 3–4 Shopsystemen + Entscheidung | | ☐ |
-| 6 | Homepage-Entwurf | Skizze der Startseite | | ☐ |
-| 7 | Präsentation | Foliensatz + ein Probelauf | | ☐ |
+| 1 | Geschäftsidee | Sortiment + Zielgruppe in einem Satz | Nick und Luca | ✅ |
+| 2 | Firmenname | Name inkl. Rechtsformzusatz, geprüft | Nick und Luca | ✅ (Register-Prüfung offen) |
+| 3 | Rechtsform | Entscheidung + Begründung | Nick und Luca | ✅ |
+| 4 | Logo (KI) | Logo als PNG, Tool + Prompt notiert | Nick und Luca | ✅ |
+| 5 | Anbietersuche | Vergleich von 3–4 Shopsystemen + Entscheidung | Nick und Luca | ✅ Shopify |
+| 6 | Homepage-Entwurf | Skizze der Startseite | Nick und Luca | ✅ |
+| 7 | Präsentation | Foliensatz + ein Probelauf | Nick und Luca | ◐ Folien fertig, Probelauf offen |
 
 **Reihenfolge:** 1 → 2 und 3 parallel → 4 → 5 → 6 → 7
 (Das Logo kommt erst nach dem Namen, weil der Name meist im Logo steht.)
@@ -92,11 +106,13 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 **Ein guter Shop-Name ist:** kurz, leicht zu buchstabieren, passend zum Sortiment und als Domain noch frei.
 
 **Prüf-Checkliste:**
-- [ ] Handelsregister – gibt es die Firma schon? (handelsregister.de)
-- [ ] Marken – ist der Name geschützt? (DPMAregister auf dpma.de, EUIPO eSearch)
-- [ ] Domain – ist die .de-Domain frei? (Domainabfrage auf denic.de)
-- [ ] Social Media – sind Instagram- und TikTok-Namen frei?
+- [ ] Handelsregister – gibt es die Firma schon? → [handelsregister.de](https://www.handelsregister.de), „Normale Suche“, Firma: `LootLager`
+- [ ] Marken – ist der Name geschützt? → [DPMAregister](https://register.dpma.de/DPMAregister/marke/basis) und [EUIPO eSearch](https://euipo.europa.eu/eSearch/), Suche nach `LootLager`
+- [ ] Domain – ist `lootlager.de` frei? → [DENIC Domainabfrage](https://www.denic.de/service/whois-service)
+- [ ] Social Media – sind Instagram- und TikTok-Namen frei? → `instagram.com/lootlager` und `tiktok.com/@lootlager` im Browser öffnen
 - [x] Kurze Websuche nach dem Namen (06.10.2026: kein Shop „LootLager“ gefunden)
+
+> Die vier Register konnten am 07.10.2026 nicht automatisch geprüft werden, weil die Seiten aus unserer Arbeitsumgebung gesperrt waren. Bitte selbst prüfen und das Ergebnis mit Datum hier eintragen. Ist die Domain vergeben, sind `lootlager.shop` oder `loot-lager.de` Alternativen.
 
 **Vollständiger Firmenname:** `LootLager UG (haftungsbeschränkt)`
 
@@ -237,10 +253,10 @@ Klappt der transparente Hintergrund nicht, entfernt ihr ihn in PowerPoint: Bild 
 - **Tool und Prompt notieren**, denn beides gehört in die Präsentation.
 - Rein KI-generierte Bilder sind in Deutschland mangels menschlicher Schöpfung meist **nicht urheberrechtlich geschützt**. Ein echtes Unternehmen würde das Logo deshalb als Marke anmelden. Außerdem gelten die Nutzungsbedingungen des Tools.
 
-**Logo-Check:**
-- [ ] Funktioniert es auch in Schwarz-Weiß?
-- [ ] Ist es in kleiner Größe (z. B. als Browser-Tab-Icon) noch erkennbar?
-- [ ] Passt es zu Name und Zielgruppe?
+**Logo-Check (07.10.2026):**
+- [x] Funktioniert es auch in Schwarz-Weiß? → Ja. Truhe und Schriftzug bleiben lesbar. In Graustufen ist „Lager“ etwas heller als „Loot“.
+- [x] Ist es in kleiner Größe (z. B. als Browser-Tab-Icon) noch erkennbar? → Das Truhen-Symbol ist bei 32 px gut erkennbar, bei 16 px nur noch grob. Als Tab-Icon deshalb nur das Symbol verwenden, nicht das ganze Logo.
+- [x] Passt es zu Name und Zielgruppe? → Ja. Die Loot-Truhe greift den Namen auf, Violett und Türkis sind typische Gaming-Farben.
 
 ---
 
@@ -257,64 +273,129 @@ Klappt der transparente Hintergrund nicht, entfernt ihr ihn in PowerPoint: Bild 
 | Jimdo | Homepage-Baukasten mit Shop | Deutschland (Hamburg) | einfach, deutschsprachig, günstig | eingeschränkter Funktionsumfang |
 | JTL-Shop | Shopsoftware | Deutschland | stark in Kombination mit der Warenwirtschaft JTL-Wawi | eher für wachsende Händler |
 
-> **Preise selbst recherchieren:** Sie ändern sich oft. Deshalb die aktuellen Preise auf der Anbieterseite nachschauen und mit Datum notieren.
+### Preise (Stand 07.10.2026)
 
-### Recherchefragen pro Anbieter
-- Was kostet es pro Monat? Gibt es Einrichtungs- oder Transaktionsgebühren?
-- Gibt es eine kostenlose Testphase?
-- Welche Zahlungsarten sind möglich (PayPal, Klarna, Kreditkarte, Rechnung)?
-- Gibt es Hilfe bei den Rechtstexten (Impressum, AGB, Widerruf, Datenschutz)?
-- Können wir eine eigene Domain nutzen? Wo stehen die Server?
-- Wie gut sind Produktsuche und Filter?
+| Anbieter | Tarif für uns | Preis pro Monat | Was noch dazukommt |
+|---|---|---|---|
+| Shopify | Basic | 25 € bei jährlicher Zahlung, 33 € bei monatlicher | 3 Tage gratis, dann 3 Monate für je 1 €. Ohne Shopify Payments 2 % Gebühr pro Verkauf |
+| Jimdo | Onlineshop Basic / Business | 18 € / 26 € | Business mit Produktvarianten und Rechtstexten |
+| WooCommerce | Grundversion kostenlos | ca. 30 € und mehr | Hosting, Germanized Pro (ca. 79 € im Jahr), Updates und Wartung selbst |
+| Shopware 6 | Community Edition kostenlos | ca. 30 € und mehr | Hosting und Technikwissen nötig. Bezahlversion „Rise“ ab ca. 600 € im Monat |
+| Wix | Core / Business | ca. 24–32 € / 35–50 € | je nach Laufzeit des Abos |
+| JTL-Shop | – | – | nicht weiter geprüft, weil eher für Händler mit JTL-Warenwirtschaft |
 
-### Nutzwertanalyse (Vorlage)
+> **Wichtig:** Die Anbieterseiten waren aus unserer Arbeitsumgebung gesperrt. Die Preise stammen deshalb aus Preisvergleichen ([qualimero.com](https://qualimero.com/blog/shopify-kosten), [l-iz.de](https://www.l-iz.de/vpn/erfahrungen/jimdo-preise-kosten/), [tooltester.com](https://www.tooltester.com/de/testberichte/woocommerce-test/kosten)). Vor der Präsentation die Preise für Shopify und Jimdo kurz auf den Anbieterseiten gegenprüfen, sie ändern sich oft.
 
-Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewichtung.
+**Vorauswahl:** In die Nutzwertanalyse kommen 4 Anbieter: Shopify, Jimdo, WooCommerce und Shopware. Wix fällt raus, weil es Jimdo stark ähnelt, aber teurer ist. JTL-Shop fällt raus, weil er erst mit einer Warenwirtschaft sinnvoll ist.
 
-| Kriterium | Gewichtung | Anbieter A | Anbieter B | Anbieter C |
-|---|---|---|---|---|
-| Kosten (Start + monatlich) | 25 % | | | |
-| Bedienbarkeit für Einsteiger | 20 % | | | |
-| Funktionen (Suche, Filter, Zahlung, Versand) | 20 % | | | |
-| Rechtssicherheit / DSGVO | 15 % | | | |
-| Design / Vorlagen | 10 % | | | |
-| Support auf Deutsch | 10 % | | | |
-| **Summe** | **100 %** | | | |
+### Recherchefragen – Antworten für Shopify
+| Frage | Antwort |
+|---|---|
+| Was kostet es pro Monat? Gibt es Einrichtungs- oder Transaktionsgebühren? | Basic 25 € im Monat (jährlich) oder 33 € (monatlich). Keine Einrichtungsgebühr. Mit Shopify Payments keine zusätzliche Transaktionsgebühr, sonst 2 % pro Verkauf |
+| Gibt es eine kostenlose Testphase? | Ja, 3 Tage gratis, danach 3 Monate für je 1 € |
+| Welche Zahlungsarten sind möglich? | PayPal, Klarna, Kreditkarte, Apple Pay, Google Pay |
+| Gibt es Hilfe bei den Rechtstexten? | Nur Vorlagen. Für deutsche Rechtstexte nehmen wir ein Abo beim Händlerbund oder bei der IT-Recht Kanzlei (ca. 10–25 € im Monat) |
+| Können wir eine eigene Domain nutzen? Wo stehen die Server? | Eigene Domain ja. Shopify kommt aus Kanada, die Daten werden teils außerhalb der EU verarbeitet |
+| Wie gut sind Produktsuche und Filter? | Suche mit Vorschlägen und Filtern ist eingebaut, erweiterbar über Apps |
 
-**Unsere Entscheidung:** ____________, weil ____________________________
+### Nutzwertanalyse
+
+Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewichtung (in Klammern).
+
+| Kriterium | Gewichtung | **Shopify** | Jimdo | WooCommerce | Shopware 6 |
+|---|---|---|---|---|---|
+| Kosten (Start + monatlich) | 25 % | 7 (1,75) | 8 (2,00) | 6 (1,50) | 4 (1,00) |
+| Bedienbarkeit für Einsteiger | 20 % | 9 (1,80) | 9 (1,80) | 4 (0,80) | 4 (0,80) |
+| Funktionen (Custom Designs, Zahlung, Suche) | 20 % | 9 (1,80) | 4 (0,80) | 8 (1,60) | 8 (1,60) |
+| Rechtssicherheit / DSGVO | 15 % | 6 (0,90) | 9 (1,35) | 8 (1,20) | 9 (1,35) |
+| Design / Vorlagen | 10 % | 9 (0,90) | 6 (0,60) | 7 (0,70) | 6 (0,60) |
+| Support auf Deutsch | 10 % | 7 (0,70) | 9 (0,90) | 4 (0,40) | 7 (0,70) |
+| **Summe** | **100 %** | **7,85** | 7,45 | 6,20 | 6,05 |
+
+**Begründung der Punkte:**
+- **Kosten:** Jimdo ist am günstigsten. Shopify ist etwas teurer, der Start kostet aber nur 3 €. WooCommerce und Shopware sind kostenlos, dafür kommen Hosting, Erweiterungen und Wartung dazu.
+- **Bedienbarkeit:** Shopify und Jimdo gehen ohne Technikwissen. Für WooCommerce und Shopware braucht man einen eigenen Server.
+- **Funktionen:** Für uns ist der Motiv-Upload am wichtigsten. Bei Shopify gibt es dafür fertige Apps, auch für Print-on-Demand (z. B. Printful, Gelato). Bei Jimdo geht das nicht.
+- **Rechtssicherheit / DSGVO:** Jimdo und Shopware sind deutsche Anbieter mit Servern in der EU. Bei Shopify werden Daten teils außerhalb der EU verarbeitet.
+- **Design:** Shopify hat die meisten modernen Vorlagen.
+- **Support:** Jimdo hat den besten deutschen Support. Bei WooCommerce gibt es nur die Community.
+
+**Unsere Entscheidung:** **Shopify (Basic-Tarif)**, weil wir dort unser wichtigstes Merkmal, die Custom Designs, per App am einfachsten umsetzen können, ohne eigene Technik. Jimdo wäre günstiger und beim Datenschutz besser, kann aber keinen Motiv-Upload.
+
+**Laufende Kosten mit Shopify (geschätzt):**
+
+| Posten | pro Monat |
+|---|---|
+| Shopify Basic (jährliche Zahlung) | 25 € |
+| Rechtstexte-Abo (Händlerbund oder IT-Recht Kanzlei) | ca. 10–25 € |
+| Domain `lootlager.de` | ca. 1–2 € |
+| Print-on-Demand-App (Printful oder Gelato) | Grundversion kostenlos, wir zahlen pro gedrucktem Produkt |
+| **Summe** | **ca. 36–52 €** |
+
+### Spickzettel: Fragen der Lehrkraft zum Anbieter
+
+**„Warum habt ihr Shopify gewählt?“**
+> Bei uns laden Kunden ihr eigenes Motiv hoch. Dafür gibt es bei Shopify fertige Apps, und mit Print-on-Demand wird das Produkt automatisch gedruckt und verschickt. Außerdem ist Shopify einfach zu bedienen und wir brauchen keinen eigenen Server.
+
+**„Wie seid ihr vorgegangen?“**
+> Wir haben sechs Anbieter angeschaut und vier davon mit einer Nutzwertanalyse verglichen. Jedes Kriterium hat eine Gewichtung, die Kosten zählen am meisten. Shopify hat mit 7,85 Punkten gewonnen, knapp vor Jimdo mit 7,45.
+
+**„Warum nicht Jimdo? Das ist doch billiger und aus Deutschland.“**
+> Stimmt, Jimdo ist günstiger und beim Datenschutz besser. Aber mit Jimdo können wir keinen Motiv-Upload umsetzen, und das ist unser wichtigstes Merkmal.
+
+**„WooCommerce und Shopware sind doch kostenlos.“**
+> Nur die Software. Wir bräuchten einen eigenen Server, müssten Updates und Sicherheit selbst machen und Erweiterungen für deutsches Recht kaufen. Das ist für Einsteiger zu aufwendig und am Ende nicht billiger.
+
+**„Hat Shopify Nachteile?“**
+> Ja. Die Daten werden teils außerhalb der EU verarbeitet. Ohne Shopify Payments zahlen wir 2 % Gebühr pro Verkauf, und manche Apps kosten extra.
+
+**„Was kostet euch der Shop?“**
+> Die ersten 3 Monate fast nichts, nur 1 € im Monat. Danach 25 € im Monat für Shopify und dazu Rechtstexte und Domain, zusammen ungefähr 36 bis 52 € im Monat.
 
 ---
 
 ## 6. Homepage-Entwurf (HP)
 
+Unser Entwurf für `lootlager.de` (als Grafik auf Folie 6):
+
 ```text
-┌──────────────────────────────────────────────────────────────────┐
-│  [LOGO]   [ Produkte suchen ...  (Suchen) ]   Konto   Warenkorb  │  Header
-├──────────────────────────────────────────────────────────────────┤
-│     Kategorie 1  |  Kategorie 2  |  Kategorie 3  |  Angebote     │  Navigation
-├──────────────────────────────────────────────────────────────────┤
-│           BANNER: Slogan  +  Button „Jetzt entdecken“            │  Banner
-├──────────────────────────────────────────────────────────────────┤
-│    [Bestseller]   [Bestseller]   [Bestseller]   [Bestseller]     │  Produkte
-├──────────────────────────────────────────────────────────────────┤
-│   Gratis Versand ab X €  ·  30 Tage Rückgabe  ·  Sicher zahlen   │  Vorteile
-├──────────────────────────────────────────────────────────────────┤
-│   Impressum · Datenschutz · AGB · Widerruf · Versand & Zahlung   │  Footer
-└──────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────┐
+│ [LootLager-Logo]  [ Motiv oder Produkt suchen ... ]  Konto  Warenkorb │  Header
+├───────────────────────────────────────────────────────────────────────┤
+│ Mauspads | Controller-Skins | Keycaps | LED-Schilder | Eigenes Design │  Navigation
+├───────────────────────────────────────────────────────────────────────┤
+│   LEVEL UP DEIN SETUP.                                   [Truhe]      │  Banner
+│   Lade dein Motiv hoch, wir drucken es auf dein Zubehör.              │  (dunkel)
+│   [ Jetzt gestalten ]                                                 │
+├───────────────────────────────────────────────────────────────────────┤
+│  [XXL-Mauspad]  [Controller-Skin]  [Custom Keycaps]  [LED-Schild]     │  Bestseller
+├───────────────────────────────────────────────────────────────────────┤
+│  Versand aus Deutschland · Design-Vorschau · PayPal, Klarna, Karte    │  Vorteile
+├───────────────────────────────────────────────────────────────────────┤
+│   Impressum · Datenschutz · AGB · Widerruf · Versand & Zahlung        │  Footer
+└───────────────────────────────────────────────────────────────────────┘
 ```
+
+**So funktioniert die Produktseite:**
+1. Kunde wählt ein Produkt, z. B. ein XXL-Mauspad.
+2. Kunde lädt sein Motiv hoch oder wählt „Design von LootLager“.
+3. Eine Vorschau zeigt, wie das fertige Produkt aussieht.
+4. Nach dem Kauf geht der Auftrag automatisch an die Print-on-Demand-App, die druckt und verschickt.
 
 **Die Suche auf der Startseite:**
 - Die Suchleiste steht gut sichtbar im Header.
 - Beim Tippen erscheinen Vorschläge (Autovervollständigung).
-- Die Ergebnisseite hat Filter (Preis, Kategorie, Marke) und eine Sortierung (Preis, Beliebtheit).
+- Die Ergebnisseite hat Filter (Produktart, Preis, Plattform wie PS5, Xbox und Switch) und eine Sortierung (Preis, Beliebtheit).
 
 **Pflichtseiten im Footer:** Impressum (§ 5 DDG), Datenschutzerklärung (DSGVO), AGB, Widerrufsbelehrung, Versand- und Zahlungsinformationen
+
+**Warum kein „30 Tage Rückgabe“?** Unsere Produkte werden nach Kundenwunsch bedruckt. Für solche individuellen Produkte gibt es kein Widerrufsrecht (§ 312g Abs. 2 Nr. 1 BGB). Darauf weisen wir in der Widerrufsbelehrung hin. Damit Kunden trotzdem sicher sind, zeigen wir vor dem Kauf eine Design-Vorschau.
 
 ---
 
 ## 7. Präsentation – Folienplan
 
-> **Fertig:** Folien 1–4 in [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx). Die Sprechtexte und Antworten auf Nachfragen stehen in den **Notizen** unter jeder Folie. Pflicht für nächste Stunde ist nur Folie 1, die Folien 2–4 sind Backup für Nachfragen.
+> **Fertig:** Alle 7 Folien in [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx). Die Sprechtexte und Antworten auf Nachfragen stehen in den **Notizen** unter jeder Folie. Folie 1 war die Pflicht für die erste Abgabe. Die Folien 5–7 sind für Phase 2 (Anbieter, Startseite, Fazit).
 
 | Folie | Inhalt |
 |---|---|
@@ -322,9 +403,9 @@ Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewicht
 | 2 | Geschäftsidee: Sortiment, Zielgruppe, was uns besonders macht |
 | 3 | Name & Logo: Bedeutung des Namens, Namensprüfung, KI-Tool + Prompt |
 | 4 | Rechtsform: Entscheidung, Vor- und Nachteile, Alternative |
-| 5 | Anbietersuche: verglichene Anbieter + Nutzwertanalyse |
-| 6 | Entscheidung + Homepage-Entwurf |
-| 7 | Fazit / Ausblick + Quellen |
+| 5 | Anbietersuche: Nutzwertanalyse mit Shopify, Jimdo, WooCommerce und Shopware |
+| 6 | Entscheidung für Shopify (Gründe + Nachteile) + Entwurf der Startseite |
+| 7 | Fazit (das steht fest), nächste Schritte bis zum Shop-Start + Quellen |
 
 ### Folie 1 – Aufbau
 
@@ -359,13 +440,23 @@ Danach kommen die Nachfragen der Lehrkraft (siehe Spickzettel in den Abschnitten
 
 | Rolle | Aufgaben | Name |
 |---|---|---|
-| Koordination | Zeitplan, Folien zusammenführen, Abgabe | |
-| Branding | Name, Logo (KI), Slogan, Farben | |
-| Recht | Rechtsform, Namens- und Markenprüfung | |
-| Recherche | Anbietervergleich, Nutzwertanalyse | |
-| Design | Homepage-Entwurf, Folienlayout | |
+| Koordination | Zeitplan, Folien zusammenführen, Abgabe | Nick |
+| Branding | Name, Logo (KI), Slogan, Farben | Luca |
+| Recht | Rechtsform, Namens- und Markenprüfung | Nick |
+| Recherche | Anbietervergleich, Nutzwertanalyse | Nick |
+| Design | Homepage-Entwurf, Folienlayout | Luca |
 
-Wir sind zu zweit (Nick und Luca), deshalb übernimmt jeder mehrere Rollen.
+Wir sind zu zweit (Nick und Luca), deshalb übernimmt jeder mehrere Rollen. **Das ist ein Vorschlag**, bitte gemeinsam bestätigen oder tauschen.
+
+**Wer stellt was vor? (Vorschlag)**
+
+| Teil | Folien | Wer |
+|---|---|---|
+| Firma, Rechtsform, Anbietervergleich | 1, 4, 5 | Nick |
+| Geschäftsidee, Name und Logo, Entscheidung + Startseite | 2, 3, 6 | Luca |
+| Fazit und nächste Schritte | 7 | beide (Nick Fazit, Luca Ausblick) |
+
+Die Lehrkraft lässt bei Folie 1 irgendein Gruppenmitglied vorstellen. Deshalb müssen trotzdem **beide** alle Spickzettel können.
 
 ---
 
@@ -380,4 +471,13 @@ Wir sind zu zweit (Nick und Luca), deshalb übernimmt jeder mehrere Rollen.
 - [x] Logo → [`assets/logo-lootlager.png`](assets/logo-lootlager.png)
 
 **Danach:**
-- [ ] Webshop-Anbieter (Shopsystem)
+- [x] Webshop-Anbieter (Shopsystem) → **Shopify**, Basic-Tarif (Abschnitt 5)
+- [x] Homepage-Entwurf → Abschnitt 6 und Folie 6
+- [x] Rollen → Vorschlag in Abschnitt 8
+
+**Noch offen (müsst ihr selbst machen):**
+- [ ] Namensprüfung: Handelsregister, DPMA, Domain `lootlager.de`, Instagram und TikTok (Abschnitt 2)
+- [ ] Preise von Shopify und Jimdo auf den Anbieterseiten gegenprüfen (Abschnitt 5)
+- [ ] Gruppennummer 4 noch einmal prüfen
+- [ ] Rollen und Aufteilung der Folien bestätigen (Abschnitt 8)
+- [ ] Spickzettel lernen (Abschnitte 2, 3 und 5) und Probelauf mit Stoppuhr
