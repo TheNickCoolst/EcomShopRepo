@@ -3,6 +3,8 @@
 > **Aufgabe (laut Tafel):** 5 Gruppen · Logo (KI) · Firmenname · Rechtsform · Suche vom Anbieter · Präsentation (1. Folie …)
 >
 > Tafel-Skizze: *Suche Anbieter → HP* – wir suchen einen Anbieter, mit dem wir unsere Homepage bzw. unseren Onlineshop bauen.
+>
+> **Die Gründung ist fiktiv** und nur für das Fach E-Commerce. Wir melden nichts an, prüfen keine Register und bezahlen nichts.
 
 ## ⏰ Jetzt dran: Folie 1 – Abgabe nächste Stunde, 13:45 Uhr
 
@@ -29,10 +31,12 @@ Die Lehrkraft hat gesagt:
 - [x] Folien 5–7 bauen (Anbietersuche, Entscheidung + Startseite, Fazit + Quellen)
 - [x] Rollen verteilen → Vorschlag in Abschnitt 8
 
-**Was ihr selbst noch machen müsst** (ging von hier aus nicht):
-- [ ] Namensprüfung in Handelsregister, DPMA, Domain und Social Media (Links in Abschnitt 2, ca. 5 Minuten)
-- [ ] Preise kurz auf den Anbieterseiten gegenprüfen (Abschnitt 5)
-- [ ] Spickzettel lernen: Rechtsform (Abschnitt 3) und Anbieter (Abschnitt 5)
+**Erledigt, weil die Gründung fiktiv ist:**
+- [x] Namensprüfung in Handelsregister, DPMA, Domain und Social Media → wir nehmen an, dass alles frei ist (Abschnitt 2)
+- [x] Preise auf den Anbieterseiten gegenprüfen → die Preise aus den Preisvergleichen reichen (Abschnitt 5)
+
+**Was ihr selbst noch machen müsst:**
+- [ ] Spickzettel lernen: Name (Abschnitt 2), Rechtsform (Abschnitt 3) und Anbieter (Abschnitt 5)
 - [ ] Probelauf mit Stoppuhr, danach Rollen in Abschnitt 8 bestätigen
 
 ---
@@ -53,7 +57,7 @@ Die Lehrkraft hat gesagt:
 | Stammkapital | 1.000 € (fiktiv), je 500 € von Nick und Luca |
 | Geschäftsführung | Nick und Luca (gemeinsam) |
 | Shopsystem | **Shopify**, Basic-Tarif (siehe Abschnitt 5) |
-| Wunsch-Domain | `lootlager.de` (noch prüfen, siehe Abschnitt 2) |
+| Domain | `lootlager.de` (fiktiv, wir nehmen an, dass sie frei ist) |
 | Farben | Violett `#7C3AED` · Türkis `#22D3EE` · Dunkelblau `#111827` |
 
 **Was der Name bedeutet:** „Loot“ ist in Videospielen die Beute, also die Belohnung, die man findet. „Lager“ steht für unseren Shop, in dem alles bereitliegt. **LootLager ist das Lager voller Beute für dein Gaming-Setup.** Das doppelte L macht den Namen leicht merkbar.
@@ -65,7 +69,7 @@ Die Lehrkraft hat gesagt:
 | # | Arbeitspaket | Ergebnis | Verantwortlich | Status |
 |---|---|---|---|---|
 | 1 | Geschäftsidee | Sortiment + Zielgruppe in einem Satz | Nick und Luca | ✅ |
-| 2 | Firmenname | Name inkl. Rechtsformzusatz, geprüft | Nick und Luca | ✅ (Register-Prüfung offen) |
+| 2 | Firmenname | Name inkl. Rechtsformzusatz, geprüft | Nick und Luca | ✅ (fiktiv: Name ist frei) |
 | 3 | Rechtsform | Entscheidung + Begründung | Nick und Luca | ✅ |
 | 4 | Logo (KI) | Logo als PNG, Tool + Prompt notiert | Nick und Luca | ✅ |
 | 5 | Anbietersuche | Vergleich von 3–4 Shopsystemen + Entscheidung | Nick und Luca | ✅ Shopify |
@@ -106,13 +110,13 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 **Ein guter Shop-Name ist:** kurz, leicht zu buchstabieren, passend zum Sortiment und als Domain noch frei.
 
 **Prüf-Checkliste:**
-- [ ] Handelsregister – gibt es die Firma schon? → [handelsregister.de](https://www.handelsregister.de), „Normale Suche“, Firma: `LootLager`
-- [ ] Marken – ist der Name geschützt? → [DPMAregister](https://register.dpma.de/DPMAregister/marke/basis) und [EUIPO eSearch](https://euipo.europa.eu/eSearch/), Suche nach `LootLager`
-- [ ] Domain – ist `lootlager.de` frei? → [DENIC Domainabfrage](https://www.denic.de/service/whois-service)
-- [ ] Social Media – sind Instagram- und TikTok-Namen frei? → `instagram.com/lootlager` und `tiktok.com/@lootlager` im Browser öffnen
+- [x] Handelsregister – gibt es die Firma schon? → fiktiv: nein. Echt prüfen würde man auf [handelsregister.de](https://www.handelsregister.de), „Normale Suche“, Firma: `LootLager`
+- [x] Marken – ist der Name geschützt? → fiktiv: nein. Echt prüfen würde man im [DPMAregister](https://register.dpma.de/DPMAregister/marke/basis) und in [EUIPO eSearch](https://euipo.europa.eu/eSearch/)
+- [x] Domain – ist `lootlager.de` frei? → fiktiv: ja. Echt prüfen würde man bei der [DENIC](https://www.denic.de/service/whois-service)
+- [x] Social Media – sind Instagram- und TikTok-Namen frei? → fiktiv: ja (`@lootlager`)
 - [x] Kurze Websuche nach dem Namen (06.10.2026: kein Shop „LootLager“ gefunden)
 
-> Die vier Register konnten am 07.10.2026 nicht automatisch geprüft werden, weil die Seiten aus unserer Arbeitsumgebung gesperrt waren. Bitte selbst prüfen und das Ergebnis mit Datum hier eintragen. Ist die Domain vergeben, sind `lootlager.shop` oder `loot-lager.de` Alternativen.
+> **Fiktive Gründung:** Unser Shop ist ein Projekt für das Fach E-Commerce. Deshalb prüfen wir die Register nicht echt, sondern **nehmen an, dass Firmenname, Marke, Domain und Social-Media-Namen frei sind**. In der Präsentation erklären wir trotzdem, wo man das prüfen würde (siehe Spickzettel unten).
 
 **Vollständiger Firmenname:** `LootLager UG (haftungsbeschränkt)`
 
@@ -141,6 +145,9 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 
 **„Was bedeutet euer Logo?“**
 > Die Truhe ist eine Loot-Kiste wie in Videospielen: Wer bei uns bestellt, bekommt seine Belohnung. Violett und Türkis sind typische Gaming-Farben. Das Logo haben wir mit ChatGPT erstellt.
+
+**„Habt ihr geprüft, ob es den Namen schon gibt?“**
+> Unsere Gründung ist fiktiv, deshalb nehmen wir an, dass der Name frei ist. Eine kurze Websuche hat keinen Shop „LootLager“ gefunden. Bei einer echten Gründung würden wir im Handelsregister nach der Firma suchen, beim DPMA nach der Marke und bei der DENIC nach der Domain lootlager.de.
 
 ---
 
@@ -284,7 +291,7 @@ Klappt der transparente Hintergrund nicht, entfernt ihr ihn in PowerPoint: Bild 
 | Wix | Core / Business | ca. 24–32 € / 35–50 € | je nach Laufzeit des Abos |
 | JTL-Shop | – | – | nicht weiter geprüft, weil eher für Händler mit JTL-Warenwirtschaft |
 
-> **Wichtig:** Die Anbieterseiten waren aus unserer Arbeitsumgebung gesperrt. Die Preise stammen deshalb aus Preisvergleichen ([qualimero.com](https://qualimero.com/blog/shopify-kosten), [l-iz.de](https://www.l-iz.de/vpn/erfahrungen/jimdo-preise-kosten/), [tooltester.com](https://www.tooltester.com/de/testberichte/woocommerce-test/kosten)). Vor der Präsentation die Preise für Shopify und Jimdo kurz auf den Anbieterseiten gegenprüfen, sie ändern sich oft.
+> **Woher die Preise kommen:** aus Preisvergleichen im Internet ([qualimero.com](https://qualimero.com/blog/shopify-kosten), [l-iz.de](https://www.l-iz.de/vpn/erfahrungen/jimdo-preise-kosten/), [tooltester.com](https://www.tooltester.com/de/testberichte/woocommerce-test/kosten)), abgerufen am 07.10.2026. Für unsere fiktive Gründung reicht das. Bei einer echten Gründung würde man die Preise noch einmal direkt beim Anbieter nachschauen, weil sie sich oft ändern.
 
 **Vorauswahl:** In die Nutzwertanalyse kommen 4 Anbieter: Shopify, Jimdo, WooCommerce und Shopware. Wix fällt raus, weil es Jimdo stark ähnelt, aber teurer ist. JTL-Shop fällt raus, weil er erst mit einer Warenwirtschaft sinnvoll ist.
 
@@ -474,10 +481,10 @@ Die Lehrkraft lässt bei Folie 1 irgendein Gruppenmitglied vorstellen. Deshalb m
 - [x] Webshop-Anbieter (Shopsystem) → **Shopify**, Basic-Tarif (Abschnitt 5)
 - [x] Homepage-Entwurf → Abschnitt 6 und Folie 6
 - [x] Rollen → Vorschlag in Abschnitt 8
+- [x] Namensprüfung → fiktiv: Name, Marke, Domain und Social-Media-Namen sind frei (Abschnitt 2)
+- [x] Preise → Preisvergleiche vom 07.10.2026 reichen für die fiktive Gründung (Abschnitt 5)
 
 **Noch offen (müsst ihr selbst machen):**
-- [ ] Namensprüfung: Handelsregister, DPMA, Domain `lootlager.de`, Instagram und TikTok (Abschnitt 2)
-- [ ] Preise von Shopify und Jimdo auf den Anbieterseiten gegenprüfen (Abschnitt 5)
 - [ ] Gruppennummer 4 noch einmal prüfen
 - [ ] Rollen und Aufteilung der Folien bestätigen (Abschnitt 8)
 - [ ] Spickzettel lernen (Abschnitte 2, 3 und 5) und Probelauf mit Stoppuhr
