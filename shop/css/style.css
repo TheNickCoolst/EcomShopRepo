@@ -1,0 +1,423 @@
+/* LootLager – Farben aus dem Logo: Violett, Türkis, Dunkelblau, Gold */
+:root {
+  --violett: #7c3aed;
+  --violett-dunkel: #5b21b6;
+  --violett-hell: #f5f1ff;
+  --tuerkis: #22d3ee;
+  --tuerkis-dunkel: #0e7490;
+  --nacht: #111827;
+  --gold: #fbbf24;
+  --text: #111827;
+  --text-leise: #566072;
+  --linie: #e6e1f5;
+  --weiss: #fff;
+  --rot: #b42318;
+  --rund: 16px;
+  --schatten: 0 10px 30px rgb(17 24 39 / 0.08);
+  --schrift: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --schrift-titel: ui-rounded, "SF Pro Rounded", "Arial Rounded MT Bold", "Nunito", "Segoe UI", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+
+body {
+  margin: 0;
+  font-family: var(--schrift);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--weiss);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+h1, h2, h3, p, ul, ol, dl, dd, figure, fieldset { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+fieldset { border: 0; min-width: 0; }
+button, input { font: inherit; color: inherit; }
+a { color: inherit; }
+[hidden] { display: none !important; }
+
+h1, h2, h3, legend { font-family: var(--schrift-titel); font-weight: 800; line-height: 1.15; text-wrap: balance; }
+
+:focus-visible { outline: 3px solid var(--tuerkis); outline-offset: 3px; border-radius: 6px; }
+
+.rahmen { width: min(100% - 40px, 1180px); margin-inline: auto; }
+
+.nur-vorleser {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+
+.sprungmarke {
+  position: absolute; left: 12px; top: -60px; z-index: 50;
+  padding: 10px 16px; border-radius: 10px;
+  background: var(--nacht); color: var(--weiss);
+}
+.sprungmarke:focus { top: 12px; }
+
+/* ---------- Kopf ---------- */
+
+.hinweisleiste {
+  padding: 7px 20px;
+  background: var(--nacht); color: #d7dbe7;
+  font-size: 0.8125rem; text-align: center;
+}
+
+.kopf {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--weiss);
+  border-bottom: 1px solid var(--linie);
+}
+
+.kopf__zeile { display: flex; align-items: center; gap: 22px; min-height: 72px; }
+
+.kopf__logo { flex: none; }
+.kopf__logo img { width: 168px; }
+
+.suche { position: relative; flex: 1 1 260px; max-width: 420px; }
+.suche input {
+  width: 100%; height: 44px; padding: 0 16px 0 44px;
+  border: 1.5px solid var(--linie); border-radius: 999px;
+  background: var(--weiss);
+}
+.suche input::placeholder { color: var(--text-leise); }
+.suche input:focus-visible { outline-offset: 0; border-color: var(--violett); border-radius: 999px; }
+.suche__lupe {
+  position: absolute; left: 15px; top: 12px; width: 20px; height: 20px;
+  fill: none; stroke: var(--text-leise); stroke-width: 2; stroke-linecap: round;
+  pointer-events: none;
+}
+
+.kopf__nav { display: flex; gap: 22px; margin-left: auto; font-weight: 600; font-size: 0.9375rem; }
+.kopf__nav a { text-decoration: none; padding: 8px 0; white-space: nowrap; }
+.kopf__nav a:hover { color: var(--violett); }
+
+.korbknopf {
+  display: inline-flex; align-items: center; gap: 8px; flex: none;
+  height: 44px; padding: 0 8px 0 14px;
+  border: 0; border-radius: 999px;
+  background: var(--nacht); color: var(--weiss);
+  font-weight: 700; font-size: 0.9375rem; cursor: pointer;
+}
+.korbknopf:hover { background: #1f2937; }
+.korbknopf svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.korbknopf circle { fill: currentColor; stroke: none; }
+.korbknopf__zahl {
+  min-width: 28px; height: 28px; padding: 0 8px; border-radius: 999px;
+  display: grid; place-items: center;
+  background: var(--tuerkis); color: var(--nacht);
+  font-size: 0.875rem; font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Knöpfe ---------- */
+
+.knopf {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 0 22px;
+  border: 2px solid transparent; border-radius: 999px;
+  font-weight: 700; text-decoration: none; cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.knopf:hover { transform: translateY(-1px); }
+.knopf:active { transform: translateY(0); }
+.knopf--tuerkis { background: var(--tuerkis); color: var(--nacht); }
+.knopf--tuerkis:hover { background: #67e8f9; }
+.knopf--violett { background: var(--violett); color: var(--weiss); }
+.knopf--violett:hover { background: var(--violett-dunkel); }
+.knopf--rand { border-color: rgb(255 255 255 / 0.45); color: var(--weiss); }
+.knopf--rand:hover { border-color: var(--weiss); }
+.knopf--breit { width: 100%; }
+
+.textlink {
+  padding: 0; border: 0; background: none; cursor: pointer;
+  color: var(--violett); font-weight: 700;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.textlink:hover { color: var(--violett-dunkel); }
+
+/* ---------- Bühne ---------- */
+
+.buehne {
+  color: var(--weiss);
+  background:
+    radial-gradient(60% 90% at 88% 40%, rgb(124 58 237 / 0.55), transparent 70%),
+    radial-gradient(40% 60% at 8% 100%, rgb(34 211 238 / 0.22), transparent 70%),
+    var(--nacht);
+}
+.buehne__raster {
+  display: grid; grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: 32px;
+  padding-block: clamp(32px, 4.5vw, 56px);
+}
+.buehne__marke {
+  display: inline-block; margin-bottom: 14px; padding: 5px 14px; border-radius: 999px;
+  background: rgb(255 255 255 / 0.1); color: #e3d9ff;
+  font-size: 0.875rem; font-weight: 600;
+}
+.buehne h1 { font-size: clamp(2.5rem, 4.8vw, 3.75rem); letter-spacing: -0.01em; }
+.buehne h1 span { color: var(--tuerkis); }
+.buehne__text { max-width: 32em; margin-top: 14px; color: #d7dbe7; font-size: clamp(1rem, 1.6vw, 1.1875rem); }
+.buehne__knoepfe { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+
+.vorteile { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 24px; color: #d7dbe7; font-size: 0.9375rem; }
+.vorteile li { display: flex; align-items: center; gap: 8px; }
+.vorteile svg { width: 18px; height: 18px; fill: none; stroke: var(--tuerkis); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+.buehne__truhe { display: grid; place-items: center; }
+/* Das Bild hat einen dunklen Hintergrund. Die Maske blendet ihn zum Rand hin aus. */
+.buehne__truhe img {
+  width: min(100%, 460px);
+  -webkit-mask-image: radial-gradient(closest-side, #000 68%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 68%, transparent 100%);
+  animation: schweben 5s ease-in-out infinite;
+}
+
+@keyframes schweben { 50% { transform: translateY(-10px); } }
+
+/* ---------- Abschnitte ---------- */
+
+.abschnitt { padding-block: clamp(44px, 5.5vw, 72px); }
+.abschnitt--getoent { background: var(--violett-hell); }
+.abschnitt__kopf { display: flex; align-items: end; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; margin-bottom: 28px; }
+.abschnitt h2 { font-size: clamp(1.75rem, 3.4vw, 2.5rem); }
+.abschnitt__unterzeile { margin-top: 8px; max-width: 46em; color: var(--text-leise); }
+
+.zaehler {
+  padding: 6px 14px; border-radius: 999px;
+  background: var(--violett-hell); color: var(--violett-dunkel);
+  font-weight: 700; font-size: 0.875rem; font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Produkte ---------- */
+
+.produkte { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
+
+.produkt {
+  display: flex; flex-direction: column; overflow: hidden;
+  border: 1px solid var(--linie); border-radius: var(--rund);
+  background: var(--weiss);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.produkt:hover { transform: translateY(-3px); box-shadow: var(--schatten); }
+.produkt__bild { background: var(--violett-hell); }
+.produkt__bild img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.produkt__text { display: flex; flex-direction: column; flex: 1; gap: 8px; padding: 16px; }
+.produkt h3 { font-size: 1.125rem; }
+.produkt__text > p { color: var(--text-leise); font-size: 0.9063rem; }
+.produkt .produkt__preis { margin-top: auto; padding-top: 6px; color: var(--text); font-size: 1.25rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.produkt__preis small, .werkstatt__kasse small { display: block; color: var(--text-leise); font-size: 0.75rem; font-weight: 400; }
+.produkt__knoepfe { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
+.produkt__knoepfe .knopf { min-height: 42px; padding-inline: 12px; font-size: 0.9063rem; }
+.produkt__knoepfe .textlink { align-self: center; font-size: 0.875rem; }
+
+.leer { margin-top: 20px; padding: 22px; border-radius: var(--rund); background: var(--violett-hell); text-align: center; }
+
+/* ---------- Eigenes Design ---------- */
+
+.werkstatt { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 28px; align-items: start; }
+.werkstatt__regler { display: grid; gap: 26px; padding: 26px; border-radius: var(--rund); background: var(--weiss); box-shadow: var(--schatten); }
+.werkstatt legend { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 1.0625rem; }
+.werkstatt legend small { color: var(--text-leise); font-family: var(--schrift); font-weight: 400; font-size: 0.875rem; }
+
+.schritt {
+  display: grid; place-items: center; flex: none;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--violett); color: var(--weiss);
+  font-family: var(--schrift-titel); font-weight: 800; font-size: 0.9375rem;
+}
+.schritt--gross { width: 44px; height: 44px; font-size: 1.25rem; }
+
+.auswahl { display: flex; flex-wrap: wrap; gap: 8px; }
+.auswahl label { cursor: pointer; }
+.auswahl input { position: absolute; opacity: 0; }
+.auswahl span {
+  display: block; padding: 9px 14px;
+  border: 1.5px solid var(--linie); border-radius: 999px;
+  font-weight: 600; font-size: 0.9375rem;
+}
+.auswahl label:hover span { border-color: var(--violett); }
+.auswahl input:checked + span { border-color: var(--violett); background: var(--violett); color: var(--weiss); }
+.auswahl input:focus-visible + span { outline: 3px solid var(--tuerkis); outline-offset: 3px; }
+
+.hochladen {
+  display: flex; align-items: center; gap: 12px; padding: 16px;
+  border: 2px dashed #c9bdf0; border-radius: 12px;
+  background: var(--violett-hell); cursor: pointer; font-weight: 600;
+}
+.hochladen:hover { border-color: var(--violett); }
+.hochladen svg { flex: none; width: 24px; height: 24px; fill: none; stroke: var(--violett); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.hochladen span { overflow-wrap: anywhere; }
+#motiv:focus-visible + .hochladen { outline: 3px solid var(--tuerkis); outline-offset: 3px; }
+.kleingedrucktes { margin-top: 8px; color: var(--text-leise); font-size: 0.8125rem; }
+.fehler { margin-top: 8px; color: var(--rot); font-size: 0.875rem; font-weight: 600; }
+
+.eingabe {
+  width: 100%; height: 46px; padding: 0 14px;
+  border: 1.5px solid var(--linie); border-radius: 12px; background: var(--weiss);
+}
+.eingabe:focus-visible { outline-offset: 0; border-color: var(--violett); border-radius: 12px; }
+
+.werkstatt__kasse {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  padding-top: 22px; border-top: 1px solid var(--linie);
+}
+.werkstatt__kasse strong { font-size: 1.375rem; font-variant-numeric: tabular-nums; }
+
+.werkstatt__vorschau { position: sticky; top: 100px; }
+.werkstatt__vorschau svg {
+  width: 100%; border-radius: var(--rund);
+  background: linear-gradient(160deg, #fff, #ece5ff);
+  box-shadow: var(--schatten);
+}
+.werkstatt__vorschau figcaption { margin-top: 10px; color: var(--text-leise); font-size: 0.875rem; text-align: center; }
+
+#vorschau [data-produkt] { display: none; }
+#vorschau[data-aktiv="mauspad"] [data-produkt="mauspad"],
+#vorschau[data-aktiv="controller"] [data-produkt="controller"],
+#vorschau[data-aktiv="keycaps"] [data-produkt="keycaps"],
+#vorschau[data-aktiv="led"] [data-produkt="led"],
+#vorschau[data-aktiv="headset"] [data-produkt="headset"] { display: inline; }
+
+.tag { font-family: var(--schrift-titel); font-weight: 800; letter-spacing: 0.04em; }
+.tag--motiv { fill: #fff; stroke: rgb(17 24 39 / 0.55); stroke-width: 3px; paint-order: stroke; stroke-linejoin: round; }
+.tag--neon { fill: none; stroke: var(--tuerkis); stroke-width: 3px; stroke-linejoin: round; }
+
+/* ---------- Ablauf ---------- */
+
+.ablauf { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.ablauf li { padding: 24px; border: 1px solid var(--linie); border-radius: var(--rund); }
+.ablauf h3 { margin: 16px 0 6px; font-size: 1.1875rem; }
+.ablauf p { color: var(--text-leise); }
+
+/* ---------- Über uns ---------- */
+
+.stimmung { position: relative; overflow: hidden; margin-bottom: 40px; border-radius: var(--rund); background: var(--nacht); color: var(--weiss); }
+.stimmung img { width: 100%; aspect-ratio: 11 / 5; object-fit: cover; object-position: right center; }
+.stimmung__text {
+  position: absolute; inset: 0 auto 0 0; width: 50%;
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 18px;
+  padding: clamp(20px, 4vw, 52px);
+  background: linear-gradient(90deg, rgb(17 24 39 / 0.8), transparent);
+}
+.stimmung__slogan { font-family: var(--schrift-titel); font-weight: 800; font-size: clamp(1.75rem, 3.6vw, 2.75rem); line-height: 1.1; }
+.stimmung__slogan span { display: block; color: var(--tuerkis); }
+
+.ueber { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: center; }
+.ueber p { margin-top: 14px; max-width: 38em; }
+.steckbrief { display: grid; gap: 10px; }
+.steckbrief div { padding: 14px 18px; border-radius: 12px; background: var(--weiss); }
+.steckbrief dt { color: var(--violett); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.steckbrief dd { font-family: var(--schrift-titel); font-weight: 800; font-size: 1.125rem; }
+
+/* ---------- Fuß ---------- */
+
+.fuss { padding-block: 48px 26px; background: var(--nacht); color: #d7dbe7; font-size: 0.9375rem; }
+.fuss__raster { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 32px; }
+.fuss__logo { display: inline-block; padding: 10px 14px; border-radius: 12px; background: var(--weiss); }
+.fuss__logo img { width: 150px; }
+.fuss__raster p { margin-top: 14px; }
+.fuss h2 { margin-bottom: 10px; color: var(--weiss); font-size: 1rem; }
+.fuss nav a { display: block; padding: 5px 0; text-decoration: none; }
+.fuss nav a:hover { color: var(--tuerkis); text-decoration: underline; }
+.fuss__zeile { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgb(255 255 255 / 0.14); color: #a9b1c4; font-size: 0.8125rem; }
+
+/* ---------- Warenkorb ---------- */
+
+.korb {
+  width: min(420px, 100%); max-width: none; height: 100dvh; max-height: none;
+  margin: 0 0 0 auto; padding: 0; border: 0;
+  background: var(--weiss); color: var(--text);
+  box-shadow: -20px 0 50px rgb(17 24 39 / 0.25);
+}
+.korb[open] { display: flex; flex-direction: column; animation: reinfahren 0.22s ease-out; }
+.korb::backdrop { background: rgb(17 24 39 / 0.5); }
+@keyframes reinfahren { from { transform: translateX(40px); opacity: 0; } }
+
+.korb__kopf { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid var(--linie); }
+.korb__kopf h2 { font-size: 1.375rem; }
+.korb__zu { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--violett-hell); cursor: pointer; }
+.korb__zu svg { width: 20px; height: 20px; fill: none; stroke: var(--text); stroke-width: 2.4; stroke-linecap: round; }
+
+.korb__liste { flex: 1; overflow-y: auto; padding: 4px 20px; }
+.korb__liste li { display: grid; grid-template-columns: 64px 1fr auto; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--linie); }
+.korb__liste img { width: 64px; border-radius: 10px; background: var(--violett-hell); }
+.korb__name { font-weight: 700; line-height: 1.3; overflow-wrap: anywhere; }
+.korb__zusatz { color: var(--violett-dunkel); font-size: 0.8125rem; overflow-wrap: anywhere; }
+.korb__preis { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+
+.menge { display: inline-flex; align-items: center; margin-top: 6px; border: 1.5px solid var(--linie); border-radius: 999px; }
+.menge button { width: 34px; height: 34px; border: 0; background: none; cursor: pointer; font-size: 1.125rem; font-weight: 700; border-radius: 50%; }
+.menge button:hover { background: var(--violett-hell); }
+.menge span { min-width: 24px; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.korb__leer { flex: 1; display: grid; place-items: center; padding: 20px; color: var(--text-leise); }
+.korb__summe { padding: 16px 20px 22px; border-top: 1px solid var(--linie); background: #fbfaff; }
+.korb__summe p { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; font-variant-numeric: tabular-nums; }
+.korb__summe small { color: var(--text-leise); }
+.korb__summe .korb__gesamt { margin: 6px 0 14px; padding-top: 10px; border-top: 1px solid var(--linie); font-size: 1.1875rem; font-weight: 800; }
+.korb__summe .korb__demo { display: block; margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: #fef3c7; font-size: 0.875rem; }
+
+.meldung {
+  position: fixed; left: 50%; bottom: 22px; z-index: 40;
+  translate: -50% 20px; opacity: 0; pointer-events: none;
+  max-width: calc(100% - 32px); padding: 12px 20px; border-radius: 999px;
+  background: var(--nacht); color: var(--weiss); font-weight: 600;
+  box-shadow: var(--schatten);
+  transition: opacity 0.2s ease, translate 0.2s ease;
+}
+.meldung.ist-sichtbar { opacity: 1; translate: -50% 0; }
+
+/* ---------- Rechtliches ---------- */
+
+.rechtstext { max-width: 760px; }
+.rechtstext h1 { font-size: clamp(2rem, 4vw, 2.75rem); }
+.rechtstext > p { margin-top: 12px; }
+.rechtstext section { margin-top: 44px; scroll-margin-top: 96px; }
+.rechtstext h2 { font-size: 1.5rem; }
+.rechtstext section p, .rechtstext section ul { margin-top: 12px; }
+.rechtstext section ul { padding-left: 1.25em; list-style: disc; }
+.rechtstext li + li { margin-top: 4px; }
+.hinweiskasten { padding: 16px 18px; border-radius: 12px; background: #fef3c7; }
+
+/* ---------- Kleinere Bildschirme ---------- */
+
+@media (max-width: 1100px) {
+  .produkte { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kopf__nav { display: none; }
+  .korbknopf { margin-left: auto; }
+}
+
+@media (max-width: 820px) {
+  .buehne__raster, .werkstatt, .ueber { grid-template-columns: 1fr; }
+  .buehne__truhe { order: -1; }
+  .buehne__truhe img { width: 260px; }
+  .werkstatt__vorschau { position: static; order: -1; }
+  .produkte { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ablauf { grid-template-columns: 1fr; }
+  .fuss__raster { grid-template-columns: 1fr 1fr; }
+  .fuss__raster > div { grid-column: 1 / -1; }
+}
+
+@media (max-width: 620px) {
+  .kopf__zeile { flex-wrap: wrap; gap: 10px 14px; padding-block: 10px; }
+  .kopf__logo img { width: 140px; }
+  .suche { order: 3; flex-basis: 100%; max-width: none; }
+  .korbknopf span:not(.korbknopf__zahl) { display: none; }
+  .korbknopf { padding-left: 12px; }
+  .stimmung img { aspect-ratio: 16 / 9; }
+  .stimmung__text { position: static; width: auto; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 18px 20px; background: none; }
+  .stimmung__slogan span { display: inline; }
+}
+
+@media (max-width: 460px) {
+  .produkte { grid-template-columns: 1fr; }
+  .werkstatt__regler { padding: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

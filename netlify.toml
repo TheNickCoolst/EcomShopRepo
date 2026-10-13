@@ -1,0 +1,10 @@
+# Netlify veröffentlicht den Ordner "shop". Ein Build-Schritt ist nicht nötig.
+[build]
+  publish = "shop"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
