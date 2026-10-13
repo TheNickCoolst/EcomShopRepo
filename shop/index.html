@@ -6,6 +6,7 @@
   <title>LootLager – Gaming-Zubehör mit deinem eigenen Design</title>
   <meta name="description" content="LootLager: XXL-Mauspads, Controller-Skins, Custom Keycaps, LED-Schilder und Headset-Halter mit deinem eigenen Design. Level up dein Setup.">
   <meta name="theme-color" content="#111827">
+  <meta name="robots" content="noindex">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
@@ -35,10 +36,15 @@
         </datalist>
       </form>
 
-      <nav class="kopf__nav" aria-label="Hauptnavigation">
+      <button class="menueknopf" type="button" id="menue-knopf" aria-expanded="false" aria-controls="hauptnav" aria-label="Menü" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <nav class="kopf__nav" id="hauptnav" aria-label="Hauptnavigation">
         <a href="#produkte">Produkte</a>
         <a href="#gestalten">Eigenes Design</a>
         <a href="#ablauf">So funktioniert’s</a>
+        <a class="kopf__nav-extra" href="#ueber-uns">Über uns</a>
       </nav>
 
       <button class="korbknopf" type="button" id="korb-oeffnen" aria-haspopup="dialog">
@@ -63,7 +69,7 @@
           <ul class="vorteile">
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Versand aus Deutschland</li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Design-Vorschau vor dem Kauf</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>PayPal, Klarna, Karte</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>PayPal, Klarna, Karte (geplant)</li>
           </ul>
         </div>
         <div class="buehne__truhe">
@@ -383,7 +389,52 @@
       <p><span>Versand <small id="versand-hinweis"></small></span><span id="summe-versand"></span></p>
       <p class="korb__gesamt"><span>Gesamt <small>inkl. MwSt.</small></span><span id="summe-gesamt"></span></p>
       <button class="knopf knopf--violett knopf--breit" type="button" id="zur-kasse">Zur Kasse</button>
-      <p class="korb__demo" id="kasse-hinweis" role="status" hidden>Das ist ein Schulprojekt. In einem echten Shop würde jetzt die Zahlung per PayPal, Klarna oder Karte starten.</p>
+    </div>
+  </dialog>
+
+  <dialog class="kasse" id="kasse" aria-labelledby="kasse-titel">
+    <div class="korb__kopf">
+      <h2 id="kasse-titel">Kasse</h2>
+      <button class="korb__zu" type="button" id="kasse-schliessen" aria-label="Kasse schließen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <form class="kasse__formular" id="kasse-formular">
+      <p class="hinweiskasten"><strong>Testbestellung:</strong> Das ist ein Schulprojekt. Es wird nichts bestellt, nichts bezahlt und nichts gespeichert. Deine Eingaben bleiben in deinem Browser.</p>
+
+      <fieldset>
+        <legend>Lieferadresse</legend>
+        <p class="feld"><label for="kasse-name">Vor- und Nachname</label><input class="eingabe" id="kasse-name" name="name" type="text" autocomplete="name" required></p>
+        <p class="feld"><label for="kasse-mail">E-Mail</label><input class="eingabe" id="kasse-mail" name="mail" type="email" autocomplete="email" required></p>
+        <p class="feld"><label for="kasse-strasse">Straße und Hausnummer</label><input class="eingabe" id="kasse-strasse" name="strasse" type="text" autocomplete="street-address" required></p>
+        <div class="kasse__zeile">
+          <p class="feld"><label for="kasse-plz">PLZ</label><input class="eingabe" id="kasse-plz" name="plz" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" title="Postleitzahl mit 5 Ziffern" autocomplete="postal-code" required></p>
+          <p class="feld"><label for="kasse-ort">Ort</label><input class="eingabe" id="kasse-ort" name="ort" type="text" autocomplete="address-level2" required></p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Zahlungsart</legend>
+        <div class="auswahl">
+          <label><input type="radio" name="zahlung" value="PayPal" checked><span>PayPal</span></label>
+          <label><input type="radio" name="zahlung" value="Klarna"><span>Klarna</span></label>
+          <label><input type="radio" name="zahlung" value="Kreditkarte"><span>Kreditkarte</span></label>
+        </div>
+      </fieldset>
+
+      <div class="kasse__abschluss">
+        <p class="kasse__gesamt"><span>Gesamt <small>inkl. MwSt. und Versand</small></span><strong id="kasse-gesamt"></strong></p>
+        <p class="kleingedrucktes">Es gelten unsere <a class="textlink" href="rechtliches.html#agb">AGB</a>. Hinweise zum Widerruf findest du in der <a class="textlink" href="rechtliches.html#widerruf">Widerrufsbelehrung</a>.</p>
+        <button class="knopf knopf--violett knopf--breit" type="submit">Zahlungspflichtig bestellen</button>
+      </div>
+    </form>
+
+    <div class="kasse__danke" id="kasse-danke" tabindex="-1" hidden>
+      <h3>Danke für deine Testbestellung!</h3>
+      <p>In einem echten Shop würde jetzt die Zahlung per <span id="kasse-zahlung">PayPal</span> starten, und du bekämst eine Bestätigung per E-Mail.</p>
+      <p>Hier ist nichts passiert: Es wurde nichts bestellt und nichts gespeichert.</p>
+      <button class="knopf knopf--violett" type="button" id="kasse-fertig">Zurück zum Shop</button>
     </div>
   </dialog>
 

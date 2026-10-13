@@ -6,6 +6,7 @@
   <title>Rechtliches – LootLager</title>
   <meta name="description" content="Impressum, Datenschutz, AGB, Widerruf sowie Versand und Zahlung von LootLager (Schulprojekt).">
   <meta name="theme-color" content="#111827">
+  <meta name="robots" content="noindex">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,7 +20,7 @@
       <a class="kopf__logo" href="index.html" aria-label="LootLager – zur Startseite">
         <img src="img/logo-lootlager.png" alt="LootLager" width="760" height="207">
       </a>
-      <nav class="kopf__nav" aria-label="Hauptnavigation">
+      <nav class="kopf__nav kopf__nav--immer" aria-label="Hauptnavigation">
         <a href="index.html#produkte">Produkte</a>
         <a href="index.html#gestalten">Eigenes Design</a>
         <a href="index.html#ablauf">So funktioniert’s</a>
@@ -50,7 +51,8 @@
         <ul>
           <li><strong>Warenkorb:</strong> Er wird nur in deinem Browser gespeichert (localStorage) und nicht an uns übertragen.</li>
           <li><strong>Eigenes Design:</strong> Dein Motiv wird nur für die Vorschau in deinem Browser geöffnet. Es wird nicht hochgeladen.</li>
-          <li><strong>Hosting:</strong> Die Seite liegt bei Netlify (Netlify, Inc., USA). Beim Aufruf verarbeitet Netlify technisch nötige Daten wie deine IP-Adresse.</li>
+          <li><strong>Kasse:</strong> Die Kasse ist eine Testbestellung. Name, Adresse und Zahlungsart bleiben in deinem Browser. Sie werden nicht gespeichert und nicht an uns übertragen.</li>
+          <li><strong>Hosting:</strong> Die Seite liegt bei Netlify (Netlify, Inc., USA). Beim Aufruf verarbeitet Netlify technisch nötige Daten wie deine IP-Adresse. Ausgeliefert wird die Seite über ein weltweites Netz von Servern. Weil Netlify ein US-Unternehmen ist, können dabei Daten in die USA übertragen werden.</li>
         </ul>
         <p>Ein echter Shop braucht eine vollständige Datenschutzerklärung nach der DSGVO, zum Beispiel für Bestellungen, Zahlungsanbieter und Versand.</p>
       </section>
@@ -62,7 +64,11 @@
 
       <section id="widerruf">
         <h2>Widerruf</h2>
-        <p>Verbraucher können Onlinekäufe normalerweise 14 Tage lang widerrufen. Für Waren, die nach Kundenwunsch angefertigt werden, gilt das nicht (§ 312g Abs. 2 Nr. 1 BGB). Unsere Produkte mit eigenem Motiv fallen darunter.</p>
+        <p>Verbraucher können Onlinekäufe normalerweise 14 Tage lang widerrufen. Bei uns kommt es auf das Produkt an:</p>
+        <ul>
+          <li><strong>Produkt mit einem Design von uns:</strong> Du kannst den Kauf 14 Tage lang ohne Grund widerrufen.</li>
+          <li><strong>Produkt mit eigenem Motiv oder Gamertag:</strong> Es wird nur für dich angefertigt. Für solche Waren gibt es kein Widerrufsrecht (§ 312g Abs. 2 Nr. 1 BGB).</li>
+        </ul>
         <p>Damit du trotzdem weißt, was du bekommst, zeigen wir dir vor dem Kauf eine Vorschau deines Designs.</p>
       </section>
 
@@ -71,17 +77,18 @@
         <ul>
           <li><strong>Versand:</strong> aus Deutschland, 4,90 € pro Bestellung, ab 50 € kostenlos</li>
           <li><strong>Geplante Zahlungsarten:</strong> PayPal, Klarna und Kreditkarte</li>
+          <li><strong>Bestellknopf:</strong> Der letzte Knopf heißt „Zahlungspflichtig bestellen“. So schreibt es § 312j Abs. 3 BGB vor, damit jeder sieht, ab wann es Geld kostet.</li>
           <li><strong>Preise:</strong> inklusive Mehrwertsteuer</li>
         </ul>
         <p>Alle Preise und Versandkosten sind ausgedacht.</p>
       </section>
 
-      <p style="margin-top: 44px"><a class="textlink" href="index.html">Zurück zum Shop</a></p>
+      <p class="rechtstext__zurueck"><a class="textlink" href="index.html">Zurück zum Shop</a></p>
     </div>
   </main>
 
   <footer class="fuss">
-    <p class="rahmen fuss__zeile" style="margin-top: 0; border-top: 0; padding-top: 0">© 2026 LootLager · lootlager.de · Schulprojekt der Gruppe 4 im Fach E-Commerce. Die Gründung ist fiktiv, es gibt keine echten Bestellungen.</p>
+    <p class="rahmen fuss__zeile fuss__zeile--allein">© 2026 LootLager · lootlager.de · Schulprojekt der Gruppe 4 im Fach E-Commerce. Die Gründung ist fiktiv, es gibt keine echten Bestellungen.</p>
   </footer>
 </body>
 </html>
