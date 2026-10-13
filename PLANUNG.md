@@ -26,16 +26,18 @@ Die Lehrkraft hat gesagt:
 - [ ] Nick und Luca können beide die Spickzettel (Abschnitte 2 und 3)
 
 **Phase 2 (danach):**
-- [x] Webshop-Anbieter auswählen → **Shopify** (Nutzwertanalyse in Abschnitt 5)
-- [x] Homepage-Entwurf → Abschnitt 6 und Folie 6
-- [x] Folien 5–7 bauen (Anbietersuche, Entscheidung + Startseite, Fazit + Quellen)
+- [x] Anbieter auswählen → **Netlify**, gebaut mit Claude Code (Nutzwertanalyse in Abschnitt 5, Excel-Datei in `praesentation/`)
+- [x] Homepage bauen → Ordner [`shop/`](shop/) mit Logo, Name, Domain und 5 Produkten (Abschnitt 6)
+- [x] Folien 5–7 bauen (Anbietersuche als Excel-Tabelle, Entscheidung + Startseite, Fazit + Quellen)
 - [x] Rollen verteilen → Vorschlag in Abschnitt 8
 
 **Erledigt, weil die Gründung fiktiv ist:**
-- [x] Namensprüfung in Handelsregister, DPMA, Domain und Social Media → wir nehmen an, dass alles frei ist (Abschnitt 2)
-- [x] Preise auf den Anbieterseiten gegenprüfen → die Preise aus den Preisvergleichen reichen (Abschnitt 5)
+- [x] Namensprüfung in Handelsregister, DPMA und Social Media → wir nehmen an, dass alles frei ist (Abschnitt 2)
+- [x] Domain → `lootlager.de` ist in echt schon vergeben, für das Projekt tun wir so, als wäre sie frei (Abschnitt 2)
+- [x] Preise gegenprüfen → Netlify direkt beim Anbieter, der Rest aus Preisvergleichen (Abschnitt 5)
 
 **Was ihr selbst noch machen müsst:**
+- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Anleitung in Abschnitt 6)
 - [ ] Spickzettel lernen: Name (Abschnitt 2), Rechtsform (Abschnitt 3) und Anbieter (Abschnitt 5)
 - [ ] Probelauf mit Stoppuhr, danach Rollen in Abschnitt 8 bestätigen
 
@@ -49,15 +51,15 @@ Die Lehrkraft hat gesagt:
 | **Markenname** | **LootLager** (gleich wie die Firma) |
 | **Rechtsform** | **Unternehmergesellschaft (haftungsbeschränkt)** |
 | **Slogan** | „Level up dein Setup.“ |
-| Was wir verkaufen | Gaming-Zubehör mit **Custom Designs**: XXL-Mauspads, Controller-Skins, Custom Keycaps, LED-Schilder |
+| Was wir verkaufen | Gaming-Zubehör mit **Custom Designs**, 5 Produkte: XXL-Mauspad, Controller-Skin, Custom Keycaps, LED-Schild, Headset-Halter |
 | Zielgruppe | Gamer und Streamer, 16–30 Jahre |
 | Was uns besonders macht | Jedes Produkt mit eigenem Design: Kunden laden ihr Motiv hoch oder lassen es von uns gestalten. Schneller Versand aus Deutschland |
 | Gruppe | Gruppe 4: Nick und Luca |
 | Gesellschafter | Nick und Luca, je 50 % |
 | Stammkapital | 1.000 € (fiktiv), je 500 € von Nick und Luca |
 | Geschäftsführung | Nick und Luca (gemeinsam) |
-| Shopsystem | **Shopify**, Basic-Tarif (siehe Abschnitt 5) |
-| Domain | `lootlager.de` (fiktiv, wir nehmen an, dass sie frei ist) |
+| Homepage | **Netlify** (Free-Tarif), gebaut mit Claude Code (siehe Abschnitte 5 und 6) |
+| Domain | `lootlager.de` (fiktiv, in echt schon vergeben). Bei Netlify kostenlos: `lootlager.netlify.app` |
 | Farben | Violett `#7C3AED` · Türkis `#22D3EE` · Dunkelblau `#111827` |
 
 **Was der Name bedeutet:** „Loot“ ist in Videospielen die Beute, also die Belohnung, die man findet. „Lager“ steht für unseren Shop, in dem alles bereitliegt. **LootLager ist das Lager voller Beute für dein Gaming-Setup.** Das doppelte L macht den Namen leicht merkbar.
@@ -72,15 +74,15 @@ Die Lehrkraft hat gesagt:
 | 2 | Firmenname | Name inkl. Rechtsformzusatz, geprüft | Nick und Luca | ✅ (fiktiv: Name ist frei) |
 | 3 | Rechtsform | Entscheidung + Begründung | Nick und Luca | ✅ |
 | 4 | Logo (KI) | Logo als PNG, Tool + Prompt notiert | Nick und Luca | ✅ |
-| 5 | Anbietersuche | Vergleich von 3–4 Shopsystemen + Entscheidung | Nick und Luca | ✅ Shopify |
-| 6 | Homepage-Entwurf | Skizze der Startseite | Nick und Luca | ✅ |
+| 5 | Anbietersuche | Vergleich von 4 Anbietern + Entscheidung | Nick und Luca | ✅ Netlify |
+| 6 | Homepage | fertiger Shop im Ordner `shop/` | Nick und Luca | ✅ gebaut, Upload zu Netlify offen |
 | 7 | Präsentation | Foliensatz + ein Probelauf | Nick und Luca | ◐ Folien fertig, Probelauf offen |
 
 **Reihenfolge:** 1 → 2 und 3 parallel → 4 → 5 → 6 → 7
 (Das Logo kommt erst nach dem Namen, weil der Name meist im Logo steht.)
 
 **Phase 1 (bis nächste Stunde 13:45 Uhr):** Pakete 1–4 → Folie 1
-**Phase 2 (danach):** Pakete 5–7 → Webshop-Anbieter auswählen, restliche Folien
+**Phase 2 (danach):** Pakete 5–7 → Anbieter auswählen, Homepage bauen, restliche Folien
 
 ---
 
@@ -97,7 +99,7 @@ Leitfragen: *Was verkaufen wir? An wen? Warum bei uns und nicht bei Amazon?*
 
 Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2.
 
-**Unsere Entscheidung:** Gaming-Zubehör mit Custom Designs. Gamer und Streamer (16–30) bekommen bei uns Zubehör mit ihrem eigenen Design, selbst hochgeladen oder von uns gestaltet.
+**Unsere Entscheidung:** Gaming-Zubehör mit Custom Designs. Gamer und Streamer (16–30) bekommen bei uns Zubehör mit ihrem eigenen Design, selbst hochgeladen oder von uns gestaltet. Unsere 5 Produkte mit Preisen stehen in Abschnitt 6.
 
 ---
 
@@ -112,11 +114,11 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 **Prüf-Checkliste:**
 - [x] Handelsregister – gibt es die Firma schon? → fiktiv: nein. Echt prüfen würde man auf [handelsregister.de](https://www.handelsregister.de), „Normale Suche“, Firma: `LootLager`
 - [x] Marken – ist der Name geschützt? → fiktiv: nein. Echt prüfen würde man im [DPMAregister](https://register.dpma.de/DPMAregister/marke/basis) und in [EUIPO eSearch](https://euipo.europa.eu/eSearch/)
-- [x] Domain – ist `lootlager.de` frei? → fiktiv: ja. Echt prüfen würde man bei der [DENIC](https://www.denic.de/service/whois-service)
+- [x] Domain – ist `lootlager.de` frei? → **in echt nein**: Die Abfrage bei der [DENIC](https://www.denic.de/service/whois-service) zeigt am 13.10.2026 „vergeben“. Für unser fiktives Projekt tun wir so, als wäre sie frei. Bei Netlify war `lootlager.netlify.app` am selben Tag noch frei
 - [x] Social Media – sind Instagram- und TikTok-Namen frei? → fiktiv: ja (`@lootlager`)
 - [x] Kurze Websuche nach dem Namen (06.10.2026: kein Shop „LootLager“ gefunden)
 
-> **Fiktive Gründung:** Unser Shop ist ein Projekt für das Fach E-Commerce. Deshalb prüfen wir die Register nicht echt, sondern **nehmen an, dass Firmenname, Marke, Domain und Social-Media-Namen frei sind**. In der Präsentation erklären wir trotzdem, wo man das prüfen würde (siehe Spickzettel unten).
+> **Fiktive Gründung:** Unser Shop ist ein Projekt für das Fach E-Commerce. Deshalb prüfen wir die Register nicht echt, sondern **nehmen an, dass Firmenname, Marke und Social-Media-Namen frei sind**. Nur die Domain haben wir echt nachgeschaut: `lootlager.de` ist schon vergeben. In der Präsentation erklären wir trotzdem, wo man das prüfen würde (siehe Spickzettel unten).
 
 **Vollständiger Firmenname:** `LootLager UG (haftungsbeschränkt)`
 
@@ -147,7 +149,10 @@ Die Namen sind nur Startpunkte. Ob es sie schon gibt, prüfen wir in Abschnitt 2
 > Die Truhe ist eine Loot-Kiste wie in Videospielen: Wer bei uns bestellt, bekommt seine Belohnung. Violett und Türkis sind typische Gaming-Farben. Das Logo haben wir mit ChatGPT erstellt.
 
 **„Habt ihr geprüft, ob es den Namen schon gibt?“**
-> Unsere Gründung ist fiktiv, deshalb nehmen wir an, dass der Name frei ist. Eine kurze Websuche hat keinen Shop „LootLager“ gefunden. Bei einer echten Gründung würden wir im Handelsregister nach der Firma suchen, beim DPMA nach der Marke und bei der DENIC nach der Domain lootlager.de.
+> Unsere Gründung ist fiktiv, deshalb nehmen wir an, dass der Name frei ist. Eine kurze Websuche hat keinen Shop „LootLager“ gefunden. Bei einer echten Gründung würden wir im Handelsregister nach der Firma suchen und beim DPMA nach der Marke.
+
+**„Was ist eure Domain? Ist die frei?“**
+> Unsere Domain ist lootlager.de, also genau unser Markenname. In echt ist sie schon vergeben, das zeigt die Abfrage bei der DENIC. Weil unsere Gründung fiktiv ist, tun wir so, als wäre sie frei. Online stellen können wir den Shop trotzdem, über die kostenlose Netlify-Adresse lootlager.netlify.app.
 
 ---
 
@@ -265,136 +270,202 @@ Klappt der transparente Hintergrund nicht, entfernt ihr ihn in PowerPoint: Bild 
 - [x] Ist es in kleiner Größe (z. B. als Browser-Tab-Icon) noch erkennbar? → Das Truhen-Symbol ist bei 32 px gut erkennbar, bei 16 px nur noch grob. Als Tab-Icon deshalb nur das Symbol verwenden, nicht das ganze Logo.
 - [x] Passt es zu Name und Zielgruppe? → Ja. Die Loot-Truhe greift den Namen auf, Violett und Türkis sind typische Gaming-Farben.
 
+### KI-Bilder für Shop und Präsentation ✅
+
+**Tool:** Gemini (Google), erstellt am 13.10.2026. Die Originale und **alle 8 Prompts** liegen in [`assets/ki-bilder/`](assets/ki-bilder/PROMPTS.md).
+
+| Bild | Wo wird es benutzt? |
+|---|---|
+| Truhe mit schwebenden Produkten | Shop: Banner oben auf der Startseite |
+| 5 Produktfotos (Mauspad, Controller-Skin, Keycaps, LED-Schild, Headset-Halter) | Shop: Produktkarten und Warenkorb · Präsentation: Folie 2 |
+| Gaming-Schreibtisch bei Nacht | Shop: Bild über „Warum LootLager?“ · Präsentation: Folie 8 |
+| Heller Hintergrund mit Gaming-Formen | Präsentation: Folie 1 |
+
+**So sind die Prompts aufgebaut:** Format (z. B. 4:3), Motiv, Stil, Hintergrund, und am Ende, was nicht ins Bild soll (kein Text, keine Markenlogos, keine Menschen). In jedem Prompt stehen unsere Farben Violett `#7C3AED` und Türkis `#22D3EE`, damit alles zum Logo passt.
+
+**„Woher sind die Bilder?“**
+> Die haben wir mit Gemini erstellt, einer KI von Google. Das Logo ist von ChatGPT. Die Produkte gibt es noch nicht in echt, die Bilder zeigen, wie sie aussehen sollen. Die Prompts haben wir notiert.
+
 ---
 
-## 5. Anbietersuche – Shopsystem für unsere Homepage
+## 5. Anbietersuche – womit bauen wir unsere Homepage?
+
+> **Entscheidung der Gruppe (13.10.2026):** Wir nutzen **Netlify**. Die Seite bauen wir mit **Claude Code**. Die frühere Entscheidung für Shopify gilt nicht mehr.
 
 ### Kandidaten
 
 | Anbieter | Typ | Sitz | Stärken | Schwächen |
 |---|---|---|---|---|
-| Shopify | Mietshop (SaaS) | Kanada | sehr einfach, viele Designs & Apps, schnell startklar | monatliche Kosten, ggf. Transaktionsgebühren, Daten teils außerhalb der EU |
-| Shopware 6 | Open Source / Cloud | Deutschland | auf den deutschen Markt und deutsches Recht ausgelegt, skalierbar | komplexer, beim Selbst-Hosting ist Technikwissen nötig |
-| WooCommerce | Plugin für WordPress | USA (Automattic) | Grundversion kostenlos, sehr flexibel, Plugins für deutsches Recht | Hosting, Updates und Sicherheit müssen wir selbst übernehmen |
-| Wix | Homepage-Baukasten mit Shop | Israel | Drag & Drop, sehr anfängerfreundlich | für große Shops wenig flexibel, späterer Wechsel aufwendig |
-| Jimdo | Homepage-Baukasten mit Shop | Deutschland (Hamburg) | einfach, deutschsprachig, günstig | eingeschränkter Funktionsumfang |
-| JTL-Shop | Shopsoftware | Deutschland | stark in Kombination mit der Warenwirtschaft JTL-Wawi | eher für wachsende Händler |
+| **Netlify** | Hosting für selbst gebaute Seiten | USA | Free-Tarif kostenlos, eigene Domain und HTTPS inklusive, in Sekunden online | kein Shopsystem: Warenkorb und Zahlung muss man selbst bauen, Server in den USA |
+| Claude Code | KI-Programmierer (von Anthropic) | USA | baut die Seite nach unserer Beschreibung, jedes Design ist möglich | stellt die Seite nicht ins Internet, kostet ein Abo |
+| Shopify | Mietshop (SaaS) | Kanada | alles fertig: Warenkorb, Zahlung, viele Apps | monatliche Kosten, beim Design an Vorlagen gebunden, Daten teils außerhalb der EU |
+| Jimdo | Homepage-Baukasten mit Shop | Deutschland (Hamburg) | einfach, deutschsprachig, gut beim Datenschutz | wenig Freiheit beim Design, eingeschränkte Shop-Funktionen |
 
-### Preise (Stand 07.10.2026)
+Früher auch angeschaut, aber nicht mehr in der Analyse: WooCommerce und Shopware 6 (eigener Server nötig), Wix (ähnlich wie Jimdo, aber teurer) und JTL-Shop (erst mit Warenwirtschaft sinnvoll).
+
+### Preise (Stand 13.10.2026)
 
 | Anbieter | Tarif für uns | Preis pro Monat | Was noch dazukommt |
 |---|---|---|---|
-| Shopify | Basic | 25 € bei jährlicher Zahlung, 33 € bei monatlicher | 3 Tage gratis, dann 3 Monate für je 1 €. Ohne Shopify Payments 2 % Gebühr pro Verkauf |
-| Jimdo | Onlineshop Basic / Business | 18 € / 26 € | Business mit Produktvarianten und Rechtstexten |
-| WooCommerce | Grundversion kostenlos | ca. 30 € und mehr | Hosting, Germanized Pro (ca. 79 € im Jahr), Updates und Wartung selbst |
-| Shopware 6 | Community Edition kostenlos | ca. 30 € und mehr | Hosting und Technikwissen nötig. Bezahlversion „Rise“ ab ca. 600 € im Monat |
-| Wix | Core / Business | ca. 24–32 € / 35–50 € | je nach Laufzeit des Abos |
-| JTL-Shop | – | – | nicht weiter geprüft, weil eher für Händler mit JTL-Warenwirtschaft |
+| Netlify | Free | 0 € | 300 Credits im Monat inklusive, eine Veröffentlichung kostet 15 Credits. Größere Tarife: Personal 9 $, Pro 20 $ |
+| Claude Code | im Abo Claude Pro enthalten | ca. 21 € (18 € netto) | brauchen wir nur, solange wir an der Seite bauen |
+| Shopify | Basic | ca. 25 € bei jährlicher Zahlung, ca. 33 € bei monatlicher | Apps kosten teils extra. Ohne Shopify Payments 2 % Gebühr pro Verkauf |
+| Jimdo | Onlineshop Basic | ab 18 € (je nach Laufzeit 15–22 €) | größere Tarife mit mehr Shop-Funktionen kosten mehr |
 
-> **Woher die Preise kommen:** aus Preisvergleichen im Internet ([qualimero.com](https://qualimero.com/blog/shopify-kosten), [l-iz.de](https://www.l-iz.de/vpn/erfahrungen/jimdo-preise-kosten/), [tooltester.com](https://www.tooltester.com/de/testberichte/woocommerce-test/kosten)), abgerufen am 07.10.2026. Für unsere fiktive Gründung reicht das. Bei einer echten Gründung würde man die Preise noch einmal direkt beim Anbieter nachschauen, weil sie sich oft ändern.
+> **Woher die Preise kommen:** Netlify direkt von [netlify.com/pricing](https://www.netlify.com/pricing/). Shopify, Jimdo und Claude aus Preisvergleichen im Internet ([qualimero.com](https://qualimero.com/blog/shopify-preise), [trusted.de](https://trusted.de/jimdo-online-shop-kosten), [eesel.ai](https://www.eesel.ai/de/blog/claude-pro-pricing)), abgerufen am 13.10.2026. Für unsere fiktive Gründung reicht das. Bei einer echten Gründung würde man alle Preise noch einmal direkt beim Anbieter nachschauen, weil sie sich oft ändern.
 
-**Vorauswahl:** In die Nutzwertanalyse kommen 4 Anbieter: Shopify, Jimdo, WooCommerce und Shopware. Wix fällt raus, weil es Jimdo stark ähnelt, aber teurer ist. JTL-Shop fällt raus, weil er erst mit einer Warenwirtschaft sinnvoll ist.
+### Recherchefragen – Antworten für Netlify
 
-### Recherchefragen – Antworten für Shopify
 | Frage | Antwort |
 |---|---|
-| Was kostet es pro Monat? Gibt es Einrichtungs- oder Transaktionsgebühren? | Basic 25 € im Monat (jährlich) oder 33 € (monatlich). Keine Einrichtungsgebühr. Mit Shopify Payments keine zusätzliche Transaktionsgebühr, sonst 2 % pro Verkauf |
-| Gibt es eine kostenlose Testphase? | Ja, 3 Tage gratis, danach 3 Monate für je 1 € |
-| Welche Zahlungsarten sind möglich? | PayPal, Klarna, Kreditkarte, Apple Pay, Google Pay |
-| Gibt es Hilfe bei den Rechtstexten? | Nur Vorlagen. Für deutsche Rechtstexte nehmen wir ein Abo beim Händlerbund oder bei der IT-Recht Kanzlei (ca. 10–25 € im Monat) |
-| Können wir eine eigene Domain nutzen? Wo stehen die Server? | Eigene Domain ja. Shopify kommt aus Kanada, die Daten werden teils außerhalb der EU verarbeitet |
-| Wie gut sind Produktsuche und Filter? | Suche mit Vorschlägen und Filtern ist eingebaut, erweiterbar über Apps |
+| Was kostet es pro Monat? | Der Free-Tarif kostet 0 €. Es gibt keine Einrichtungsgebühr |
+| Gibt es eine Grenze? | Ja, 300 Credits im Monat. Sind sie aufgebraucht, pausiert die Seite laut Preisvergleichen bis zum nächsten Monat, oder man wechselt in einen größeren Tarif |
+| Können wir eine eigene Domain nutzen? | Ja, eine eigene Domain kann man kostenlos anschließen. HTTPS ist automatisch dabei. Ohne eigene Domain bekommt man eine Gratis-Adresse wie `lootlager.netlify.app` |
+| Wo stehen die Server? | Netlify ist ein Unternehmen aus den USA |
+| Welche Zahlungsarten sind möglich? | Keine, Netlify ist kein Shopsystem. Eine Zahlung müssten wir selbst einbauen, z. B. mit PayPal oder Stripe |
+| Gibt es Hilfe bei den Rechtstexten? | Nein. Dafür bräuchten wir ein Abo beim Händlerbund oder bei der IT-Recht Kanzlei (ca. 10–25 € im Monat) |
+| Wie kommt die Seite online? | Ordner `shop` bei Netlify hochladen oder das GitHub-Projekt verbinden (siehe Abschnitt 6) |
 
 ### Nutzwertanalyse
 
+Die Tabelle gibt es auch als Excel-Datei mit Formeln: [`praesentation/Nutzwertanalyse.xlsx`](praesentation/Nutzwertanalyse.xlsx). Auf Folie 5 ist sie als Excel-Tabelle zu sehen.
+
 Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewichtung (in Klammern).
 
-| Kriterium | Gewichtung | **Shopify** | Jimdo | WooCommerce | Shopware 6 |
+| Kriterium | Gewichtung | **Netlify** | Claude Code | Shopify | Jimdo |
 |---|---|---|---|---|---|
-| Kosten (Start + monatlich) | 25 % | 7 (1,75) | 8 (2,00) | 6 (1,50) | 4 (1,00) |
-| Bedienbarkeit für Einsteiger | 20 % | 9 (1,80) | 9 (1,80) | 4 (0,80) | 4 (0,80) |
-| Funktionen (Custom Designs, Zahlung, Suche) | 20 % | 9 (1,80) | 4 (0,80) | 8 (1,60) | 8 (1,60) |
-| Rechtssicherheit / DSGVO | 15 % | 6 (0,90) | 9 (1,35) | 8 (1,20) | 9 (1,35) |
-| Design / Vorlagen | 10 % | 9 (0,90) | 6 (0,60) | 7 (0,70) | 6 (0,60) |
-| Support auf Deutsch | 10 % | 7 (0,70) | 9 (0,90) | 4 (0,40) | 7 (0,70) |
-| **Summe** | **100 %** | **7,85** | 7,45 | 6,20 | 6,05 |
+| Kosten (Start + monatlich) | 25 % | 10 (2,50) | 6 (1,50) | 5 (1,25) | 6 (1,50) |
+| Bedienbarkeit für Einsteiger | 15 % | 6 (0,90) | 6 (0,90) | 9 (1,35) | 9 (1,35) |
+| Freiheit beim Design | 20 % | 9 (1,80) | 10 (2,00) | 7 (1,40) | 5 (1,00) |
+| Warenkorb und Zahlung | 15 % | 4 (0,60) | 4 (0,60) | 10 (1,50) | 6 (0,90) |
+| Domain und Hosting inklusive | 15 % | 9 (1,35) | 1 (0,15) | 9 (1,35) | 8 (1,20) |
+| Datenschutz (DSGVO) | 10 % | 5 (0,50) | 5 (0,50) | 6 (0,60) | 9 (0,90) |
+| **Summe** | **100 %** | **7,65** | 5,65 | 7,45 | 6,85 |
 
-**Begründung der Punkte:**
-- **Kosten:** Jimdo ist am günstigsten. Shopify ist etwas teurer, der Start kostet aber nur 3 €. WooCommerce und Shopware sind kostenlos, dafür kommen Hosting, Erweiterungen und Wartung dazu.
-- **Bedienbarkeit:** Shopify und Jimdo gehen ohne Technikwissen. Für WooCommerce und Shopware braucht man einen eigenen Server.
-- **Funktionen:** Für uns ist der Motiv-Upload am wichtigsten. Bei Shopify gibt es dafür fertige Apps, auch für Print-on-Demand (z. B. Printful, Gelato). Bei Jimdo geht das nicht.
-- **Rechtssicherheit / DSGVO:** Jimdo und Shopware sind deutsche Anbieter mit Servern in der EU. Bei Shopify werden Daten teils außerhalb der EU verarbeitet.
-- **Design:** Shopify hat die meisten modernen Vorlagen.
-- **Support:** Jimdo hat den besten deutschen Support. Bei WooCommerce gibt es nur die Community.
+**Begründung der Punkte** (die Punkte haben wir selbst vergeben):
+- **Kosten:** Netlify ist im Free-Tarif kostenlos. Claude Code und Jimdo kosten etwa 20 € im Monat, Shopify ab 25 € und dazu oft Apps.
+- **Bedienbarkeit:** Shopify und Jimdo gehen ohne Technikwissen. Bei Netlify und Claude Code muss man verstehen, was ein Ordner mit HTML-Dateien ist.
+- **Freiheit beim Design:** Mit eigenem Code geht alles. Bei Shopify ist man an Vorlagen und Apps gebunden, bei Jimdo noch stärker.
+- **Warenkorb und Zahlung:** Bei Shopify ist alles fertig. Bei Netlify und Claude Code muss man Warenkorb und Zahlung selbst bauen.
+- **Domain und Hosting:** Netlify und Shopify bringen Adresse, HTTPS und Server mit. Claude Code stellt keine Seite ins Internet, deshalb nur 1 Punkt.
+- **Datenschutz:** Jimdo ist ein deutscher Anbieter. Netlify und Claude Code kommen aus den USA, Shopify aus Kanada.
 
-**Unsere Entscheidung:** **Shopify (Basic-Tarif)**, weil wir dort unser wichtigstes Merkmal, die Custom Designs, per App am einfachsten umsetzen können, ohne eigene Technik. Jimdo wäre günstiger und beim Datenschutz besser, kann aber keinen Motiv-Upload.
+**Unsere Entscheidung:** **Netlify (Free-Tarif)**, weil es nichts kostet und wir beim Design frei sind. Das passt zu unserer Idee mit den Custom Designs. Die Seite bauen wir mit **Claude Code**, denn Claude Code allein stellt keine Seite ins Internet. Shopify liegt knapp dahinter und wäre die bessere Wahl, sobald wir echte Bestellungen und Zahlungen brauchen.
 
-**Laufende Kosten mit Shopify (geschätzt):**
+**Laufende Kosten mit Netlify (geschätzt):**
 
 | Posten | pro Monat |
 |---|---|
-| Shopify Basic (jährliche Zahlung) | 25 € |
-| Rechtstexte-Abo (Händlerbund oder IT-Recht Kanzlei) | ca. 10–25 € |
+| Netlify Free | 0 € |
 | Domain `lootlager.de` | ca. 1–2 € |
-| Print-on-Demand-App (Printful oder Gelato) | Grundversion kostenlos, wir zahlen pro gedrucktem Produkt |
-| **Summe** | **ca. 36–52 €** |
+| Rechtstexte-Abo (nur für einen echten Shop) | ca. 10–25 € |
+| **Summe** | **ca. 1–27 €** |
+| Claude Pro für Claude Code (nur solange wir bauen) | ca. 21 € |
 
 ### Spickzettel: Fragen der Lehrkraft zum Anbieter
 
-**„Warum habt ihr Shopify gewählt?“**
-> Bei uns laden Kunden ihr eigenes Motiv hoch. Dafür gibt es bei Shopify fertige Apps, und mit Print-on-Demand wird das Produkt automatisch gedruckt und verschickt. Außerdem ist Shopify einfach zu bedienen und wir brauchen keinen eigenen Server.
+**„Warum habt ihr Netlify gewählt?“**
+> Netlify kostet im Free-Tarif nichts, und eine eigene Domain mit HTTPS ist dabei. Weil wir die Seite selbst bauen, sieht sie genau so aus, wie wir wollen. Das passt zu unseren Custom Designs.
 
 **„Wie seid ihr vorgegangen?“**
-> Wir haben sechs Anbieter angeschaut und vier davon mit einer Nutzwertanalyse verglichen. Jedes Kriterium hat eine Gewichtung, die Kosten zählen am meisten. Shopify hat mit 7,85 Punkten gewonnen, knapp vor Jimdo mit 7,45.
+> Wir haben vier Möglichkeiten mit einer Nutzwertanalyse in Excel verglichen. Jedes Kriterium hat eine Gewichtung, die Kosten zählen am meisten. Netlify hat mit 7,65 Punkten gewonnen, knapp vor Shopify mit 7,45.
 
-**„Warum nicht Jimdo? Das ist doch billiger und aus Deutschland.“**
-> Stimmt, Jimdo ist günstiger und beim Datenschutz besser. Aber mit Jimdo können wir keinen Motiv-Upload umsetzen, und das ist unser wichtigstes Merkmal.
+**„Wie rechnet die Excel-Tabelle?“**
+> Jeder Anbieter bekommt pro Kriterium 1 bis 10 Punkte. Die Formel SUMMENPRODUKT multipliziert die Punkte mit der Gewichtung und zählt alles zusammen.
 
-**„WooCommerce und Shopware sind doch kostenlos.“**
-> Nur die Software. Wir bräuchten einen eigenen Server, müssten Updates und Sicherheit selbst machen und Erweiterungen für deutsches Recht kaufen. Das ist für Einsteiger zu aufwendig und am Ende nicht billiger.
+**„Claude Code ist doch kein Anbieter für Homepages?“**
+> Stimmt. Claude Code ist eine KI, die programmiert. Sie baut die Seite, stellt sie aber nicht ins Internet. Deshalb hat sie bei „Domain und Hosting“ nur 1 Punkt. Wir kombinieren beides: gebaut mit Claude Code, online bei Netlify.
 
-**„Hat Shopify Nachteile?“**
-> Ja. Die Daten werden teils außerhalb der EU verarbeitet. Ohne Shopify Payments zahlen wir 2 % Gebühr pro Verkauf, und manche Apps kosten extra.
+**„Warum nicht Shopify? Da ist doch alles fertig.“**
+> Stimmt, bei Warenkorb und Zahlung ist Shopify am besten. Aber es kostet ab 25 € im Monat, und beim Design sind wir an Vorlagen gebunden. Für einen echten Shop mit vielen Bestellungen wäre Shopify unsere zweite Wahl.
+
+**„Warum nicht Jimdo? Das ist doch aus Deutschland.“**
+> Jimdo ist einfach und gut beim Datenschutz. Aber beim Design und bei den Shop-Funktionen ist es eingeschränkt.
+
+**„Hat Netlify Nachteile?“**
+> Ja. Netlify ist kein Shopsystem. Den Warenkorb haben wir selbst gebaut, eine echte Zahlung fehlt noch. Die Server stehen in den USA, und Rechtstexte bekommen wir nicht mitgeliefert.
 
 **„Was kostet euch der Shop?“**
-> Die ersten 3 Monate fast nichts, nur 1 € im Monat. Danach 25 € im Monat für Shopify und dazu Rechtstexte und Domain, zusammen ungefähr 36 bis 52 € im Monat.
+> Netlify kostet 0 €. Dazu käme die Domain für etwa 1 bis 2 € im Monat. Für einen echten Shop bräuchten wir noch Rechtstexte für 10 bis 25 € im Monat.
 
 ---
 
-## 6. Homepage-Entwurf (HP)
+## 6. Homepage (HP) – unser Shop
 
-Unser Entwurf für `lootlager.de` (als Grafik auf Folie 6):
+Der Shop ist gebaut und liegt im Ordner [`shop/`](shop/). Zum Ansehen `shop/index.html` doppelklicken.
+
+| Datei | Inhalt |
+|---|---|
+| `shop/index.html` | Startseite mit allen Produkten |
+| `shop/rechtliches.html` | Impressum, Datenschutz, AGB, Widerruf, Versand und Zahlung |
+| `shop/css/style.css` | Aussehen (Farben aus dem Logo) |
+| `shop/js/shop.js` | Suche, Warenkorb und Design-Vorschau |
+| `shop/img/` | Logo und Produktbilder |
+| `netlify.toml` | sagt Netlify, dass der Ordner `shop` veröffentlicht wird |
+
+### Das muss laut Lehrkraft drauf sein
+
+- [x] **Logo** → oben links und im Footer
+- [x] **Name** → LootLager im Logo, Firma „LootLager UG (haftungsbeschränkt)“ im Footer und im Impressum
+- [x] **Domain** → `lootlager.de` im Abschnitt „Warum LootLager?“ und im Footer
+- [x] **5 Produkte** → Abschnitt „Unsere Produkte“
+
+### Unsere 5 Produkte
+
+| Produkt | Beschreibung | Preis (ausgedacht) |
+|---|---|---|
+| XXL-Mauspad | 900 × 400 mm, mit eigenem Motiv | 24,99 € |
+| Controller-Skin | für PS5, Xbox und Switch | 14,99 € |
+| Custom Keycaps (4er-Set) | mit Gamertag oder Logo | 19,99 € |
+| LED-Schild | Neon-Schriftzug mit deinem Namen | 49,99 € |
+| Headset-Halter | mit graviertem Gamertag | 29,99 € |
+
+Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos (siehe Abschnitt 4). Alle Preise sind inklusive Mehrwertsteuer gemeint. Versand: 4,90 €, ab 50 € kostenlos.
+
+### Aufbau der Startseite
 
 ```text
 ┌───────────────────────────────────────────────────────────────────────┐
-│ [LootLager-Logo]  [ Motiv oder Produkt suchen ... ]  Konto  Warenkorb │  Header
+│ Schulprojekt · fiktiver Shop, keine echten Bestellungen               │  Hinweis
 ├───────────────────────────────────────────────────────────────────────┤
-│ Mauspads | Controller-Skins | Keycaps | LED-Schilder | Eigenes Design │  Navigation
+│ [LootLager-Logo]  [ Motiv oder Produkt suchen ... ]  Menü  Warenkorb  │  Header
 ├───────────────────────────────────────────────────────────────────────┤
 │   LEVEL UP DEIN SETUP.                                   [Truhe]      │  Banner
 │   Lade dein Motiv hoch, wir drucken es auf dein Zubehör.              │  (dunkel)
-│   [ Jetzt gestalten ]                                                 │
+│   [ Jetzt gestalten ]  [ Produkte ansehen ]                           │
 ├───────────────────────────────────────────────────────────────────────┤
-│  [XXL-Mauspad]  [Controller-Skin]  [Custom Keycaps]  [LED-Schild]     │  Bestseller
+│  [Mauspad] [Controller-Skin] [Keycaps] [LED-Schild] [Headset-Halter]  │  5 Produkte
 ├───────────────────────────────────────────────────────────────────────┤
-│  Versand aus Deutschland · Design-Vorschau · PayPal, Klarna, Karte    │  Vorteile
+│  Eigenes Design: Produkt wählen · Motiv hochladen · Vorschau          │  Gestalten
+├───────────────────────────────────────────────────────────────────────┤
+│  So funktioniert’s (3 Schritte) · Warum LootLager? (Firma, Domain)    │  Infos
 ├───────────────────────────────────────────────────────────────────────┤
 │   Impressum · Datenschutz · AGB · Widerruf · Versand & Zahlung        │  Footer
 └───────────────────────────────────────────────────────────────────────┘
 ```
 
-**So funktioniert die Produktseite:**
-1. Kunde wählt ein Produkt, z. B. ein XXL-Mauspad.
-2. Kunde lädt sein Motiv hoch oder wählt „Design von LootLager“.
-3. Eine Vorschau zeigt, wie das fertige Produkt aussieht.
-4. Nach dem Kauf geht der Auftrag automatisch an die Print-on-Demand-App, die druckt und verschickt.
+**Das kann die Seite:**
+- **Suche:** Beim Tippen erscheinen Vorschläge, und es bleiben nur die passenden Produkte stehen.
+- **Warenkorb:** Produkte hineinlegen, Menge ändern, Summe mit Versand sehen. Er wird nur im Browser gespeichert.
+- **Eigenes Design:** Produkt wählen, Motiv hochladen, Gamertag eintippen. Die Vorschau zeigt sofort, wie es aussieht. Das Bild bleibt auf dem eigenen Gerät.
+- **Kasse:** Es kommt nur ein Hinweis, dass der Shop ein Schulprojekt ist. Echte Bestellungen gibt es nicht.
+- Die Seite passt sich an Handy, Tablet und PC an und kommt ohne Cookies und Tracking aus.
 
-**Die Suche auf der Startseite:**
-- Die Suchleiste steht gut sichtbar im Header.
-- Beim Tippen erscheinen Vorschläge (Autovervollständigung).
-- Die Ergebnisseite hat Filter (Produktart, Preis, Plattform wie PS5, Xbox und Switch) und eine Sortierung (Preis, Beliebtheit).
+### So kommt die Seite zu Netlify
 
-**Pflichtseiten im Footer:** Impressum (§ 5 DDG), Datenschutzerklärung (DSGVO), AGB, Widerrufsbelehrung, Versand- und Zahlungsinformationen
+**Variante A – Ordner hochladen (am schnellsten):**
+1. Bei [netlify.com](https://www.netlify.com) kostenlos anmelden.
+2. [app.netlify.com/drop](https://app.netlify.com/drop) öffnen und den Ordner `shop` hineinziehen.
+3. Fertig: Die Seite ist sofort unter einer zufälligen Adresse online.
+
+**Variante B – GitHub verbinden (aktualisiert sich von selbst):**
+1. Die Änderungen zu GitHub hochladen (commit und push).
+2. Bei Netlify ein neues Projekt anlegen („Import an existing project“), GitHub wählen und `EcomShopRepo` aussuchen.
+3. Nichts einstellen, die Datei `netlify.toml` regelt alles. Auf „Deploy“ klicken.
+
+**Danach die Adresse ändern:** In den Einstellungen des Projekts den Namen auf `lootlager` setzen. Dann ist der Shop unter `lootlager.netlify.app` erreichbar. Am 13.10.2026 war dieser Name noch frei. Ist er inzwischen vergeben, einen ähnlichen nehmen und auf Folie 6 anpassen.
+
+**Pflichtseiten im Footer:** Impressum (§ 5 DDG), Datenschutzerklärung (DSGVO), AGB, Widerrufsbelehrung, Versand- und Zahlungsinformationen. Bei uns stehen sie auf `rechtliches.html`. Es sind Beispieltexte für das Schulprojekt, keine geprüften Rechtstexte.
 
 **Warum kein „30 Tage Rückgabe“?** Unsere Produkte werden nach Kundenwunsch bedruckt. Für solche individuellen Produkte gibt es kein Widerrufsrecht (§ 312g Abs. 2 Nr. 1 BGB). Darauf weisen wir in der Widerrufsbelehrung hin. Damit Kunden trotzdem sicher sind, zeigen wir vor dem Kauf eine Design-Vorschau.
 
@@ -402,17 +473,18 @@ Unser Entwurf für `lootlager.de` (als Grafik auf Folie 6):
 
 ## 7. Präsentation – Folienplan
 
-> **Fertig:** Alle 7 Folien in [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx). Die Sprechtexte und Antworten auf Nachfragen stehen in den **Notizen** unter jeder Folie. Folie 1 war die Pflicht für die erste Abgabe. Die Folien 5–7 sind für Phase 2 (Anbieter, Startseite, Fazit).
+> **Fertig:** Alle 8 Folien in [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx). Die Sprechtexte und Antworten auf Nachfragen stehen in den **Notizen** unter jeder Folie. Folie 1 war die Pflicht für die erste Abgabe. Die Folien 5–7 sind für Phase 2 (Anbieter, Startseite, Fazit). Die Excel-Tabelle von Folie 5 liegt als [`praesentation/Nutzwertanalyse.xlsx`](praesentation/Nutzwertanalyse.xlsx) daneben.
 
 | Folie | Inhalt |
 |---|---|
 | **1** | **Firmenlogo, Firmenname, Rechtsform** (Pflicht laut Lehrkraft) + Markenname, Slogan und Gruppenmitglieder |
-| 2 | Geschäftsidee: Sortiment, Zielgruppe, was uns besonders macht |
-| 3 | Name & Logo: Bedeutung des Namens, Namensprüfung, KI-Tool + Prompt |
+| 2 | Geschäftsidee: unsere 5 Produkte mit Bildern und Preisen, Zielgruppe, so funktioniert’s |
+| 3 | Name, Logo und Domain: Bedeutung des Namens, Firma, Marke, `lootlager.de` |
 | 4 | Rechtsform: Entscheidung, Vor- und Nachteile, Alternative |
-| 5 | Anbietersuche: Nutzwertanalyse mit Shopify, Jimdo, WooCommerce und Shopware |
-| 6 | Entscheidung für Shopify (Gründe + Nachteile) + Entwurf der Startseite |
-| 7 | Fazit (das steht fest), nächste Schritte bis zum Shop-Start + Quellen |
+| 5 | Anbietersuche: Nutzwertanalyse als Excel-Tabelle mit Netlify, Claude Code, Shopify und Jimdo |
+| 6 | Entscheidung für Netlify (Gründe + Nachteile) + Bild unserer Startseite mit den 5 Produkten |
+| 7 | Fazit (das steht fest, mit Domain und Netlify), nächste Schritte + Quellen |
+| 8 | Abschluss: „Vielen Dank! Habt ihr noch Fragen?“ mit Bild von einem Setup |
 
 ### Folie 1 – Aufbau
 
@@ -478,13 +550,15 @@ Die Lehrkraft lässt bei Folie 1 irgendein Gruppenmitglied vorstellen. Deshalb m
 - [x] Logo → [`assets/logo-lootlager.png`](assets/logo-lootlager.png)
 
 **Danach:**
-- [x] Webshop-Anbieter (Shopsystem) → **Shopify**, Basic-Tarif (Abschnitt 5)
-- [x] Homepage-Entwurf → Abschnitt 6 und Folie 6
+- [x] Anbieter → **Netlify**, Free-Tarif, gebaut mit Claude Code (Abschnitt 5)
+- [x] Homepage → gebaut im Ordner `shop/`, zu sehen auf Folie 6 (Abschnitt 6)
+- [x] Sortiment → 5 Produkte mit Preisen (Abschnitt 6)
 - [x] Rollen → Vorschlag in Abschnitt 8
-- [x] Namensprüfung → fiktiv: Name, Marke, Domain und Social-Media-Namen sind frei (Abschnitt 2)
-- [x] Preise → Preisvergleiche vom 07.10.2026 reichen für die fiktive Gründung (Abschnitt 5)
+- [x] Namensprüfung → fiktiv: Name, Marke und Social-Media-Namen sind frei. Die Domain `lootlager.de` ist in echt vergeben (Abschnitt 2)
+- [x] Preise → Stand 13.10.2026 (Abschnitt 5)
 
 **Noch offen (müsst ihr selbst machen):**
+- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Abschnitt 6)
 - [ ] Gruppennummer 4 noch einmal prüfen
 - [ ] Rollen und Aufteilung der Folien bestätigen (Abschnitt 8)
 - [ ] Spickzettel lernen (Abschnitte 2, 3 und 5) und Probelauf mit Stoppuhr
