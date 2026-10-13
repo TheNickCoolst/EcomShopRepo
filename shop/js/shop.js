@@ -1,4 +1,4 @@
-// LootLager – Suche, Warenkorb und Design-Vorschau. Alles läuft nur im Browser.
+// LootLager – Menü, Suche, Warenkorb, Kasse und Design-Vorschau. Alles läuft nur im Browser.
 
 const VERSAND = 4.9;
 const VERSANDFREI_AB = 50;
@@ -21,6 +21,25 @@ const produkte = new Map(
     },
   ]),
 );
+
+/* ---------- Menü (kleine Bildschirme) ---------- */
+
+const menueKnopf = $("#menue-knopf");
+const hauptnav = $("#hauptnav");
+
+function menueSchalten(offen) {
+  hauptnav.classList.toggle("ist-offen", offen);
+  menueKnopf.setAttribute("aria-expanded", String(offen));
+}
+
+menueKnopf.hidden = false; // ohne JavaScript bleibt der Knopf versteckt
+menueKnopf.addEventListener("click", () => menueSchalten(menueKnopf.getAttribute("aria-expanded") !== "true"));
+hauptnav.addEventListener("click", (ereignis) => {
+  if (ereignis.target.closest("a")) menueSchalten(false);
+});
+document.addEventListener("keydown", (ereignis) => {
+  if (ereignis.key === "Escape") menueSchalten(false);
+});
 
 /* ---------- Suche ---------- */
 
@@ -92,6 +111,11 @@ function mengeAendern(index, schritt) {
   eintraege[index].menge += schritt;
   if (eintraege[index].menge < 1) eintraege.splice(index, 1);
   korbAktualisieren();
+
+  // Die Liste wird neu aufgebaut. Der Fokus soll trotzdem auf dem gleichen Knopf bleiben.
+  const zeile = korbListe.children[Math.min(index, eintraege.length - 1)];
+  const knopf = zeile?.querySelector(schritt > 0 ? ".menge button:last-child" : ".menge button:first-child");
+  (knopf ?? $("#korb-schliessen")).focus();
 }
 
 function melden(text) {
@@ -106,6 +130,12 @@ function element(tag, klasse, text) {
   if (klasse) neu.className = klasse;
   if (text !== undefined) neu.textContent = text;
   return neu;
+}
+
+function summen() {
+  const waren = eintraege.reduce((summe, e) => summe + produkte.get(e.id).preis * e.menge, 0);
+  const versand = waren >= VERSANDFREI_AB ? 0 : VERSAND;
+  return { waren, versand, gesamt: waren + versand };
 }
 
 function korbAktualisieren() {
@@ -147,15 +177,13 @@ function korbAktualisieren() {
     }),
   );
 
-  const waren = eintraege.reduce((summe, e) => summe + produkte.get(e.id).preis * e.menge, 0);
-  const versand = waren >= VERSANDFREI_AB ? 0 : VERSAND;
+  const { waren, versand, gesamt } = summen();
   $("#korb-leer").hidden = anzahl > 0;
   $("#korb-summe").hidden = anzahl === 0;
   $("#summe-waren").textContent = euro.format(waren);
   $("#summe-versand").textContent = versand ? euro.format(versand) : "kostenlos";
   $("#versand-hinweis").textContent = versand ? `(ab ${euro.format(VERSANDFREI_AB)} kostenlos)` : "";
-  $("#summe-gesamt").textContent = euro.format(waren + versand);
-  if (anzahl === 0) $("#kasse-hinweis").hidden = true;
+  $("#summe-gesamt").textContent = euro.format(gesamt);
 }
 
 $("#korb-oeffnen").addEventListener("click", () => korb.showModal());
@@ -163,14 +191,44 @@ $("#korb-schliessen").addEventListener("click", () => korb.close());
 korb.addEventListener("click", (ereignis) => {
   if (ereignis.target === korb) korb.close(); // Klick auf den abgedunkelten Hintergrund
 });
-$("#zur-kasse").addEventListener("click", () => {
-  $("#kasse-hinweis").hidden = false;
-});
+$("#zur-kasse").addEventListener("click", kasseOeffnen);
 
 for (const karte of karten) {
   karte.querySelector("[data-in-korb]").addEventListener("click", () => hinzufuegen(karte.dataset.id));
   karte.querySelector("[data-gestalten]").addEventListener("click", () => produktWaehlen(karte.dataset.id));
 }
+
+/* ---------- Kasse (Testbestellung) ---------- */
+
+const kasse = $("#kasse");
+const kasseFormular = $("#kasse-formular");
+const kasseDanke = $("#kasse-danke");
+
+function kasseOeffnen() {
+  kasseFormular.hidden = false;
+  kasseDanke.hidden = true;
+  $("#kasse-gesamt").textContent = euro.format(summen().gesamt);
+  korb.close();
+  kasse.showModal();
+}
+
+$("#kasse-schliessen").addEventListener("click", () => kasse.close());
+$("#kasse-fertig").addEventListener("click", () => kasse.close());
+kasse.addEventListener("click", (ereignis) => {
+  if (ereignis.target === kasse) kasse.close();
+});
+
+// Nichts wird abgeschickt: Die Bestellung endet hier mit einem Hinweis.
+kasseFormular.addEventListener("submit", (ereignis) => {
+  ereignis.preventDefault();
+  $("#kasse-zahlung").textContent = new FormData(kasseFormular).get("zahlung");
+  kasseFormular.reset();
+  kasseFormular.hidden = true;
+  kasseDanke.hidden = false;
+  kasseDanke.focus();
+  eintraege = [];
+  korbAktualisieren();
+});
 
 /* ---------- Eigenes Design ---------- */
 

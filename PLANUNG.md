@@ -6,16 +6,23 @@
 >
 > **Die Gründung ist fiktiv** und nur für das Fach E-Commerce. Wir melden nichts an, prüfen keine Register und bezahlen nichts.
 
-## ⏰ Jetzt dran: Folie 1 – Abgabe nächste Stunde, 13:45 Uhr
+## Stand: alles gebaut, noch offen sind Upload und Probelauf
+
+Shop, Präsentation (8 Folien) und Nutzwertanalyse sind fertig. **Was ihr selbst noch machen müsst:**
+- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Anleitung in Abschnitt 6). **Erst dann funktioniert der QR-Code auf Folie 8.**
+- [ ] Präsentation einmal in PowerPoint öffnen und alle Folien durchklicken
+- [ ] Spickzettel lernen: Name (Abschnitt 2), Rechtsform (Abschnitt 3) und Anbieter (Abschnitt 5)
+- [ ] Probelauf mit Stoppuhr (die Sprechtexte dauern zusammen etwa 5 bis 6 Minuten, ohne Nachfragen und Live-Demo), danach Rollen in Abschnitt 8 bestätigen
+- [ ] Bei der Lehrkraft nachfragen, wie lange die Präsentation dauern darf
+- [ ] Gruppennummer 4 noch einmal prüfen
+
+### Phase 1 (erledigt): Folie 1
 
 Die Lehrkraft hat gesagt:
 - **Folie 1 ist der Anfang der Präsentation.** Darauf müssen stehen: **Firmenlogo, Firmenname, Rechtsform.**
 - Zusätzlich überlegen wir uns einen **Markennamen**. Er darf genauso heißen wie die Firma.
 - Die Lehrkraft lässt **irgendein Gruppenmitglied** vorstellen und fragt nach, z. B. **„Warum habt ihr diese Rechtsform gewählt?“**. Deshalb muss **jede und jeder** die Begründung können (siehe [Spickzettel](#spickzettel-fragen-der-lehrkraft-zur-rechtsform)).
-- Bis nächste Stunde 13:45 Uhr ist das unsere Aufgabe. In der nächsten Stunde gibt es noch **15 Minuten extra**, um alles zusammenzustellen.
-- **Danach** wählen wir den Webshop-Anbieter aus (Abschnitt 5).
 
-**To-do bis 13:45 Uhr:**
 - [x] Geschäftsidee festlegen (Abschnitt 1)
 - [x] Firmenname + Markenname festlegen (Abschnitt 2)
 - [x] Rechtsform festlegen (Abschnitt 3)
@@ -23,9 +30,9 @@ Die Lehrkraft hat gesagt:
 - [x] Logo mit ChatGPT erstellen → [`assets/logo-lootlager.png`](assets/logo-lootlager.png)
 - [x] Folie 1 bauen → [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx)
 - [x] Auf Folie 1 Gruppennummer und Namen eintragen → Gruppe 4, Nick und Luca (Gruppennummer bitte noch einmal prüfen)
-- [ ] Nick und Luca können beide die Spickzettel (Abschnitte 2 und 3)
 
-**Phase 2 (danach):**
+### Phase 2 (erledigt): Anbieter, Homepage, restliche Folien
+
 - [x] Anbieter auswählen → **Netlify**, gebaut mit Claude Code (Nutzwertanalyse in Abschnitt 5, Excel-Datei in `praesentation/`)
 - [x] Homepage bauen → Ordner [`shop/`](shop/) mit Logo, Name, Domain und 5 Produkten (Abschnitt 6)
 - [x] Folien 5–7 bauen (Anbietersuche als Excel-Tabelle, Entscheidung + Startseite, Fazit + Quellen)
@@ -35,11 +42,6 @@ Die Lehrkraft hat gesagt:
 - [x] Namensprüfung in Handelsregister, DPMA und Social Media → wir nehmen an, dass alles frei ist (Abschnitt 2)
 - [x] Domain → `lootlager.de` ist in echt schon vergeben, für das Projekt tun wir so, als wäre sie frei (Abschnitt 2)
 - [x] Preise gegenprüfen → Netlify direkt beim Anbieter, der Rest aus Preisvergleichen (Abschnitt 5)
-
-**Was ihr selbst noch machen müsst:**
-- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Anleitung in Abschnitt 6)
-- [ ] Spickzettel lernen: Name (Abschnitt 2), Rechtsform (Abschnitt 3) und Anbieter (Abschnitt 5)
-- [ ] Probelauf mit Stoppuhr, danach Rollen in Abschnitt 8 bestätigen
 
 ---
 
@@ -81,8 +83,8 @@ Die Lehrkraft hat gesagt:
 **Reihenfolge:** 1 → 2 und 3 parallel → 4 → 5 → 6 → 7
 (Das Logo kommt erst nach dem Namen, weil der Name meist im Logo steht.)
 
-**Phase 1 (bis nächste Stunde 13:45 Uhr):** Pakete 1–4 → Folie 1
-**Phase 2 (danach):** Pakete 5–7 → Anbieter auswählen, Homepage bauen, restliche Folien
+**Phase 1:** Pakete 1–4 → Folie 1
+**Phase 2:** Pakete 5–7 → Anbieter auswählen, Homepage bauen, restliche Folien
 
 ---
 
@@ -247,6 +249,8 @@ Kein Fotorealismus, kein 3D, kein Slogan, kein weiterer Text,
 keine Wasserzeichen. Schreibe den Namen genau so: LootLager
 ```
 
+> **Warum stehen im Prompt LED-Leisten und Controller-Ständer?** Das Logo war zuerst fertig, das Sortiment haben wir danach festgelegt (siehe Abschnitt 6). Der Prompt steht hier so, wie wir ihn wirklich benutzt haben. Das Logo zeigt nur die Truhe und kein Produkt, deshalb passt es weiterhin. Eine gekürzte Fassung steht auf Folie 3.
+
 ### Folge-Prompts (danach im selben Chat eingeben)
 
 | Wenn … | dann eingeben: |
@@ -296,7 +300,7 @@ Klappt der transparente Hintergrund nicht, entfernt ihr ihn in PowerPoint: Bild 
 
 | Anbieter | Typ | Sitz | Stärken | Schwächen |
 |---|---|---|---|---|
-| **Netlify** | Hosting für selbst gebaute Seiten | USA | Free-Tarif kostenlos, eigene Domain und HTTPS inklusive, in Sekunden online | kein Shopsystem: Warenkorb und Zahlung muss man selbst bauen, Server in den USA |
+| **Netlify** | Hosting für selbst gebaute Seiten | USA | Free-Tarif kostenlos, eigene Domain und HTTPS inklusive, in Sekunden online | kein Shopsystem: Warenkorb und Zahlung muss man selbst bauen, US-Anbieter (Daten können in die USA gehen) |
 | Claude Code | KI-Programmierer (von Anthropic) | USA | baut die Seite nach unserer Beschreibung, jedes Design ist möglich | stellt die Seite nicht ins Internet, kostet ein Abo |
 | Shopify | Mietshop (SaaS) | Kanada | alles fertig: Warenkorb, Zahlung, viele Apps | monatliche Kosten, beim Design an Vorlagen gebunden, Daten teils außerhalb der EU |
 | Jimdo | Homepage-Baukasten mit Shop | Deutschland (Hamburg) | einfach, deutschsprachig, gut beim Datenschutz | wenig Freiheit beim Design, eingeschränkte Shop-Funktionen |
@@ -321,9 +325,9 @@ Früher auch angeschaut, aber nicht mehr in der Analyse: WooCommerce und Shopwar
 | Was kostet es pro Monat? | Der Free-Tarif kostet 0 €. Es gibt keine Einrichtungsgebühr |
 | Gibt es eine Grenze? | Ja, 300 Credits im Monat. Sind sie aufgebraucht, pausiert die Seite laut Preisvergleichen bis zum nächsten Monat, oder man wechselt in einen größeren Tarif |
 | Können wir eine eigene Domain nutzen? | Ja, eine eigene Domain kann man kostenlos anschließen. HTTPS ist automatisch dabei. Ohne eigene Domain bekommt man eine Gratis-Adresse wie `lootlager.netlify.app` |
-| Wo stehen die Server? | Netlify ist ein Unternehmen aus den USA |
+| Wo stehen die Server? | Netlify ist ein Unternehmen aus den USA. Die Seite wird über ein weltweites Netz von Servern ausgeliefert, in Europa z. B. aus Frankfurt. Der Hauptspeicher liegt in den USA, deshalb können Daten dorthin gehen. Einen Standort nur in der EU kann man nicht wählen (Quelle: Antworten von Netlify-Mitarbeitern im [Netlify-Forum](https://answers.netlify.com/t/can-i-set-my-netlify-server-location/41835), abgerufen am 13.10.2026) |
 | Welche Zahlungsarten sind möglich? | Keine, Netlify ist kein Shopsystem. Eine Zahlung müssten wir selbst einbauen, z. B. mit PayPal oder Stripe |
-| Gibt es Hilfe bei den Rechtstexten? | Nein. Dafür bräuchten wir ein Abo beim Händlerbund oder bei der IT-Recht Kanzlei (ca. 10–25 € im Monat) |
+| Gibt es Hilfe bei den Rechtstexten? | Nein. Dafür bräuchten wir ein Abo beim Händlerbund oder bei der IT-Recht Kanzlei (ca. 10–25 € im Monat). Selbst schreiben würden wir sie nicht, weil Fehler zu Abmahnungen führen können |
 | Wie kommt die Seite online? | Ordner `shop` bei Netlify hochladen oder das GitHub-Projekt verbinden (siehe Abschnitt 6) |
 
 ### Nutzwertanalyse
@@ -349,6 +353,10 @@ Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewicht
 - **Warenkorb und Zahlung:** Bei Shopify ist alles fertig. Bei Netlify und Claude Code muss man Warenkorb und Zahlung selbst bauen.
 - **Domain und Hosting:** Netlify und Shopify bringen Adresse, HTTPS und Server mit. Claude Code stellt keine Seite ins Internet, deshalb nur 1 Punkt.
 - **Datenschutz:** Jimdo ist ein deutscher Anbieter. Netlify und Claude Code kommen aus den USA, Shopify aus Kanada.
+
+**Wie sicher ist das Ergebnis?** Knapp: 7,65 gegen 7,45 Punkte. Es hängt an zwei Dingen, die wir offen sagen:
+- **Gewichtung:** Uns sind die Kosten am wichtigsten (25 %). Mit 20 % für die Kosten und 20 % für „Warenkorb und Zahlung“ würde Shopify gewinnen (7,70 gegen 7,35).
+- **Kosten von Netlify:** Die 10 Punkte gelten für den laufenden Betrieb (0 €). Zum Bauen brauchen wir Claude Code für ca. 21 € im Monat, aber nur, solange wir bauen.
 
 **Unsere Entscheidung:** **Netlify (Free-Tarif)**, weil es nichts kostet und wir beim Design frei sind. Das passt zu unserer Idee mit den Custom Designs. Die Seite bauen wir mit **Claude Code**, denn Claude Code allein stellt keine Seite ins Internet. Shopify liegt knapp dahinter und wäre die bessere Wahl, sobald wir echte Bestellungen und Zahlungen brauchen.
 
@@ -383,7 +391,16 @@ Punkte von 1 (schlecht) bis 10 (sehr gut). Gewichtete Punkte = Punkte × Gewicht
 > Jimdo ist einfach und gut beim Datenschutz. Aber beim Design und bei den Shop-Funktionen ist es eingeschränkt.
 
 **„Hat Netlify Nachteile?“**
-> Ja. Netlify ist kein Shopsystem. Den Warenkorb haben wir selbst gebaut, eine echte Zahlung fehlt noch. Die Server stehen in den USA, und Rechtstexte bekommen wir nicht mitgeliefert.
+> Ja. Netlify ist kein Shopsystem. Den Warenkorb haben wir selbst gebaut, eine echte Zahlung fehlt noch. Netlify ist ein Unternehmen aus den USA, deshalb können Daten in die USA gehen. Und Rechtstexte bekommen wir nicht mitgeliefert, die müssten wir extra besorgen.
+
+**„Stehen die Server von Netlify in den USA?“**
+> Nicht nur. Netlify liefert die Seite über ein weltweites Netz von Servern aus, in Europa zum Beispiel aus Frankfurt. Aber Netlify ist ein US-Unternehmen und der Hauptspeicher liegt in den USA. Deshalb müssen wir das in der Datenschutzerklärung angeben.
+
+**„Netlify bekommt bei den Kosten 10 Punkte. Ihr braucht aber Claude Code für 21 €?“**
+> Das Abo brauchen wir nur, solange wir an der Seite bauen. Danach kündigen wir es, und die Seite läuft bei Netlify für 0 € weiter. Bei Shopify und Jimdo zahlen wir jeden Monat, solange es den Shop gibt.
+
+**„Wie sicher ist euer Ergebnis?“**
+> Es ist knapp und hängt an unserer Gewichtung. Uns sind die Kosten am wichtigsten, weil wir wenig Startkapital haben. Wäre uns die Zahlung wichtiger als die Kosten, würde Shopify gewinnen. Deshalb ist Shopify unsere zweite Wahl, sobald wir echte Bestellungen haben.
 
 **„Was kostet euch der Shop?“**
 > Netlify kostet 0 €. Dazu käme die Domain für etwa 1 bis 2 € im Monat. Für einen echten Shop bräuchten wir noch Rechtstexte für 10 bis 25 € im Monat.
@@ -398,10 +415,11 @@ Der Shop ist gebaut und liegt im Ordner [`shop/`](shop/). Zum Ansehen `shop/inde
 |---|---|
 | `shop/index.html` | Startseite mit allen Produkten |
 | `shop/rechtliches.html` | Impressum, Datenschutz, AGB, Widerruf, Versand und Zahlung |
+| `shop/404.html` | Fehlerseite, falls jemand eine Adresse aufruft, die es nicht gibt |
 | `shop/css/style.css` | Aussehen (Farben aus dem Logo) |
-| `shop/js/shop.js` | Suche, Warenkorb und Design-Vorschau |
+| `shop/js/shop.js` | Menü, Suche, Warenkorb, Kasse und Design-Vorschau |
 | `shop/img/` | Logo und Produktbilder |
-| `netlify.toml` | sagt Netlify, dass der Ordner `shop` veröffentlicht wird |
+| `netlify.toml` | sagt Netlify, dass der Ordner `shop` veröffentlicht wird und dass Suchmaschinen die Seite nicht aufnehmen sollen |
 
 ### Das muss laut Lehrkraft drauf sein
 
@@ -448,8 +466,12 @@ Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos
 - **Suche:** Beim Tippen erscheinen Vorschläge, und es bleiben nur die passenden Produkte stehen.
 - **Warenkorb:** Produkte hineinlegen, Menge ändern, Summe mit Versand sehen. Er wird nur im Browser gespeichert.
 - **Eigenes Design:** Produkt wählen, Motiv hochladen, Gamertag eintippen. Die Vorschau zeigt sofort, wie es aussieht. Das Bild bleibt auf dem eigenen Gerät.
-- **Kasse:** Es kommt nur ein Hinweis, dass der Shop ein Schulprojekt ist. Echte Bestellungen gibt es nicht.
+- **Kasse:** Man kann eine Testbestellung durchspielen: Adresse eintragen, Zahlungsart wählen, auf „Zahlungspflichtig bestellen“ klicken. Danach kommt der Hinweis, dass nichts bestellt und nichts gespeichert wurde. Echte Bestellungen gibt es nicht.
+- **Menü:** Auf dem Handy klappt die Navigation über einen Menüknopf auf.
 - Die Seite passt sich an Handy, Tablet und PC an und kommt ohne Cookies und Tracking aus.
+- **Nicht bei Google:** Die Seite sagt Suchmaschinen, dass sie nicht aufgenommen werden soll (`noindex`). Der Shop ist fiktiv, und `lootlager.de` gehört in echt jemand anderem.
+
+**Warum heißt der Knopf „Zahlungspflichtig bestellen“?** Das ist die Button-Lösung (§ 312j Abs. 3 BGB): Der letzte Knopf muss eindeutig zeigen, dass es ab jetzt Geld kostet. Direkt darüber steht der Gesamtpreis mit Mehrwertsteuer und Versand.
 
 ### So kommt die Seite zu Netlify
 
@@ -463,11 +485,15 @@ Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos
 2. Bei Netlify ein neues Projekt anlegen („Import an existing project“), GitHub wählen und `EcomShopRepo` aussuchen.
 3. Nichts einstellen, die Datei `netlify.toml` regelt alles. Auf „Deploy“ klicken.
 
-**Danach die Adresse ändern:** In den Einstellungen des Projekts den Namen auf `lootlager` setzen. Dann ist der Shop unter `lootlager.netlify.app` erreichbar. Am 13.10.2026 war dieser Name noch frei. Ist er inzwischen vergeben, einen ähnlichen nehmen und auf Folie 6 anpassen.
+**Danach die Adresse ändern:** In den Einstellungen des Projekts den Namen auf `lootlager` setzen. Dann ist der Shop unter `lootlager.netlify.app` erreichbar. Am 13.10.2026 war dieser Name noch frei. Ist er inzwischen vergeben, einen ähnlichen nehmen und auf Folie 6 und Folie 8 anpassen.
+
+**QR-Code auf Folie 8:** Er führt zu `https://lootlager.netlify.app` (Datei: [`assets/qr-shop.png`](assets/qr-shop.png)). Er funktioniert erst, wenn der Shop unter genau dieser Adresse online ist. Bei einer anderen Adresse muss der QR-Code neu erstellt werden. Vor der Präsentation einmal mit dem Handy testen.
 
 **Pflichtseiten im Footer:** Impressum (§ 5 DDG), Datenschutzerklärung (DSGVO), AGB, Widerrufsbelehrung, Versand- und Zahlungsinformationen. Bei uns stehen sie auf `rechtliches.html`. Es sind Beispieltexte für das Schulprojekt, keine geprüften Rechtstexte.
 
-**Warum kein „30 Tage Rückgabe“?** Unsere Produkte werden nach Kundenwunsch bedruckt. Für solche individuellen Produkte gibt es kein Widerrufsrecht (§ 312g Abs. 2 Nr. 1 BGB). Darauf weisen wir in der Widerrufsbelehrung hin. Damit Kunden trotzdem sicher sind, zeigen wir vor dem Kauf eine Design-Vorschau.
+**Warum kein „30 Tage Rückgabe“?** Die meisten Produkte werden nach Kundenwunsch bedruckt. Für Produkte mit eigenem Motiv oder Gamertag gibt es kein Widerrufsrecht (§ 312g Abs. 2 Nr. 1 BGB). Darauf weisen wir in der Widerrufsbelehrung hin. Damit Kunden trotzdem sicher sind, zeigen wir vor dem Kauf eine Design-Vorschau.
+
+**Und Produkte mit einem Design von uns?** Die sind nicht extra für einen Kunden angefertigt. Dafür gilt das normale Widerrufsrecht: 14 Tage, ohne Grund. Auch das steht in der Widerrufsbelehrung.
 
 ---
 
@@ -479,12 +505,12 @@ Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos
 |---|---|
 | **1** | **Firmenlogo, Firmenname, Rechtsform** (Pflicht laut Lehrkraft) + Markenname, Slogan und Gruppenmitglieder |
 | 2 | Geschäftsidee: unsere 5 Produkte mit Bildern und Preisen, Zielgruppe, so funktioniert’s |
-| 3 | Name, Logo und Domain: Bedeutung des Namens, Firma, Marke, `lootlager.de` |
+| 3 | Name, Logo und Domain: Bedeutung des Namens, Firma, Marke, `lootlager.de`, Logo-Prompt (gekürzt) |
 | 4 | Rechtsform: Entscheidung, Vor- und Nachteile, Alternative |
 | 5 | Anbietersuche: Nutzwertanalyse als Excel-Tabelle mit Netlify, Claude Code, Shopify und Jimdo |
 | 6 | Entscheidung für Netlify (Gründe + Nachteile) + Bild unserer Startseite mit den 5 Produkten |
 | 7 | Fazit (das steht fest, mit Domain und Netlify), nächste Schritte + Quellen |
-| 8 | Abschluss: „Vielen Dank! Habt ihr noch Fragen?“ mit Bild von einem Setup |
+| 8 | Abschluss: „Vielen Dank! Habt ihr noch Fragen?“ mit Bild von einem Setup und QR-Code zum Shop |
 
 ### Folie 1 – Aufbau
 
@@ -512,6 +538,7 @@ Danach kommen die Nachfragen der Lehrkraft (siehe Spickzettel in den Abschnitten
 - Jedes Gruppenmitglied präsentiert einen Teil.
 - Einen Probelauf mit Stoppuhr machen.
 - Quellen angeben, auch das KI-Tool.
+- **Live-Demo bei Folie 6 (ca. 1 Minute):** Motiv hochladen, Vorschau zeigen, in den Warenkorb, Testbestellung an der Kasse. Die Schritte stehen in den Notizen von Folie 6. Ohne Internet: `shop/index.html` doppelklicken.
 
 ---
 
@@ -534,6 +561,7 @@ Wir sind zu zweit (Nick und Luca), deshalb übernimmt jeder mehrere Rollen. **Da
 | Firma, Rechtsform, Anbietervergleich | 1, 4, 5 | Nick |
 | Geschäftsidee, Name und Logo, Entscheidung + Startseite | 2, 3, 6 | Luca |
 | Fazit und nächste Schritte | 7 | beide (Nick Fazit, Luca Ausblick) |
+| Abschluss und Fragen | 8 | beide |
 
 Die Lehrkraft lässt bei Folie 1 irgendein Gruppenmitglied vorstellen. Deshalb müssen trotzdem **beide** alle Spickzettel können.
 
@@ -558,7 +586,7 @@ Die Lehrkraft lässt bei Folie 1 irgendein Gruppenmitglied vorstellen. Deshalb m
 - [x] Preise → Stand 13.10.2026 (Abschnitt 5)
 
 **Noch offen (müsst ihr selbst machen):**
-- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Abschnitt 6)
+- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Abschnitt 6), danach den QR-Code von Folie 8 mit dem Handy testen
 - [ ] Gruppennummer 4 noch einmal prüfen
 - [ ] Rollen und Aufteilung der Folien bestätigen (Abschnitt 8)
 - [ ] Spickzettel lernen (Abschnitte 2, 3 und 5) und Probelauf mit Stoppuhr

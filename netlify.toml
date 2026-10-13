@@ -8,3 +8,5 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # Fiktiver Shop: Suchmaschinen sollen die Seite nicht aufnehmen.
+    X-Robots-Tag = "noindex"
