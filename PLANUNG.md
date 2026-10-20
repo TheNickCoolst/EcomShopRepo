@@ -9,7 +9,7 @@
 ## Stand: alles gebaut, noch offen sind Upload und Probelauf
 
 Shop, Präsentation (8 Folien) und Nutzwertanalyse sind fertig. **Was ihr selbst noch machen müsst:**
-- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Anleitung in Abschnitt 6). **Erst dann funktioniert der QR-Code auf Folie 8.**
+- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Anleitung in Abschnitt 6).
 - [ ] Präsentation einmal in PowerPoint öffnen und alle Folien durchklicken
 - [ ] Spickzettel lernen: Name (Abschnitt 2), Rechtsform (Abschnitt 3) und Anbieter (Abschnitt 5)
 - [ ] Probelauf mit Stoppuhr (die Sprechtexte dauern zusammen etwa 5 bis 6 Minuten, ohne Nachfragen und Live-Demo), danach Rollen in Abschnitt 8 bestätigen
@@ -485,9 +485,7 @@ Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos
 2. Bei Netlify ein neues Projekt anlegen („Import an existing project“), GitHub wählen und `EcomShopRepo` aussuchen.
 3. Nichts einstellen, die Datei `netlify.toml` regelt alles. Auf „Deploy“ klicken.
 
-**Danach die Adresse ändern:** In den Einstellungen des Projekts den Namen auf `lootlager` setzen. Dann ist der Shop unter `lootlager.netlify.app` erreichbar. Am 13.10.2026 war dieser Name noch frei. Ist er inzwischen vergeben, einen ähnlichen nehmen und auf Folie 6 und Folie 8 anpassen.
-
-**QR-Code auf Folie 8:** Er führt zu `https://lootlager.netlify.app` (Datei: [`assets/qr-shop.png`](assets/qr-shop.png)). Er funktioniert erst, wenn der Shop unter genau dieser Adresse online ist. Bei einer anderen Adresse muss der QR-Code neu erstellt werden. Vor der Präsentation einmal mit dem Handy testen.
+**Danach die Adresse ändern:** In den Einstellungen des Projekts den Namen auf `lootlager` setzen. Dann ist der Shop unter `lootlager.netlify.app` erreichbar. Am 13.10.2026 war dieser Name noch frei. Ist er inzwischen vergeben, einen ähnlichen nehmen und auf Folie 6 anpassen.
 
 **Pflichtseiten im Footer:** Impressum (§ 5 DDG), Datenschutzerklärung (DSGVO), AGB, Widerrufsbelehrung, Versand- und Zahlungsinformationen. Bei uns stehen sie auf `rechtliches.html`. Es sind Beispieltexte für das Schulprojekt, keine geprüften Rechtstexte.
 
@@ -510,7 +508,7 @@ Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos
 | 5 | Anbietersuche: Nutzwertanalyse als Excel-Tabelle mit Netlify, Claude Code, Shopify und Jimdo |
 | 6 | Entscheidung für Netlify (Gründe + Nachteile) + Bild unserer Startseite mit den 5 Produkten |
 | 7 | Fazit (das steht fest, mit Domain und Netlify), nächste Schritte + Quellen |
-| 8 | Abschluss: „Vielen Dank! Habt ihr noch Fragen?“ mit Bild von einem Setup und QR-Code zum Shop |
+| 8 | Abschluss: „Vielen Dank! Habt ihr noch Fragen?“ mit Bild von einem Setup |
 
 ### Folie 1 – Aufbau
 
@@ -586,7 +584,7 @@ Die Lehrkraft lässt bei Folie 1 irgendein Gruppenmitglied vorstellen. Deshalb m
 - [x] Preise → Stand 13.10.2026 (Abschnitt 5)
 
 **Noch offen (müsst ihr selbst machen):**
-- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Abschnitt 6), danach den QR-Code von Folie 8 mit dem Handy testen
+- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Abschnitt 6)
 - [ ] Gruppennummer 4 noch einmal prüfen
 - [ ] Rollen und Aufteilung der Folien bestätigen (Abschnitt 8)
 - [ ] Spickzettel lernen (Abschnitte 2, 3 und 5) und Probelauf mit Stoppuhr
