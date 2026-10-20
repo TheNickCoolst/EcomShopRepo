@@ -6,14 +6,14 @@ Die Bilder zeigen, wie unsere Produkte aussehen sollen. Echte Produkte gibt es n
 
 | Datei | Wo wird es benutzt? |
 |---|---|
-| `hero-truhe.png` | Shop: Banner oben auf der Startseite |
+| `hero-truhe.png` | Shop: Banner oben auf der Startseite · Präsentation: Folie 1 |
 | `produkt-mauspad.png` | Shop: Produktkarte und Warenkorb · Präsentation: Folie 2 |
 | `produkt-controller-skin.png` | Shop: Produktkarte und Warenkorb · Präsentation: Folie 2 |
 | `produkt-keycaps.png` | Shop: Produktkarte und Warenkorb · Präsentation: Folie 2 |
 | `produkt-led-schild.png` | Shop: Produktkarte und Warenkorb · Präsentation: Folie 2 |
 | `produkt-headset-halter.png` | Shop: Produktkarte und Warenkorb · Präsentation: Folie 2 |
 | `setup-stimmung.png` | Shop: Bild über „Warum LootLager?“ · Präsentation: Folie 8 |
-| `folie-hintergrund.png` | Präsentation: Hintergrund von Folie 1 |
+| `folie-hintergrund.png` | nicht mehr benutzt (früher Hintergrund von Folie 1) |
 
 In diesem Ordner liegen die Originale aus Gemini. Im Shop (`shop/img/`) liegen verkleinerte Kopien im Format WebP, damit die Seite schnell lädt.
 
