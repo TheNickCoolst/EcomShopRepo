@@ -5,7 +5,7 @@
 Gruppenprojekt: Wir gründen einen (fiktiven) Onlineshop – die **LootLager UG (haftungsbeschränkt)**, ein Shop für Gaming-Zubehör mit Custom Designs. Dazu gehören Firmenname, Rechtsform, KI-Logo, die Anbietersuche für die Homepage, der fertige Shop und eine Präsentation.
 
 - Planung: [PLANUNG.md](PLANUNG.md)
-- Präsentation (8 Folien): [praesentation/LootLager_Praesentation.pptx](praesentation/LootLager_Praesentation.pptx)
+- Präsentation (8 Folien) in zwei Versionen: [v1](praesentation/LootLager_Praesentation_v1.pptx) (Luca und Nick) und [v2](praesentation/LootLager_Praesentation_v2.pptx) (Luca, Noah und Nick). Sie unterscheiden sich nur in der Gruppenzeile auf Folie 1 und 8
 - Nutzwertanalyse als Excel-Datei: [praesentation/Nutzwertanalyse.xlsx](praesentation/Nutzwertanalyse.xlsx)
 - Shop: [shop/](shop/) – zum Ansehen `shop/index.html` öffnen. Mit Logo, Name, Domain, 5 Produkten, Warenkorb und Test-Kasse
 - Anbieter: **Netlify**, gebaut mit Claude Code (Begründung in [PLANUNG.md](PLANUNG.md), Abschnitt 5). `netlify.toml` veröffentlicht den Ordner `shop`

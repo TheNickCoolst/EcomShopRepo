@@ -28,7 +28,7 @@ Die Lehrkraft hat gesagt:
 - [x] Rechtsform festlegen (Abschnitt 3)
 - [x] Geschäftsführung bestimmen → Nick und Luca
 - [x] Logo mit ChatGPT erstellen → [`assets/logo-lootlager.png`](assets/logo-lootlager.png)
-- [x] Folie 1 bauen → [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx)
+- [x] Folie 1 bauen → [`praesentation/LootLager_Praesentation_v1.pptx`](praesentation/LootLager_Praesentation_v1.pptx) und [`_v2.pptx`](praesentation/LootLager_Praesentation_v2.pptx)
 - [x] Auf Folie 1 Gruppennummer und Namen eintragen → Gruppe 4, Nick und Luca (Gruppennummer bitte noch einmal prüfen)
 
 ### Phase 2 (erledigt): Anbieter, Homepage, restliche Folien
@@ -497,7 +497,7 @@ Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos
 
 ## 7. Präsentation – Folienplan
 
-> **Fertig:** Alle 8 Folien in [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx). Die Sprechtexte und Antworten auf Nachfragen stehen in den **Notizen** unter jeder Folie. Folie 1 war die Pflicht für die erste Abgabe. Die Folien 5–7 sind für Phase 2 (Anbieter, Startseite, Fazit). Die Excel-Tabelle von Folie 5 liegt als [`praesentation/Nutzwertanalyse.xlsx`](praesentation/Nutzwertanalyse.xlsx) daneben.
+> **Fertig:** Alle 8 Folien in zwei Versionen: [`LootLager_Praesentation_v1.pptx`](praesentation/LootLager_Praesentation_v1.pptx) ohne Noah (Gruppe 4 · Luca und Nick) und [`LootLager_Praesentation_v2.pptx`](praesentation/LootLager_Praesentation_v2.pptx) mit Noah (Gruppe 4 · Luca, Noah und Nick). Der Unterschied ist nur die Gruppenzeile auf Folie 1 und 8. Die Sprechtexte und Antworten auf Nachfragen stehen in den **Notizen** unter jeder Folie. Folie 1 war die Pflicht für die erste Abgabe. Die Folien 5–7 sind für Phase 2 (Anbieter, Startseite, Fazit). Die Excel-Tabelle von Folie 5 liegt als [`praesentation/Nutzwertanalyse.xlsx`](praesentation/Nutzwertanalyse.xlsx) daneben.
 
 | Folie | Inhalt |
 |---|---|
