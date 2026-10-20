@@ -420,6 +420,7 @@ Der Shop ist gebaut und liegt im Ordner [`shop/`](shop/). Zum Ansehen `shop/inde
 | `shop/js/shop.js` | Menü, Suche, Warenkorb, Kasse und Design-Vorschau |
 | `shop/img/` | Logo und Produktbilder |
 | `netlify.toml` | sagt Netlify, dass der Ordner `shop` veröffentlicht wird und dass Suchmaschinen die Seite nicht aufnehmen sollen |
+| `netlify/edge-functions/passwortschutz.js` | Passwortschutz: Ohne Passwort zeigt Netlify nur eine Anmeldeseite |
 
 ### Das muss laut Lehrkraft drauf sein
 
@@ -468,26 +469,30 @@ Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos
 - **Eigenes Design:** Produkt wählen, Motiv hochladen, Gamertag eintippen. Die Vorschau zeigt sofort, wie es aussieht. Das Bild bleibt auf dem eigenen Gerät.
 - **Kasse:** Man kann eine Testbestellung durchspielen: Adresse eintragen, Zahlungsart wählen, auf „Zahlungspflichtig bestellen“ klicken. Danach kommt der Hinweis, dass nichts bestellt und nichts gespeichert wurde. Echte Bestellungen gibt es nicht.
 - **Menü:** Auf dem Handy klappt die Navigation über einen Menüknopf auf.
-- Die Seite passt sich an Handy, Tablet und PC an und kommt ohne Cookies und Tracking aus.
+- Die Seite passt sich an Handy, Tablet und PC an und kommt ohne Tracking aus.
+- **Passwort:** Online ist der Shop nur mit Passwort zu sehen. Das Passwort sagen wir der Klasse direkt, im öffentlichen GitHub-Projekt steht es absichtlich nicht. Er ist damit nicht öffentlich, sondern nur für unsere Klasse. Deshalb verzichten wir auf ein echtes Impressum mit Anschrift. Nach der Eingabe merkt sich der Browser die Anmeldung 30 Tage lang (ein Cookie, sonst keine). Zum Ändern des Passworts steht die Anleitung oben in der Datei `passwortschutz.js`.
 - **Nicht bei Google:** Die Seite sagt Suchmaschinen, dass sie nicht aufgenommen werden soll (`noindex`). Der Shop ist fiktiv, und `lootlager.de` gehört in echt jemand anderem.
 
 **Warum heißt der Knopf „Zahlungspflichtig bestellen“?** Das ist die Button-Lösung (§ 312j Abs. 3 BGB): Der letzte Knopf muss eindeutig zeigen, dass es ab jetzt Geld kostet. Direkt darüber steht der Gesamtpreis mit Mehrwertsteuer und Versand.
 
 ### So kommt die Seite zu Netlify
 
-**Variante A – Ordner hochladen (am schnellsten):**
+**Variante A – Ordner hochladen (am schnellsten, aber ohne Passwort):**
+
+> **Achtung:** Hier landet nur der Ordner `shop` bei Netlify. Der Passwortschutz liegt außerhalb davon und fehlt dann. Der Shop wäre öffentlich, und wir bräuchten ein echtes Impressum. Deshalb **Variante B** nehmen.
+
 1. Bei [netlify.com](https://www.netlify.com) kostenlos anmelden.
 2. [app.netlify.com/drop](https://app.netlify.com/drop) öffnen und den Ordner `shop` hineinziehen.
 3. Fertig: Die Seite ist sofort unter einer zufälligen Adresse online.
 
-**Variante B – GitHub verbinden (aktualisiert sich von selbst):**
+**Variante B – GitHub verbinden (aktualisiert sich von selbst, mit Passwort):**
 1. Die Änderungen zu GitHub hochladen (commit und push).
 2. Bei Netlify ein neues Projekt anlegen („Import an existing project“), GitHub wählen und `EcomShopRepo` aussuchen.
 3. Nichts einstellen, die Datei `netlify.toml` regelt alles. Auf „Deploy“ klicken.
 
 **Danach die Adresse ändern:** In den Einstellungen des Projekts den Namen auf `lootlager` setzen. Dann ist der Shop unter `lootlager.netlify.app` erreichbar. Am 13.10.2026 war dieser Name noch frei. Ist er inzwischen vergeben, einen ähnlichen nehmen und auf Folie 6 anpassen.
 
-**Pflichtseiten im Footer:** Impressum (§ 5 DDG), Datenschutzerklärung (DSGVO), AGB, Widerrufsbelehrung, Versand- und Zahlungsinformationen. Bei uns stehen sie auf `rechtliches.html`. Es sind Beispieltexte für das Schulprojekt, keine geprüften Rechtstexte.
+**Pflichtseiten im Footer:** Impressum (§ 5 DDG), Datenschutzerklärung (DSGVO), AGB, Widerrufsbelehrung, Versand- und Zahlungsinformationen. Bei uns stehen sie auf `rechtliches.html`. Weil der Shop nur mit Passwort erreichbar ist, enthält das Impressum keine echte Anschrift. Es sind Beispieltexte für das Schulprojekt, keine geprüften Rechtstexte.
 
 **Warum kein „30 Tage Rückgabe“?** Die meisten Produkte werden nach Kundenwunsch bedruckt. Für Produkte mit eigenem Motiv oder Gamertag gibt es kein Widerrufsrecht (§ 312g Abs. 2 Nr. 1 BGB). Darauf weisen wir in der Widerrufsbelehrung hin. Damit Kunden trotzdem sicher sind, zeigen wir vor dem Kauf eine Design-Vorschau.
 
