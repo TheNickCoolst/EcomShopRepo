@@ -280,10 +280,10 @@ Klappt der transparente Hintergrund nicht, entfernt ihr ihn in PowerPoint: Bild 
 
 | Bild | Wo wird es benutzt? |
 |---|---|
-| Truhe mit schwebenden Produkten | Shop: Banner oben auf der Startseite |
+| Truhe mit schwebenden Produkten | Shop: Banner oben auf der Startseite · Präsentation: Folie 1 |
 | 5 Produktfotos (Mauspad, Controller-Skin, Keycaps, LED-Schild, Headset-Halter) | Shop: Produktkarten und Warenkorb · Präsentation: Folie 2 |
 | Gaming-Schreibtisch bei Nacht | Shop: Bild über „Warum LootLager?“ · Präsentation: Folie 8 |
-| Heller Hintergrund mit Gaming-Formen | Präsentation: Folie 1 |
+| Heller Hintergrund mit Gaming-Formen | nicht mehr benutzt (früher Hintergrund von Folie 1) |
 
 **So sind die Prompts aufgebaut:** Format (z. B. 4:3), Motiv, Stil, Hintergrund, und am Ende, was nicht ins Bild soll (kein Text, keine Markenlogos, keine Menschen). In jedem Prompt stehen unsere Farben Violett `#7C3AED` und Türkis `#22D3EE`, damit alles zum Logo passt.
 
