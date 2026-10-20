@@ -9,7 +9,7 @@
 ## Stand: alles gebaut, noch offen sind Upload und Probelauf
 
 Shop, Präsentation (8 Folien) und Nutzwertanalyse sind fertig. **Was ihr selbst noch machen müsst:**
-- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Anleitung in Abschnitt 6). **Erst dann funktioniert der QR-Code auf Folie 8.**
+- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Anleitung in Abschnitt 6).
 - [ ] Präsentation einmal in PowerPoint öffnen und alle Folien durchklicken
 - [ ] Spickzettel lernen: Name (Abschnitt 2), Rechtsform (Abschnitt 3) und Anbieter (Abschnitt 5)
 - [ ] Probelauf mit Stoppuhr (die Sprechtexte dauern zusammen etwa 5 bis 6 Minuten, ohne Nachfragen und Live-Demo), danach Rollen in Abschnitt 8 bestätigen
@@ -28,7 +28,7 @@ Die Lehrkraft hat gesagt:
 - [x] Rechtsform festlegen (Abschnitt 3)
 - [x] Geschäftsführung bestimmen → Nick und Luca
 - [x] Logo mit ChatGPT erstellen → [`assets/logo-lootlager.png`](assets/logo-lootlager.png)
-- [x] Folie 1 bauen → [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx)
+- [x] Folie 1 bauen → [`praesentation/LootLager_Praesentation_v1.pptx`](praesentation/LootLager_Praesentation_v1.pptx) und [`_v2.pptx`](praesentation/LootLager_Praesentation_v2.pptx)
 - [x] Auf Folie 1 Gruppennummer und Namen eintragen → Gruppe 4, Nick und Luca (Gruppennummer bitte noch einmal prüfen)
 
 ### Phase 2 (erledigt): Anbieter, Homepage, restliche Folien
@@ -490,9 +490,7 @@ Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos
 2. Bei Netlify ein neues Projekt anlegen („Import an existing project“), GitHub wählen und `EcomShopRepo` aussuchen.
 3. Nichts einstellen, die Datei `netlify.toml` regelt alles. Auf „Deploy“ klicken.
 
-**Danach die Adresse ändern:** In den Einstellungen des Projekts den Namen auf `lootlager` setzen. Dann ist der Shop unter `lootlager.netlify.app` erreichbar. Am 13.10.2026 war dieser Name noch frei. Ist er inzwischen vergeben, einen ähnlichen nehmen und auf Folie 6 und Folie 8 anpassen.
-
-**QR-Code auf Folie 8:** Er führt zu `https://lootlager.netlify.app` (Datei: [`assets/qr-shop.png`](assets/qr-shop.png)). Er funktioniert erst, wenn der Shop unter genau dieser Adresse online ist. Bei einer anderen Adresse muss der QR-Code neu erstellt werden. Vor der Präsentation einmal mit dem Handy testen.
+**Danach die Adresse ändern:** In den Einstellungen des Projekts den Namen auf `lootlager` setzen. Dann ist der Shop unter `lootlager.netlify.app` erreichbar. Am 13.10.2026 war dieser Name noch frei. Ist er inzwischen vergeben, einen ähnlichen nehmen und auf Folie 6 anpassen.
 
 **Pflichtseiten im Footer:** Impressum (§ 5 DDG), Datenschutzerklärung (DSGVO), AGB, Widerrufsbelehrung, Versand- und Zahlungsinformationen. Bei uns stehen sie auf `rechtliches.html`. Weil der Shop nur mit Passwort erreichbar ist, enthält das Impressum keine echte Anschrift. Es sind Beispieltexte für das Schulprojekt, keine geprüften Rechtstexte.
 
@@ -504,7 +502,7 @@ Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos
 
 ## 7. Präsentation – Folienplan
 
-> **Fertig:** Alle 8 Folien in [`praesentation/LootLager_Praesentation.pptx`](praesentation/LootLager_Praesentation.pptx). Die Sprechtexte und Antworten auf Nachfragen stehen in den **Notizen** unter jeder Folie. Folie 1 war die Pflicht für die erste Abgabe. Die Folien 5–7 sind für Phase 2 (Anbieter, Startseite, Fazit). Die Excel-Tabelle von Folie 5 liegt als [`praesentation/Nutzwertanalyse.xlsx`](praesentation/Nutzwertanalyse.xlsx) daneben.
+> **Fertig:** Alle 8 Folien in zwei Versionen: [`LootLager_Praesentation_v1.pptx`](praesentation/LootLager_Praesentation_v1.pptx) ohne Noah (Gruppe 4 · Luca und Nick) und [`LootLager_Praesentation_v2.pptx`](praesentation/LootLager_Praesentation_v2.pptx) mit Noah (Gruppe 4 · Luca, Noah und Nick). Der Unterschied ist nur die Gruppenzeile auf Folie 1 und 8. Die Sprechtexte und Antworten auf Nachfragen stehen in den **Notizen** unter jeder Folie. Folie 1 war die Pflicht für die erste Abgabe. Die Folien 5–7 sind für Phase 2 (Anbieter, Startseite, Fazit). Die Excel-Tabelle von Folie 5 liegt als [`praesentation/Nutzwertanalyse.xlsx`](praesentation/Nutzwertanalyse.xlsx) daneben.
 
 | Folie | Inhalt |
 |---|---|
@@ -515,7 +513,7 @@ Die Produktbilder haben wir mit Gemini (KI) erstellt, es sind keine echten Fotos
 | 5 | Anbietersuche: Nutzwertanalyse als Excel-Tabelle mit Netlify, Claude Code, Shopify und Jimdo |
 | 6 | Entscheidung für Netlify (Gründe + Nachteile) + Bild unserer Startseite mit den 5 Produkten |
 | 7 | Fazit (das steht fest, mit Domain und Netlify), nächste Schritte + Quellen |
-| 8 | Abschluss: „Vielen Dank! Habt ihr noch Fragen?“ mit Bild von einem Setup und QR-Code zum Shop |
+| 8 | Abschluss: „Vielen Dank! Habt ihr noch Fragen?“ mit Bild von einem Setup |
 
 ### Folie 1 – Aufbau
 
@@ -591,7 +589,7 @@ Die Lehrkraft lässt bei Folie 1 irgendein Gruppenmitglied vorstellen. Deshalb m
 - [x] Preise → Stand 13.10.2026 (Abschnitt 5)
 
 **Noch offen (müsst ihr selbst machen):**
-- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Abschnitt 6), danach den QR-Code von Folie 8 mit dem Handy testen
+- [ ] Shop bei Netlify hochladen und den Namen `lootlager` sichern (Abschnitt 6)
 - [ ] Gruppennummer 4 noch einmal prüfen
 - [ ] Rollen und Aufteilung der Folien bestätigen (Abschnitt 8)
 - [ ] Spickzettel lernen (Abschnitte 2, 3 und 5) und Probelauf mit Stoppuhr
