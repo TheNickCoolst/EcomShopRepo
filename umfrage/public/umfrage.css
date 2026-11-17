@@ -1,5 +1,7 @@
-/* LootLager-Umfrage – Farben wie im Shop: Violett, Türkis, Dunkelblau */
+/* LootLager-Umfrage – Farben wie im Shop: Violett, Türkis, Dunkelblau.
+   Handy: Bühne oben, Karte darunter. PC (ab 960 px): Bühne links, Karte rechts. */
 :root {
+  color-scheme: light;
   --violett: #7c3aed;
   --violett-dunkel: #5b21b6;
   --violett-hell: #f5f1ff;
@@ -10,49 +12,69 @@
   --linie: #e6e1f5;
   --weiss: #fff;
   --rot: #b42318;
-  --rund: 18px;
+  --rund: 20px;
   --schrift: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --schrift-titel: ui-rounded, "SF Pro Rounded", "Arial Rounded MT Bold", "Nunito", "Segoe UI", system-ui, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-
 html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  min-height: 100dvh;
   font-family: var(--schrift);
   font-size: 1.0625rem;
   line-height: 1.5;
   color: var(--text);
-  background:
-    radial-gradient(60rem 30rem at 110% -10%, rgb(34 211 238 / 0.18), transparent 60%),
-    radial-gradient(50rem 30rem at -20% 0%, rgb(124 58 237 / 0.16), transparent 60%),
-    var(--violett-hell);
+  background: var(--violett-hell);
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, p { margin: 0; }
 h1, h2 { font-family: var(--schrift-titel); font-weight: 800; line-height: 1.2; text-wrap: balance; }
-h1 { font-size: clamp(1.6rem, 6vw, 2rem); }
-h2 { font-size: clamp(1.3rem, 5vw, 1.6rem); }
+h1 { font-size: clamp(1.6rem, 6vw, 2.1rem); }
+h2 { font-size: clamp(1.3rem, 5vw, 1.7rem); }
 h1:focus, h2:focus { outline: none; }
 button, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--tuerkis); outline-offset: 3px; }
 
-.kopf {
-  display: flex;
-  justify-content: center;
-  padding: 18px 16px 6px;
-}
-.kopf img { height: 44px; width: auto; border-radius: 10px; }
+.seite { min-height: 100dvh; display: grid; grid-template-rows: auto 1fr; }
 
+/* ---------- Bühne ---------- */
 .buehne {
-  width: min(100% - 32px, 560px);
-  margin: 12px auto 40px;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 16px 16px 56px;
+  color: var(--weiss);
+  text-align: center;
+  background:
+    radial-gradient(70% 90% at 85% 30%, rgb(124 58 237 / 0.55), transparent 70%),
+    radial-gradient(50% 70% at 5% 100%, rgb(34 211 238 / 0.22), transparent 70%),
+    var(--nacht);
 }
+.buehne__logo { display: inline-flex; padding: 6px 12px; border-radius: 12px; background: var(--weiss); }
+.buehne__logo img { display: block; height: 34px; width: auto; }
+.buehne__inhalt { display: grid; justify-items: center; }
+/* Das Bild hat einen dunklen Hintergrund. Die Maske blendet ihn zum Rand hin aus. */
+.buehne__truhe {
+  width: 124px;
+  height: auto;
+  -webkit-mask-image: radial-gradient(closest-side, #000 68%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 68%, transparent 100%);
+  animation: schweben 5s ease-in-out infinite;
+}
+.buehne__spruch { font-family: var(--schrift-titel); font-weight: 800; font-size: 1.35rem; line-height: 1.15; }
+.buehne__spruch span { color: var(--tuerkis); }
+.buehne__text { display: none; margin-top: 4px; color: #d7dbe7; font-size: 0.95rem; }
+@keyframes schweben { 50% { transform: translateY(-8px); } }
 
+/* Während der Fragen bleibt auf dem Handy nur das Logo, damit die Frage ganz oben steht. */
+body:not([data-zustand="start"]) .buehne__inhalt { display: none; }
+
+.arbeit { width: min(100% - 32px, 620px); margin: -36px auto 40px; }
+
+/* ---------- Karte ---------- */
 .karte {
   display: grid;
   gap: 16px;
@@ -60,70 +82,48 @@ button, textarea { font: inherit; color: inherit; }
   background: var(--weiss);
   border: 1px solid var(--linie);
   border-radius: var(--rund);
-  box-shadow: 0 12px 34px rgb(17 24 39 / 0.08);
+  box-shadow: 0 18px 44px rgb(17 24 39 / 0.14);
+  animation: rein 0.28s ease both;
 }
-.karte--mitte { text-align: center; justify-items: center; padding-block: 36px; }
+@keyframes rein { from { opacity: 0; transform: translateY(10px); } }
+.karte--mitte { text-align: center; justify-items: center; padding-block: 40px; }
 
-.marke {
-  color: var(--violett);
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
+.marke { color: var(--violett); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; }
 
-.fakten {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.fakten li {
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: var(--violett-hell);
-  font-size: 0.95rem;
-  font-weight: 600;
-}
+.fakten { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.fakten li { padding: 6px 12px; border-radius: 999px; background: var(--violett-hell); font-size: 0.95rem; font-weight: 600; }
 
 .kleingedruckt { font-size: 0.85rem; color: var(--text-leise); }
 .hinweis { color: var(--text-leise); margin-top: -8px; }
 .fehler { color: var(--rot); font-weight: 600; }
 .gross { font-size: 3rem; line-height: 1; }
 
-/* Knöpfe */
+/* ---------- Knöpfe ---------- */
 .knopf {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 52px;
-  padding: 12px 22px;
+  min-height: 54px;
+  padding: 12px 24px;
   border: 0;
   border-radius: 14px;
   background: linear-gradient(135deg, var(--violett), var(--violett-dunkel));
   color: var(--weiss);
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.12s ease, opacity 0.12s ease;
+  box-shadow: 0 8px 20px rgb(124 58 237 / 0.28);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
 }
+@media (hover: hover) { .knopf:not(:disabled):hover { transform: translateY(-1px); box-shadow: 0 12px 26px rgb(124 58 237 / 0.36); } }
 .knopf:active { transform: scale(0.98); }
-.knopf:disabled { opacity: 0.45; cursor: not-allowed; }
+.knopf:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
 .knopf--gross { width: 100%; font-size: 1.1rem; }
-.knopf--hell { background: var(--violett-hell); color: var(--violett-dunkel); }
+.knopf--hell { background: var(--violett-hell); color: var(--violett-dunkel); box-shadow: none; }
 
-.link {
-  padding: 6px 0;
-  border: 0;
-  background: none;
-  color: var(--violett-dunkel);
-  font-weight: 600;
-  cursor: pointer;
-}
+.link { padding: 6px 0; border: 0; background: none; color: var(--violett-dunkel); font-weight: 600; cursor: pointer; }
 .link--klein { font-size: 0.85rem; color: var(--text-leise); text-decoration: underline; }
 
-/* Fortschritt */
+/* ---------- Fortschritt ---------- */
 .fortschritt { display: grid; gap: 8px; }
 .fortschritt__zeile { display: flex; justify-content: space-between; align-items: center; }
 .fortschritt__text { font-size: 0.9rem; color: var(--text-leise); font-weight: 600; }
@@ -135,7 +135,7 @@ button, textarea { font: inherit; color: inherit; }
   transition: width 0.3s ease;
 }
 
-/* Antwortmöglichkeiten */
+/* ---------- Antwortmöglichkeiten ---------- */
 .optionen { display: grid; gap: 10px; }
 .optionen.gesperrt, .skala.gesperrt { pointer-events: none; }
 
@@ -144,23 +144,42 @@ button, textarea { font: inherit; color: inherit; }
   align-items: center;
   gap: 12px;
   width: 100%;
-  min-height: 54px;
+  min-height: 56px;
   padding: 12px 16px;
   border: 2px solid var(--linie);
   border-radius: 14px;
   background: var(--weiss);
+  color: var(--text);
   text-align: left;
+  text-decoration: none;
   font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.12s ease, background 0.12s ease;
+  transition: border-color 0.12s ease, background 0.12s ease, transform 0.12s ease;
 }
 @media (hover: hover) {
-  .option:hover { border-color: #c4b5fd; }
+  .option:hover { border-color: #a78bfa; background: #fbf9ff; transform: translateX(2px); }
 }
-.option[aria-pressed="true"] {
-  border-color: var(--violett);
-  background: var(--violett-hell);
-  color: var(--violett-dunkel);
+.option[aria-pressed="true"] { border-color: var(--violett); background: var(--violett-hell); color: var(--violett-dunkel); }
+
+/* Tasten-Anzeige: nur am PC mit Maus und Tastatur */
+.taste { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .taste {
+    display: grid;
+    place-items: center;
+    flex: none;
+    order: 2;
+    width: 26px;
+    height: 26px;
+    margin-left: auto;
+    border: 1px solid var(--linie);
+    border-bottom-width: 3px;
+    border-radius: 7px;
+    background: var(--weiss);
+    color: var(--text-leise);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
 }
 
 /* Häkchen-Kästchen bei Mehrfachauswahl */
@@ -180,29 +199,36 @@ button, textarea { font: inherit; color: inherit; }
 
 /* Skala 1–5 */
 .skala { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
-.option--skala { justify-content: center; padding: 0; font-size: 1.25rem; min-height: 58px; text-align: center; }
-.skala__legende {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: -6px;
-  font-size: 0.9rem;
-  color: var(--text-leise);
-}
+.option--skala { justify-content: center; padding: 0; font-size: 1.25rem; min-height: 60px; text-align: center; }
+@media (hover: hover) { .option--skala:hover { transform: translateY(-2px); } }
+.skala__legende { display: flex; justify-content: space-between; gap: 12px; margin-top: -6px; font-size: 0.9rem; color: var(--text-leise); }
 
 /* Offene Frage */
-.textfeld {
-  width: 100%;
-  min-height: 120px;
-  padding: 12px 14px;
-  border: 2px solid var(--linie);
-  border-radius: 14px;
-  resize: vertical;
-  font-size: 1rem;
-}
+.textfeld { width: 100%; min-height: 130px; padding: 12px 14px; border: 2px solid var(--linie); border-radius: 14px; resize: vertical; font-size: 1rem; }
 .textfeld:focus { border-color: var(--violett); outline: none; }
 .zeichen { margin-top: -8px; font-size: 0.85rem; color: var(--text-leise); text-align: right; }
 
+/* ---------- PC ---------- */
+@media (min-width: 960px) {
+  .seite { grid-template-columns: minmax(380px, 40%) 1fr; grid-template-rows: none; }
+  .buehne {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    align-content: center;
+    gap: 20px;
+    padding: 40px;
+  }
+  .buehne__logo { position: absolute; top: 28px; left: 32px; padding: 8px 14px; }
+  .buehne__logo img { height: 40px; }
+  body:not([data-zustand="start"]) .buehne__inhalt { display: grid; }
+  .buehne__truhe { width: min(100%, 400px); }
+  .buehne__spruch { font-size: clamp(2.2rem, 3.4vw, 3.1rem); }
+  .buehne__text { display: block; margin-top: 10px; font-size: 1.15rem; }
+  .arbeit { width: min(100% - 64px, 640px); margin: 0 auto; padding-block: 48px; align-self: center; }
+  .karte { padding: 36px 36px; gap: 20px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
 }

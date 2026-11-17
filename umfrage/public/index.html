@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" data-version="{{VERSION}}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#7c3aed">
+  <meta name="theme-color" content="#111827">
   <meta name="robots" content="noindex, nofollow">
   <title>Kurze Umfrage · LootLager</title>
   <meta name="description" content="2 Minuten, anonym: Hilf unserem Unternehmen LootLager mit ein paar Fragen zu Gaming-Zubehör.">
@@ -12,26 +12,34 @@
   <link rel="stylesheet" href="/umfrage.css">
   <script src="/umfrage.js" defer></script>
 </head>
-<body>
-  <header class="kopf">
-    <img src="/logo-lootlager.png" alt="LootLager" width="160" height="44">
-  </header>
+<body data-zustand="start">
+  <div class="seite">
+    <!-- Bühne: auf dem Handy oben, auf dem PC links -->
+    <aside class="buehne">
+      <span class="buehne__logo"><img src="/logo-lootlager.png" alt="LootLager" width="160" height="44"></span>
+      <div class="buehne__inhalt">
+        <img class="buehne__truhe" src="/hero-truhe.webp" alt="" width="460" height="460">
+        <p class="buehne__spruch">Level up <span>dein Setup.</span></p>
+        <p class="buehne__text">Gaming-Zubehör mit deinem eigenen Design.</p>
+      </div>
+    </aside>
 
-  <main id="app" class="buehne">
-    <!-- Startseite: steht direkt im HTML, damit sie sofort erscheint -->
-    <section class="karte" id="start">
-      <p class="marke">Unternehmen · E-Commerce</p>
-      <h1>Hi! Hast du 2 Minuten für uns?</h1>
-      <p>Wir gründen im Unterricht den (fiktiven) Onlineshop <strong>LootLager</strong> für Gaming-Zubehör mit eigenem Design. Mit deinen Antworten finden wir heraus, ob unsere Idee ankommt.</p>
-      <ul class="fakten">
-        <li><span aria-hidden="true">⏱️</span> ca. 2 Minuten</li>
-        <li><span aria-hidden="true">👆</span> fast nur Antippen</li>
-        <li><span aria-hidden="true">🔒</span> anonym</li>
-      </ul>
-      <button class="knopf knopf--gross" id="los" type="button" disabled>Los geht’s</button>
-      <noscript><p class="fehler">Bitte JavaScript einschalten, sonst funktioniert die Umfrage nicht.</p></noscript>
-      <p class="kleingedruckt">Wir fragen nicht nach deinem Namen oder deiner E-Mail und speichern keine IP-Adressen. Die Antworten nutzen wir nur für unsere Präsentation im Unterricht und löschen sie nach dem Projekt.</p>
-    </section>
-  </main>
+    <main id="app" class="arbeit">
+      <!-- Startseite: steht direkt im HTML, damit sie sofort erscheint -->
+      <section class="karte" id="start">
+        <p class="marke">Unternehmen · E-Commerce</p>
+        <h1>Hi! Hast du 2 Minuten für uns?</h1>
+        <p>Wir gründen im Unterricht den (fiktiven) Onlineshop <strong>LootLager</strong> für Gaming-Zubehör mit eigenem Design. Mit deinen Antworten finden wir heraus, ob unsere Idee ankommt.</p>
+        <ul class="fakten">
+          <li><span aria-hidden="true">⏱️</span> ca. 2 Minuten</li>
+          <li><span aria-hidden="true">👆</span> fast nur Antippen</li>
+          <li><span aria-hidden="true">🔒</span> anonym</li>
+        </ul>
+        <button class="knopf knopf--gross" id="los" type="button" disabled>Los geht’s</button>
+        <noscript><p class="fehler">Bitte JavaScript einschalten, sonst funktioniert die Umfrage nicht.</p></noscript>
+        <p class="kleingedruckt">Wir fragen nicht nach deinem Namen oder deiner E-Mail und speichern keine IP-Adressen. Die Antworten nutzen wir nur für unsere Präsentation im Unterricht und löschen sie nach dem Projekt. Diesen Link hat {{NAME}} aus unserem Team verteilt.</p>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

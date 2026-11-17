@@ -2,6 +2,8 @@
 'use strict';
 
 const SCHON_DABEI = 'lootlager-umfrage-erledigt';
+// Welche Version der Umfrage das ist (nick, noah, luca), steht im <html>-Tag.
+const VERSION = document.documentElement.dataset.version;
 const app = document.getElementById('app');
 const startKarte = document.getElementById('start');
 const losKnopf = document.getElementById('los');
@@ -28,13 +30,22 @@ function el(tag, klasse, text) {
   return e;
 }
 
+// Kleine Tasten-Anzeige neben einer Antwort (nur am PC sichtbar): Zifferntaste wählt die Antwort.
+function taste(nummer) {
+  const t = el('span', 'taste', String(nummer));
+  t.setAttribute('aria-hidden', 'true');
+  return t;
+}
+
 function knopf(text, klasse = 'knopf') {
   const b = el('button', klasse, text);
   b.type = 'button';
   return b;
 }
 
-function zeigen(karte) {
+// zustand: "start" (Startseite), "frage" oder "ende". Davon hängt ab, wie groß die Bühne auf dem Handy ist.
+function zeigen(karte, zustand) {
+  document.body.dataset.zustand = zustand;
   app.replaceChildren(karte);
   const titel = karte.querySelector('h1, h2');
   if (titel) {
@@ -65,7 +76,7 @@ function zurueck() {
     schritt -= 1;
     frageZeigen();
   } else {
-    zeigen(startKarte);
+    zeigen(startKarte, 'start');
   }
 }
 
@@ -76,6 +87,7 @@ function frageZeigen() {
 
   // Fortschritt
   const leiste = el('div', 'fortschritt');
+  const anteil = Math.round((schritt / fragen.length) * 100);
   const navi = el('div', 'fortschritt__zeile');
   const zurueckKnopf = knopf('‹ Zurück', 'link');
   zurueckKnopf.addEventListener('click', zurueck);
@@ -83,7 +95,7 @@ function frageZeigen() {
   navi.append(zurueckKnopf, zaehler);
   const spur = el('div', 'fortschritt__spur');
   const fuellung = el('div', 'fortschritt__fuellung');
-  fuellung.style.width = `${(schritt / fragen.length) * 100}%`;
+  fuellung.style.width = `${anteil}%`;
   spur.append(fuellung);
   spur.setAttribute('role', 'progressbar');
   spur.setAttribute('aria-valuemin', '0');
@@ -100,8 +112,9 @@ function frageZeigen() {
 
   if (frage.typ === 'einfach' || frage.typ === 'kontrolle') {
     const liste = el('div', 'optionen');
-    for (const option of frage.optionen) {
+    frage.optionen.forEach((option, nr) => {
       const b = knopf(option, 'option');
+      b.append(taste(nr + 1));
       b.setAttribute('aria-pressed', String(antworten[frage.id] === option));
       b.addEventListener('click', () => {
         antworten[frage.id] = option;
@@ -110,7 +123,7 @@ function frageZeigen() {
         setTimeout(weiter, 220);
       });
       liste.append(b);
-    }
+    });
     karte.append(liste);
   }
 
@@ -122,8 +135,9 @@ function frageZeigen() {
       liste.querySelectorAll('.option').forEach((o) => o.setAttribute('aria-pressed', String(gewaehlt.has(o.dataset.wert))));
       fertigKnopf.disabled = gewaehlt.size === 0;
     };
-    for (const option of frage.optionen) {
+    frage.optionen.forEach((option, nr) => {
       const b = knopf(option, 'option option--mehrfach');
+      b.append(taste(nr + 1));
       b.dataset.wert = option;
       b.addEventListener('click', () => {
         if (gewaehlt.has(option)) {
@@ -138,7 +152,7 @@ function frageZeigen() {
         aktualisieren();
       });
       liste.append(b);
-    }
+    });
     karte.append(liste, fertigKnopf);
     aktualisieren();
   }
@@ -187,13 +201,13 @@ function frageZeigen() {
     karte.append(fertigKnopf);
   }
 
-  zeigen(karte);
+  zeigen(karte, 'frage');
 }
 
 async function absenden() {
   const karte = el('section', 'karte karte--mitte');
   karte.append(el('h2', '', 'Wird gesendet …'));
-  zeigen(karte);
+  zeigen(karte, 'frage');
 
   const fehlend = fragen.find((f) => !istBeantwortet(f));
   if (fehlend) {
@@ -206,7 +220,7 @@ async function absenden() {
     const antwort = await fetch('/api/antwort', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ antworten, dauerSekunden: Math.round((Date.now() - startZeit) / 1000) }),
+      body: JSON.stringify({ version: VERSION, antworten, dauerSekunden: Math.round((Date.now() - startZeit) / 1000) }),
     });
     const daten = await antwort.json().catch(() => ({}));
     if (!antwort.ok) throw new Error(daten.fehler || `Fehler ${antwort.status}`);
@@ -222,14 +236,14 @@ async function absenden() {
     const nochmal = knopf('Noch einmal senden', 'knopf knopf--gross');
     nochmal.addEventListener('click', absenden);
     fehlerKarte.append(nochmal);
-    zeigen(fehlerKarte);
+    zeigen(fehlerKarte, 'frage');
   }
 }
 
 function teilenKnopf() {
   const b = knopf('Umfrage mit Freunden teilen', 'knopf knopf--hell');
   b.addEventListener('click', async () => {
-    const daten = { title: 'LootLager-Umfrage', text: 'Hast du 2 Minuten für unser Unternehmen LootLager?', url: location.origin };
+    const daten = { title: 'LootLager-Umfrage', text: 'Hast du 2 Minuten für unser Unternehmen LootLager?', url: `${location.origin}/${VERSION}` };
     try {
       if (navigator.share) {
         await navigator.share(daten);
@@ -250,7 +264,7 @@ function dankeZeigen() {
     el('p', '', 'Deine Antworten sind gespeichert und helfen unserem Unternehmen sehr.'),
     teilenKnopf(),
   );
-  zeigen(karte);
+  zeigen(karte, 'ende');
 }
 
 function schonDabeiZeigen() {
@@ -267,7 +281,7 @@ function schonDabeiZeigen() {
     location.reload();
   });
   karte.append(neu);
-  zeigen(karte);
+  zeigen(karte, 'ende');
 }
 
 async function laden() {
@@ -292,5 +306,25 @@ async function laden() {
     frageZeigen();
   });
 }
+
+// Am PC geht es auch mit der Tastatur: Ziffern wählen eine Antwort, Enter geht weiter.
+document.addEventListener('keydown', (ereignis) => {
+  if (ereignis.altKey || ereignis.ctrlKey || ereignis.metaKey || ereignis.repeat) return;
+  const ziel = ereignis.target;
+  if (ziel instanceof HTMLTextAreaElement || ziel instanceof HTMLInputElement) return;
+  if (/^[1-9]$/.test(ereignis.key)) {
+    const antwort = app.querySelectorAll('.option')[Number(ereignis.key) - 1];
+    if (antwort && !antwort.closest('.gesperrt')) {
+      ereignis.preventDefault();
+      antwort.click();
+    }
+  } else if (ereignis.key === 'Enter' && !(ziel instanceof HTMLButtonElement) && !(ziel instanceof HTMLAnchorElement)) {
+    const fertig = app.querySelector('.knopf--gross:not(:disabled)');
+    if (fertig) {
+      ereignis.preventDefault();
+      fertig.click();
+    }
+  }
+});
 
 laden();

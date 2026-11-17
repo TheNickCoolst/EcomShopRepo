@@ -7,24 +7,29 @@
 //   kontrolle – Aufmerksamkeits-Check: wer nicht "richtig" wählt, zählt in der Auswertung nicht mit
 //   text      – offene Frage, freiwillig
 //
+// "kurz" ist die Kurzbezeichnung der Frage für Tabellen und Menüs im Auswertungszentrum.
+//
 // Achtung: Wenn die Umfrage schon läuft, keine Antworttexte mehr ändern.
 // Die Auswertung zählt nach dem genauen Text, alte Antworten würden sonst nicht mehr passen.
 
 export const fragen = [
   {
     id: 'alter',
+    kurz: 'Alter',
     typ: 'einfach',
     text: 'Wie alt bist du?',
     optionen: ['unter 16', '16–20', '21–25', '26–30', 'über 30'],
   },
   {
     id: 'zocken',
+    kurz: 'Zocken',
     typ: 'einfach',
     text: 'Wie oft zockst du?',
     optionen: ['Täglich', 'Mehrmals pro Woche', 'Etwa einmal pro Woche', 'Seltener', 'Nie'],
   },
   {
     id: 'plattform',
+    kurz: 'Plattform',
     typ: 'mehrfach',
     text: 'Worauf spielst du?',
     hinweis: 'Mehrere Antworten möglich',
@@ -33,6 +38,7 @@ export const fragen = [
   },
   {
     id: 'produkte',
+    kurz: 'Produkte',
     typ: 'mehrfach',
     text: 'Welche Produkte würdest du dir mit eigenem Design holen?',
     hinweis: 'Mehrere Antworten möglich',
@@ -48,6 +54,7 @@ export const fragen = [
   },
   {
     id: 'design',
+    kurz: 'Eigenes Design',
     typ: 'skala',
     text: 'Wie wichtig ist dir ein eigenes Design bei Gaming-Zubehör?',
     min: 'egal',
@@ -55,12 +62,14 @@ export const fragen = [
   },
   {
     id: 'preis',
+    kurz: 'Preis Mauspad',
     typ: 'einfach',
     text: 'Wie viel würdest du für ein XXL-Mauspad mit deinem eigenen Design zahlen?',
     optionen: ['bis 15 €', '16–25 €', '26–35 €', 'mehr als 35 €'],
   },
   {
     id: 'kontrolle',
+    kurz: 'Kontrollfrage',
     typ: 'kontrolle',
     text: 'Kurzer Aufmerksamkeits-Check: Bitte tippe auf „Lila“.',
     optionen: ['Rot', 'Grün', 'Lila', 'Blau'],
@@ -68,12 +77,14 @@ export const fragen = [
   },
   {
     id: 'kaufgrund',
+    kurz: 'Kaufgrund',
     typ: 'einfach',
     text: 'Was ist dir beim Kauf von Gaming-Zubehör am wichtigsten?',
     optionen: ['Niedriger Preis', 'Gute Qualität', 'Cooles Design', 'Schnelle Lieferung', 'Gute Bewertungen'],
   },
   {
     id: 'kaufort',
+    kurz: 'Kaufort',
     typ: 'mehrfach',
     text: 'Wo kaufst du Gaming-Zubehör meistens?',
     hinweis: 'Mehrere Antworten möglich',
@@ -88,12 +99,14 @@ export const fragen = [
   },
   {
     id: 'kanal',
+    kurz: 'Werbekanal',
     typ: 'einfach',
     text: 'Wo würdest du am ehesten von einem neuen Gaming-Shop erfahren?',
     optionen: ['TikTok', 'Instagram', 'YouTube', 'Twitch', 'Freunde', 'Google-Suche'],
   },
   {
     id: 'wunsch',
+    kurz: 'Wunsch',
     typ: 'text',
     text: 'Was müsste ein neuer Gaming-Shop bieten, damit du dort bestellst?',
     hinweis: 'Freiwillig. Zum Beispiel ein Produkt, das dir fehlt, ein Rabatt oder etwas ganz anderes',
@@ -105,7 +118,7 @@ export const kontrollfrage = fragen.find((f) => f.typ === 'kontrolle');
 
 // Version für den Browser: ohne die richtige Antwort der Kontrollfrage.
 export function oeffentlicheFragen() {
-  return fragen.map(({ richtig, ...rest }) => rest);
+  return fragen.map(({ richtig, kurz, ...rest }) => rest);
 }
 
 export function istGueltig(antworten) {

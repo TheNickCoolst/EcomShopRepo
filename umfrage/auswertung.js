@@ -1,10 +1,16 @@
-// Auswertung: zählt die Antworten und baut daraus die Seite /auswertung und die CSV-Datei.
+// Auswertung: zählt die Antworten aus (Häufigkeiten, Kreuztabelle, Kernaussagen) und baut die CSV-Datei.
+// Die Seiten des Auswertungszentrums stehen in seiten.js.
 import { fragen, kontrollfrage } from './fragen.js';
+import { versionen } from './versionen.js';
 
-const prozent = new Intl.NumberFormat('de-DE', { style: 'percent', maximumFractionDigits: 0 });
-const komma = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 1 });
-const datumZeit = new Intl.DateTimeFormat('de-DE', {
+export const prozent = new Intl.NumberFormat('de-DE', { style: 'percent', maximumFractionDigits: 0 });
+export const komma = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 1 });
+export const datumZeit = new Intl.DateTimeFormat('de-DE', {
   timeZone: 'Europe/Berlin', dateStyle: 'short', timeStyle: 'short',
+});
+const tagSchluessel = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Berlin', dateStyle: 'short' });
+const tagText = new Intl.DateTimeFormat('de-DE', {
+  timeZone: 'Europe/Berlin', weekday: 'short', day: '2-digit', month: '2-digit',
 });
 
 export function escapeHtml(text) {
@@ -13,7 +19,7 @@ export function escapeHtml(text) {
     .replaceAll('"', '&quot;').replaceAll("'", '&#39;');
 }
 
-function minuten(sekunden) {
+export function minuten(sekunden) {
   if (sekunden == null || Number.isNaN(sekunden)) return '–';
   const s = Math.round(sekunden);
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')} min`;
@@ -26,36 +32,94 @@ function median(zahlen) {
   return sortiert.length % 2 ? sortiert[mitte] : (sortiert[mitte - 1] + sortiert[mitte]) / 2;
 }
 
-// Zählt alle Fragen aus. "saetze" sind die gespeicherten Antworten (eine pro Teilnahme).
-export function auswerten(alleSaetze, { auchUngueltige = false } = {}) {
+// Im Team-Zentrum gibt es zusätzlich die "Frage", über wessen Link eine Antwort kam.
+// So lässt sich nach Version filtern und vergleichen.
+export const versionsFrage = {
+  id: 'version',
+  typ: 'einfach',
+  pseudo: true,
+  kurz: 'Version',
+  text: 'Über wessen Link kam die Antwort?',
+  optionen: versionen.map((v) => v.name),
+};
+
+export const kurzname = (frage) => frage.kurz ?? frage.text;
+
+// Alle Fragen eines Zentrums, im Team-Zentrum mit der Versions-Frage vorneweg.
+export function fragenFuer(zentrum) {
+  return zentrum.team ? [versionsFrage, ...fragen] : fragen;
+}
+
+// Fragen mit festen Antworten (alles außer der offenen Frage). Nur die kann man filtern und vergleichen.
+export const istGeschlossen = (frage) => frage.typ !== 'text';
+
+export function wert(satz, frage) {
+  if (frage.pseudo) return versionen.find((v) => v.id === satz.version)?.name ?? null;
+  return satz.antworten?.[frage.id];
+}
+
+export function optionenVon(frage) {
+  if (frage.typ === 'skala') return ['1', '2', '3', '4', '5'];
+  return frage.optionen ?? [];
+}
+
+export function waehlte(satz, frage, option) {
+  const w = wert(satz, frage);
+  if (Array.isArray(w)) return w.includes(option);
+  if (frage.typ === 'skala') return String(w) === option;
+  return w === option;
+}
+
+export function hatAntwort(satz, frage) {
+  const w = wert(satz, frage);
+  if (Array.isArray(w)) return w.length > 0;
+  if (frage.typ === 'skala') return Number.isInteger(w);
+  return w != null && w !== '';
+}
+
+// Liest den Filter aus der Adresse, z. B. "alter:1" = zweite Antwort der Frage "alter".
+export function filterLesen(text, zentrum) {
+  const treffer = /^([a-z0-9_]+):(\d{1,2})$/.exec(text || '');
+  if (!treffer) return null;
+  const frage = fragenFuer(zentrum).find((f) => f.id === treffer[1] && istGeschlossen(f));
+  const option = frage && optionenVon(frage)[Number(treffer[2])];
+  return option == null ? null : { frage, option, schluessel: `${frage.id}:${Number(treffer[2])}` };
+}
+
+// Welche Antworten gezählt werden: nur gültige (Kontrollfrage richtig), außer man will alle,
+// und auf Wunsch nur die Befragten, die eine bestimmte Antwort gegeben haben.
+export function auswahl(alleSaetze, { auchUngueltige = false, filter = null } = {}) {
+  let saetze = auchUngueltige ? alleSaetze : alleSaetze.filter((s) => s.gueltig);
+  if (filter) saetze = saetze.filter((s) => waehlte(s, filter.frage, filter.option));
+  return saetze;
+}
+
+// Zählt eine Frage aus.
+export function frageAuswerten(saetze, frage) {
+  if (frage.typ === 'text') {
+    const texte = saetze
+      .map((s) => ({ satz: s, text: wert(s, frage) }))
+      .filter((t) => typeof t.text === 'string' && t.text.trim() !== '');
+    return { frage, texte, n: texte.length };
+  }
+  const beantwortet = saetze.filter((s) => hatAntwort(s, frage));
+  const zeilen = optionenVon(frage).map((option) => ({
+    option,
+    anzahl: beantwortet.filter((s) => waehlte(s, frage, option)).length,
+  }));
+  const ergebnis = { frage, zeilen, n: beantwortet.length };
+  if (frage.typ === 'skala') {
+    const zahlen = beantwortet.map((s) => wert(s, frage));
+    ergebnis.schnitt = zahlen.length ? zahlen.reduce((a, b) => a + b, 0) / zahlen.length : null;
+  }
+  return ergebnis;
+}
+
+// Kennzahlen und alle Fragen. "alleSaetze" = alles im Zentrum, "saetze" = was nach Filter gezählt wird.
+export function auswerten(alleSaetze, saetze, zentrum) {
   const gueltige = alleSaetze.filter((s) => s.gueltig);
-  const saetze = auchUngueltige ? alleSaetze : gueltige;
   const dauer = saetze.map((s) => s.dauerSekunden).filter((d) => Number.isFinite(d) && d > 0);
-
-  const ergebnisse = fragen.map((frage) => {
-    const werte = saetze.map((s) => s.antworten?.[frage.id]);
-    if (frage.typ === 'text') {
-      const texte = saetze
-        .map((s) => ({ zeit: s.zeit, text: s.antworten?.[frage.id] }))
-        .filter((t) => typeof t.text === 'string' && t.text.trim() !== '');
-      return { frage, texte, n: texte.length };
-    }
-    if (frage.typ === 'skala') {
-      const zahlen = werte.filter((w) => Number.isInteger(w));
-      const zeilen = [1, 2, 3, 4, 5].map((stufe) => ({
-        option: String(stufe), anzahl: zahlen.filter((z) => z === stufe).length,
-      }));
-      const schnitt = zahlen.length ? zahlen.reduce((a, b) => a + b, 0) / zahlen.length : null;
-      return { frage, zeilen, n: zahlen.length, schnitt };
-    }
-    const beantwortet = werte.filter((w) => (Array.isArray(w) ? w.length > 0 : w != null));
-    const zeilen = frage.optionen.map((option) => ({
-      option,
-      anzahl: beantwortet.filter((w) => (Array.isArray(w) ? w.includes(option) : w === option)).length,
-    }));
-    return { frage, zeilen, n: beantwortet.length };
-  });
-
+  const zeiten = alleSaetze.map((s) => s.zeit).filter(Boolean).sort();
   return {
     gesamt: alleSaetze.length,
     gueltig: gueltige.length,
@@ -63,143 +127,133 @@ export function auswerten(alleSaetze, { auchUngueltige = false } = {}) {
     gezaehlt: saetze.length,
     dauerSchnitt: dauer.length ? dauer.reduce((a, b) => a + b, 0) / dauer.length : null,
     dauerMedian: median(dauer),
-    erste: alleSaetze[0]?.zeit,
-    letzte: alleSaetze.at(-1)?.zeit,
-    ergebnisse,
+    erste: zeiten[0],
+    letzte: zeiten.at(-1),
+    ergebnisse: fragenFuer(zentrum).map((frage) => frageAuswerten(saetze, frage)),
   };
 }
 
-// Die häufigste Antwort jeder Frage, für den Kasten "Auf einen Blick".
-function spitzenreiter(ergebnis) {
+// Die häufigste Antwort einer Frage (bei Gleichstand mehrere).
+export function spitzenreiter(ergebnis) {
   const { frage, zeilen, n } = ergebnis;
   if (!zeilen || n === 0) return null;
   if (frage.typ === 'skala') {
-    return `Durchschnitt ${komma.format(ergebnis.schnitt)} von 5`;
+    return { text: `Durchschnitt ${komma.format(ergebnis.schnitt)} von 5`, anteil: (ergebnis.schnitt - 1) / 4, skala: true };
   }
-  const max = Math.max(...zeilen.map((z) => z.anzahl));
-  const vorne = zeilen.filter((z) => z.anzahl === max).map((z) => `„${z.option}“`);
-  return `${vorne.join(' und ')} (${prozent.format(max / n)})`;
+  const kandidaten = zeilen.filter((z) => z.option !== frage.exklusiv);
+  const max = Math.max(...kandidaten.map((z) => z.anzahl));
+  if (max === 0) return null;
+  const vorne = kandidaten.filter((z) => z.anzahl === max).map((z) => z.option);
+  return { text: vorne.join(' und '), anteil: max / n };
 }
 
-function balken(ergebnis) {
-  const { frage, zeilen, n } = ergebnis;
-  const max = Math.max(1, ...zeilen.map((z) => z.anzahl));
-  const beschriftung = (option) => {
-    if (frage.typ !== 'skala') return escapeHtml(option);
-    if (option === '1') return `1 <small>(${escapeHtml(frage.min)})</small>`;
-    if (option === '5') return `5 <small>(${escapeHtml(frage.max)})</small>`;
-    return option;
+// Teilnahmen pro Tag (deutsche Zeit), ältester Tag zuerst.
+export function proTag(saetze) {
+  const tage = new Map();
+  for (const s of saetze) {
+    const zeit = new Date(s.zeit);
+    if (Number.isNaN(zeit.getTime())) continue;
+    const schluessel = tagSchluessel.format(zeit);
+    const eintrag = tage.get(schluessel) ?? { text: tagText.format(zeit), anzahl: 0 };
+    eintrag.anzahl += 1;
+    tage.set(schluessel, eintrag);
+  }
+  return [...tage.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([, eintrag]) => eintrag);
+}
+
+// Kreuztabelle: Wie haben die Gruppen von Frage B (Spalten) auf Frage A (Zeilen) geantwortet?
+// Jede Zelle: Anteil der Gruppe, der diese Antwort gewählt hat.
+export function kreuztabelle(saetze, frageA, frageB) {
+  const mitA = saetze.filter((s) => hatAntwort(s, frageA));
+  const gruppen = [
+    { name: 'Alle', alle: true, saetze: mitA },
+    ...optionenVon(frageB).map((option) => ({
+      name: option,
+      saetze: mitA.filter((s) => waehlte(s, frageB, option)),
+    })),
+  ];
+  const zeilen = optionenVon(frageA).map((option) => ({
+    option,
+    zellen: gruppen.map((g) => {
+      const anzahl = g.saetze.filter((s) => waehlte(s, frageA, option)).length;
+      return { anzahl, n: g.saetze.length, anteil: g.saetze.length ? anzahl / g.saetze.length : null };
+    }),
+  }));
+  let schnitt = null;
+  if (frageA.typ === 'skala') {
+    schnitt = gruppen.map((g) => {
+      const zahlen = g.saetze.map((s) => wert(s, frageA));
+      return zahlen.length ? zahlen.reduce((a, b) => a + b, 0) / zahlen.length : null;
+    });
+  }
+  return { gruppen: gruppen.map((g) => ({ name: g.name, alle: Boolean(g.alle), n: g.saetze.length })), zeilen, schnitt };
+}
+
+// Kernaussagen für die Präsentation. Jede Aussage gibt es nur, wenn die passende Frage
+// noch so in fragen.js steht. Fehlt sie, fällt die Aussage einfach weg.
+export function kernaussagen(a) {
+  const finde = (id) => a.ergebnisse.find((e) => e.frage.id === id && e.n > 0);
+  const anteil = (ergebnis, optionen) => {
+    const zeilen = ergebnis.zeilen.filter((z) => optionen.includes(z.option));
+    if (zeilen.length !== optionen.length) return null;
+    return zeilen.reduce((summe, z) => summe + z.anzahl, 0) / ergebnis.n;
   };
-  return `<ul class="balken">${zeilen.map((z) => {
-    const anteil = n ? z.anzahl / n : 0;
-    const richtig = frage.typ === 'kontrolle' && z.option === frage.richtig;
-    const spitze = z.anzahl === max && z.anzahl > 0 && frage.typ !== 'kontrolle';
-    return `<li class="${spitze ? 'spitze' : ''}${richtig ? ' richtig' : ''}">
-      <span class="option">${beschriftung(z.option)}${richtig ? ' ✓' : ''}</span>
-      <span class="spur"><span class="fuellung" style="width:${(z.anzahl / max) * 100}%"></span></span>
-      <span class="zahl">${z.anzahl} · ${prozent.format(anteil)}</span>
-    </li>`;
-  }).join('')}</ul>`;
-}
+  const aussagen = [];
 
-function frageKarte(ergebnis, nummer) {
-  const { frage, n } = ergebnis;
-  let inhalt;
-  let info = `${n} Antworten`;
-  if (frage.typ === 'text') {
-    inhalt = ergebnis.texte.length
-      ? `<ol class="texte">${ergebnis.texte.map((t) => `<li>${escapeHtml(t.text)}</li>`).join('')}</ol>`
-      : '<p class="leise">Noch keine Antworten.</p>';
-    info = `${n} Antworten (freiwillig)`;
-  } else {
-    inhalt = balken(ergebnis);
-    if (frage.typ === 'mehrfach') info += ' · Mehrfachauswahl, deshalb über 100 % möglich';
-    if (frage.typ === 'skala' && ergebnis.schnitt != null) info += ` · Durchschnitt ${komma.format(ergebnis.schnitt)}`;
-    if (frage.typ === 'kontrolle') info += ' · Kontrollfrage, wer falsch tippt, wird aussortiert';
+  const alter = finde('alter');
+  const zielgruppe = alter && anteil(alter, ['16–20', '21–25', '26–30']);
+  if (zielgruppe != null) {
+    aussagen.push({ wert: prozent.format(zielgruppe), text: 'sind 16 bis 30 Jahre alt. Das ist unsere Zielgruppe.' });
   }
-  return `<section class="karte">
-    <h2><span class="nr">${nummer}</span> ${escapeHtml(frage.text)}</h2>
-    <p class="leise">${info}</p>
-    ${inhalt}
-  </section>`;
-}
 
-export function auswertungSeite(alleSaetze, { auchUngueltige, warnung }) {
-  const a = auswerten(alleSaetze, { auchUngueltige });
-  const blick = a.ergebnisse
-    .filter((e) => e.frage.typ !== 'text' && e.frage.typ !== 'kontrolle')
-    .map((e) => ({ frage: e.frage.text, antwort: spitzenreiter(e) }))
-    .filter((z) => z.antwort);
+  const produkte = finde('produkte');
+  const lieblingsprodukt = produkte && spitzenreiter(produkte);
+  if (lieblingsprodukt) {
+    aussagen.push({
+      wert: prozent.format(lieblingsprodukt.anteil),
+      text: `würden sich ${lieblingsprodukt.text} mit eigenem Design holen. Das ist unser gefragtestes Produkt.`,
+    });
+  }
 
-  return `<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Auswertung · LootLager-Umfrage</title>
-  <link rel="icon" href="/favicon.png">
-  <link rel="stylesheet" href="/auswertung.css">
-</head>
-<body>
-  <header class="kopf">
-    <img src="/logo-lootlager.png" alt="LootLager" width="190" height="52">
-    <div>
-      <h1>Auswertung der Umfrage</h1>
-      <p class="leise">Stand: ${escapeHtml(datumZeit.format(new Date()))} Uhr</p>
-    </div>
-  </header>
-  <main>
-    ${warnung ? `<p class="warnung">${warnung}</p>` : ''}
-    <section class="zahlen">
-      <div><strong>${a.gesamt}</strong><span>Teilnahmen</span></div>
-      <div><strong>${a.gueltig}</strong><span>gültig</span></div>
-      <div><strong>${a.aussortiert}</strong><span>aussortiert (Kontrollfrage falsch)</span></div>
-      <div><strong>${minuten(a.dauerMedian)}</strong><span>typische Dauer (Median), Ø ${minuten(a.dauerSchnitt)}</span></div>
-    </section>
-    <p class="leise">
-      ${a.gesamt ? `Erste Antwort ${escapeHtml(datumZeit.format(new Date(a.erste)))}, letzte ${escapeHtml(datumZeit.format(new Date(a.letzte)))} Uhr. ` : ''}
-      Gezählt werden ${auchUngueltige ? '<strong>alle</strong> Antworten, auch die aussortierten' : 'nur <strong>gültige</strong> Antworten'}.
-    </p>
-    <nav class="knoepfe">
-      <a class="knopf" href="/auswertung">Aktualisieren</a>
-      <a class="knopf" href="${auchUngueltige ? '/auswertung' : '/auswertung?alle=1'}">${auchUngueltige ? 'Nur gültige zählen' : 'Auch aussortierte zählen'}</a>
-      <a class="knopf knopf--voll" href="/auswertung/antworten.csv">CSV für Excel herunterladen</a>
-    </nav>
+  const design = finde('design');
+  const designWichtig = design && anteil(design, ['4', '5']);
+  if (designWichtig != null) {
+    aussagen.push({
+      wert: prozent.format(designWichtig),
+      text: `ist ein eigenes Design wichtig (4 oder 5 von 5). Durchschnitt: ${komma.format(design.schnitt)}.`,
+    });
+  }
 
-    ${blick.length ? `<section class="karte blick">
-      <h2>Auf einen Blick</h2>
-      <p class="leise">Häufigste Antwort pro Frage (${a.gezaehlt} ${auchUngueltige ? 'Antworten' : 'gültige Antworten'})</p>
-      <dl>${blick.map((z) => `<dt>${escapeHtml(z.frage)}</dt><dd>${escapeHtml(z.antwort)}</dd>`).join('')}</dl>
-    </section>` : '<section class="karte"><p>Noch keine gültigen Antworten. Sobald jemand die Umfrage abschickt, erscheinen hier die Ergebnisse.</p></section>'}
+  const preis = finde('preis');
+  const mehrAls25 = preis && anteil(preis, ['26–35 €', 'mehr als 35 €']);
+  if (mehrAls25 != null) {
+    aussagen.push({ wert: prozent.format(mehrAls25), text: 'würden für ein XXL-Mauspad mit eigenem Design mehr als 25 € zahlen.' });
+  }
 
-    ${a.ergebnisse.map((e, i) => frageKarte(e, i + 1)).join('')}
-
-    <details class="karte gefahr">
-      <summary>Alle Antworten löschen (z. B. nach dem Testen)</summary>
-      <p>Die Antworten werden nicht endgültig gelöscht, sondern in eine Sicherungsdatei verschoben. Die Auswertung startet danach bei 0.</p>
-      <form method="post" action="/auswertung/zuruecksetzen">
-        <label>Zum Bestätigen <strong>LÖSCHEN</strong> eintippen:
-          <input name="bestaetigung" autocomplete="off" required pattern="LÖSCHEN">
-        </label>
-        <button type="submit">Antworten zurücksetzen</button>
-      </form>
-    </details>
-  </main>
-</body>
-</html>`;
+  for (const [id, satz] of [
+    ['kaufgrund', (t) => `ist „${t}“ beim Kauf am wichtigsten. Damit sollten wir werben.`],
+    ['kaufort', (t) => `kaufen Gaming-Zubehör meistens hier: ${t}. Das ist unser stärkster Mitbewerber.`],
+    ['kanal', (t) => `würden über ${t} von einem neuen Shop erfahren. Dort lohnt sich Werbung.`],
+  ]) {
+    const ergebnis = finde(id);
+    const vorne = ergebnis && spitzenreiter(ergebnis);
+    if (vorne) aussagen.push({ wert: prozent.format(vorne.anteil), text: satz(vorne.text) });
+  }
+  return aussagen;
 }
 
 // CSV mit Semikolon und BOM, damit Excel (deutsch) Umlaute und Spalten richtig erkennt.
 export function alsCsv(alleSaetze) {
-  const zelle = (wert) => {
-    let text = wert == null ? '' : String(wert);
+  const zelle = (inhalt) => {
+    let text = inhalt == null ? '' : String(inhalt);
     // Schutz vor Formeln in Excel (z. B. wenn jemand "=..." in die offene Frage schreibt)
     if (/^[=+\-@\t\r]/.test(text)) text = `'${text}`;
     return /[";\n\r]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
   };
-  const kopf = ['Nr', 'Zeit', 'Dauer (Sekunden)', 'Gültig', ...fragen.map((f) => f.text)];
+  const kopf = ['Nr', 'Version', 'Zeit', 'Dauer (Sekunden)', 'Gültig', ...fragen.map((f) => f.text)];
   const zeilen = alleSaetze.map((s, i) => [
     i + 1,
+    wert(s, versionsFrage) ?? '',
     datumZeit.format(new Date(s.zeit)),
     s.dauerSekunden ?? '',
     s.gueltig ? 'ja' : 'nein',

@@ -5,14 +5,49 @@ Unsere **Primärforschung**: eine kurze Online-Umfrage, die auf **Railway** läu
 - **11 Fragen, ca. 2 Minuten** (Vorgabe: höchstens 3 Minuten)
 - fast nur **geschlossene Fragen** zum Antippen, **1 Kontrollfrage** (Aufmerksamkeits-Check „Bitte tippe auf Lila“) und **1 offene Frage** (freiwillig)
 - **handytauglich**: eine Frage pro Bildschirm, große Knöpfe, Fortschrittsbalken
-- **schnell auswertbar**: Auf `/auswertung` stehen sofort alle Ergebnisse als Balken, dazu „Auf einen Blick“ (häufigste Antwort pro Frage) und ein CSV-Download für Excel
+- **am PC genauso**: links die Bühne mit der Truhe, rechts die Frage. Mit den Zifferntasten wählt man eine Antwort, mit Enter geht es weiter
+- **schnell auswertbar**: Im **Auswertungszentrum** stehen sofort alle Ergebnisse (siehe unten), dazu gibt es einen CSV-Download für Excel
 - **anonym**: keine Namen, keine E-Mail, keine IP-Adressen
 
-| Adresse | Was ist da? |
+## Drei Versionen: Nick, Noah und Luca
+
+Die Umfrage gibt es dreimal. Jeder verteilt seinen eigenen Link, die Antworten werden getrennt gespeichert und jeder hat sein eigenes Auswertungszentrum mit eigenem Passwort. Alles läuft in **einem** Railway-Projekt.
+
+| Wer | Umfrage-Link | Auswertungszentrum | Passwort-Variable in Railway |
+|---|---|---|---|
+| Nick | `/nick` | `/nick/auswertung` | `PASSWORT_NICK` |
+| Noah | `/noah` | `/noah/auswertung` | `PASSWORT_NOAH` |
+| Luca | `/luca` | `/luca/auswertung` | `PASSWORT_LUCA` |
+| Team (alle zusammen) | – | `/team/auswertung` | `ADMIN_PASSWORT` |
+
+- Das **Team-Zentrum** zeigt alle Antworten zusammen. Dort kann man zusätzlich nach Version filtern und die Versionen vergleichen. Für die Präsentation nehmt ihr am besten diese Zahlen, weil es mehr Antworten sind.
+- Hat eine Version kein eigenes Passwort, gilt für sie `ADMIN_PASSWORT`.
+- Wer nur die Hauptadresse ohne `/nick` öffnet, kann auswählen, von wem der Link kam.
+- Namen ändern oder eine Version ergänzen: in [`versionen.js`](versionen.js).
+
+## Das Auswertungszentrum
+
+Nach der Anmeldung gibt es links (am Handy oben) ein Menü:
+
+| Menüpunkt | Was ist da? |
 |---|---|
-| `/` | die Umfrage, diesen Link teilt ihr |
-| `/auswertung` | die Ergebnisse, nur mit Passwort |
-| `/auswertung/antworten.csv` | alle Antworten als Excel-Datei |
+| **Übersicht** | Teilnahmen, gültige und aussortierte Antworten, typische Dauer, **Kernaussagen für die Präsentation**, häufigste Antwort pro Frage, Teilnahmen pro Tag, euer Umfrage-Link zum Kopieren |
+| **Alle Fragen** | jede Frage mit Balken, Prozent und Anzahl |
+| **Vergleichen** | zwei Fragen gegeneinander, z. B. „Preis nach Alter“ oder „Produkte nach Plattform“ (Kreuztabelle) |
+| **Offene Antworten** | alle Texte aus der offenen Frage |
+| **Einzelne Antworten** | eine Zeile pro Teilnahme |
+| **Sekundärforschung** | Preise, Angebote und Bewertungen der Mitbewerber, Einkaufspreise, Marktdaten (siehe unten) |
+| **Export & Verwaltung** | CSV für Excel, Drucken als PDF, Testantworten löschen |
+
+Oben auf den Seiten steht ein **Filter**: Damit zählt ihr nur Befragte mit einer bestimmten Antwort, z. B. nur die 16- bis 20-Jährigen. Mit dem Häkchen „auch aussortierte zählen“ kommen die Antworten mit falscher Kontrollfrage dazu.
+
+## Sekundärforschung
+
+Die Daten stehen in [`sekundaer.js`](sekundaer.js): pro Produkt die Mitbewerber (Preis, Angebot, Bewertung, Quelle), die Einkaufspreise (EK) und ein Fazit, dazu Zahlen zum Gaming-Markt.
+
+**Wichtig:** Die Werte stammen aus Suchergebnissen vom 17.11.2026. Die Shop-Seiten selbst wurden dabei nicht geöffnet. **Prüft jeden Wert, den ihr zeigt, über den Link in der Spalte „Quelle“ nach** und korrigiert ihn in `sekundaer.js`.
+
+Die Einkaufspreise aus dem Großhandel stehen in US-Dollar. Tragt in `sekundaer.js` bei `dollarKurs` den aktuellen Kurs ein (z. B. `0.92`), dann rechnet die Seite den Rohgewinn pro Stück aus.
 
 ## Die Fragen
 
@@ -39,19 +74,19 @@ Unsere **Primärforschung**: eine kurze Online-Umfrage, die auf **Railway** läu
 3. Den neuen Dienst anklicken → **Settings** → **Source**:
    - **Root Directory**: `/umfrage` (wichtig, sonst findet Railway die App nicht)
    - **Branch**: der Branch, auf dem der Ordner `umfrage` liegt (nach dem Mergen `main`)
-4. **Variables** → **New Variable**: Name `ADMIN_PASSWORT`, Wert: ein Passwort, das ihr euch ausdenkt. Damit öffnet ihr später die Auswertung.
+4. **Variables** → **New Variable**, vier Stück anlegen: `ADMIN_PASSWORT` (Team-Zentrum), `PASSWORT_NICK`, `PASSWORT_NOAH` und `PASSWORT_LUCA`. Jeder denkt sich sein eigenes Passwort aus, am besten mindestens 12 Zeichen.
 5. **Volume anlegen**, damit die Antworten nicht verloren gehen: Rechtsklick auf den Dienst (oder `Strg+K` bzw. `Cmd+K` → „Volume“) → **Attach Volume** → Mount Path: `/daten`.
-   Ohne Volume löscht Railway die Antworten bei jedem neuen Deploy. Die Auswertung zeigt dann eine rote Warnung.
-6. **Settings** → **Networking** → **Generate Domain**. Railway zeigt euch eine Adresse wie `irgendwas.up.railway.app`. Das ist der Link zur Umfrage.
+   Ohne Volume löscht Railway die Antworten bei jedem neuen Deploy. Das Auswertungszentrum zeigt dann eine rote Warnung.
+6. **Settings** → **Networking** → **Generate Domain**. Railway zeigt euch eine Adresse wie `irgendwas.up.railway.app`. Die Umfrage-Links sind dann `irgendwas.up.railway.app/nick`, `/noah` und `/luca`.
 7. Falls Railway eine **Region** anbietet (Settings → Deploy): eine in Europa wählen, z. B. EU West (Amsterdam). Dann liegen die Antworten in der EU.
 
-**Testen, bevor ihr den Link teilt:**
-1. Link auf dem Handy öffnen und die Umfrage einmal komplett ausfüllen.
-2. `…up.railway.app/auswertung` öffnen, Benutzername leer lassen, Passwort aus Schritt 4 eingeben. Eure Testantwort muss dort stehen.
-3. Ganz unten auf der Auswertung „Alle Antworten löschen“ aufklappen, `LÖSCHEN` eintippen und bestätigen. Jetzt steht alles auf 0 und die echte Umfrage kann losgehen.
-4. Wer einmal mitgemacht hat, sieht beim nächsten Öffnen „Du hast schon mitgemacht“. Zum erneuten Testen unten auf „Jemand anderes nutzt dieses Handy …“ tippen.
+**Testen, bevor ihr den Link teilt (jeder für seine Version):**
+1. Eigenen Link (z. B. `…up.railway.app/nick`) auf dem Handy öffnen und die Umfrage einmal komplett ausfüllen.
+2. `…up.railway.app/nick/auswertung` öffnen und mit dem eigenen Passwort anmelden. Die Testantwort muss dort stehen. Die Anmeldung gilt 12 Stunden. Nach 8 falschen Versuchen ist die Anmeldung für dieses Gerät 10 Minuten gesperrt.
+3. Im Menü „Export & Verwaltung“ ganz unten „Alle Antworten dieser Version löschen“ aufklappen, `LÖSCHEN` eintippen und bestätigen. Jetzt steht alles auf 0 und die echte Umfrage kann losgehen.
+4. Wer einmal mitgemacht hat, sieht beim nächsten Öffnen „Du hast schon mitgemacht“, auch bei den Links der anderen. Zum erneuten Testen unten auf „Jemand anderes nutzt dieses Handy …“ tippen.
 
-**Link verteilen:** in die Klassen-Gruppe schicken oder einen QR-Code erstellen (z. B. in PowerPoint oder mit einem QR-Code-Generator) und auf eine Folie oder ein Plakat setzen.
+**Link verteilen:** Den eigenen Link findet jeder in seinem Zentrum auf der Übersicht („Link kopieren“). In Gruppen schicken oder einen QR-Code erstellen (z. B. in PowerPoint oder mit einem QR-Code-Generator) und auf eine Folie oder ein Plakat setzen.
 
 ## Kosten
 
@@ -65,16 +100,19 @@ Nötig ist nur [Node.js](https://nodejs.org) ab Version 20, weitere Pakete brauc
 
 ```bash
 cd umfrage
-ADMIN_PASSWORT=test npm start
+ADMIN_PASSWORT=test PASSWORT_NICK=nick npm start
 ```
 
-Dann im Browser `http://localhost:3000` öffnen, die Auswertung unter `http://localhost:3000/auswertung` (Passwort `test`). Die Antworten landen lokal in `umfrage/daten/antworten.jsonl`. Dieser Ordner wird nicht mit hochgeladen.
+Dann im Browser `http://localhost:3000/nick` öffnen, das Zentrum unter `http://localhost:3000/nick/auswertung` (Passwort `nick`), das Team-Zentrum unter `http://localhost:3000/team/auswertung` (Passwort `test`). Die Antworten landen lokal in `umfrage/daten/`. Dieser Ordner wird nicht mit hochgeladen.
 
 ## Dateien
 
 | Datei | Inhalt |
 |---|---|
 | [`fragen.js`](fragen.js) | alle Fragen und die Prüfung der Antworten |
-| [`server.js`](server.js) | der Webserver: Umfrage ausliefern, Antworten speichern, Passwort für die Auswertung |
-| [`auswertung.js`](auswertung.js) | zählt die Antworten und baut die Auswertungsseite und die CSV-Datei |
-| [`public/`](public/) | Startseite, Aussehen (CSS), Ablauf der Umfrage im Browser, Logo |
+| [`versionen.js`](versionen.js) | die drei Versionen (Nick, Noah, Luca) |
+| [`sekundaer.js`](sekundaer.js) | die Daten der Sekundärforschung |
+| [`server.js`](server.js) | der Webserver: Umfrage ausliefern, Antworten speichern, Anmeldung im Auswertungszentrum |
+| [`auswertung.js`](auswertung.js) | zählt die Antworten aus und baut die CSV-Datei |
+| [`seiten.js`](seiten.js), [`sekundaer-seite.js`](sekundaer-seite.js) | die Seiten des Auswertungszentrums |
+| [`public/`](public/) | Startseite, Aussehen (CSS), Ablauf der Umfrage im Browser, Bilder |

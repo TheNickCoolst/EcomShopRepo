@@ -603,14 +603,16 @@ Aus der Mitschrift vom 17.11.2026:
 | Art | Was wir machen | Stand |
 |---|---|---|
 | **Primärforschung** (wir erheben selbst neue Daten) | Online-Umfrage auf **Railway**: kurz (höchstens 3 Minuten), geschlossene Fragen, 1 Kontrollfrage, 1 offene Frage, handytauglich, schnell auswertbar | ✅ gebaut im Ordner [`umfrage/`](umfrage/README.md), muss noch auf Railway |
-| **Sekundärforschung** (wir nutzen Daten, die es schon gibt) | Preise, Reaktionen (Bewertungen) und Angebote der Mitbewerber, dazu unser Einkaufspreis (EK) | offen |
+| **Sekundärforschung** (wir nutzen Daten, die es schon gibt) | Preise, Reaktionen (Bewertungen) und Angebote der Mitbewerber, dazu unser Einkaufspreis (EK) | ✅ erste Fassung in [`umfrage/sekundaer.js`](umfrage/sekundaer.js), zu sehen im Auswertungszentrum. Werte stammen aus Suchergebnissen und müssen noch nachgeprüft werden |
 
-**Die Umfrage auf einen Blick:** 11 Fragen, ca. 2 Minuten, anonym. Die Fragen und wozu wir sie stellen stehen in [`umfrage/README.md`](umfrage/README.md). Die Auswertung (`/auswertung`, mit Passwort) zeigt sofort Balken pro Frage, die häufigste Antwort pro Frage und die typische Dauer. Antworten mit falscher Kontrollfrage werden automatisch aussortiert. Für Excel gibt es einen CSV-Download.
+**Drei Versionen:** Nick, Noah und Luca haben je einen eigenen Umfrage-Link (`/nick`, `/noah`, `/luca`) und ein eigenes Auswertungszentrum mit eigenem Passwort. Das Team-Zentrum (`/team/auswertung`) zeigt alle Antworten zusammen.
+
+**Die Umfrage auf einen Blick:** 11 Fragen, ca. 2 Minuten, anonym. Die Fragen und wozu wir sie stellen stehen in [`umfrage/README.md`](umfrage/README.md). Das Auswertungszentrum zeigt sofort Kernaussagen, Balken pro Frage, Vergleiche zwischen zwei Fragen und die typische Dauer. Antworten mit falscher Kontrollfrage werden automatisch aussortiert. Für Excel gibt es einen CSV-Download.
 
 **Noch offen:**
 - [ ] Umfrage auf Railway online stellen (Anleitung in [`umfrage/README.md`](umfrage/README.md))
 - [ ] Umfrage einmal testen, Testantworten löschen, Link oder QR-Code verteilen
-- [ ] Sekundärforschung: Preise und Angebote der Mitbewerber, Bewertungen, Einkaufspreise
+- [ ] Sekundärforschung: Werte über die Quellen-Links nachprüfen, Dollarkurs für den Rohgewinn eintragen
 - [ ] Ergebnisse auswerten und für die Präsentation aufbereiten
 - [ ] Unternehmensgründung, 3 Folien am Beispiel GmbH: Ablauf der Gründung, ungefähre Kosten
 - [ ] Nach dem Projekt: CSV sichern und das Railway-Projekt löschen
