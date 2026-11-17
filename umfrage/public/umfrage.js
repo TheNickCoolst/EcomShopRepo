@@ -243,7 +243,7 @@ async function absenden() {
 function teilenKnopf() {
   const b = knopf('Umfrage mit Freunden teilen', 'knopf knopf--hell');
   b.addEventListener('click', async () => {
-    const daten = { title: 'LootLager-Umfrage', text: 'Hast du 2 Minuten für unser Unternehmen LootLager?', url: `${location.origin}/${VERSION}` };
+    const daten = { title: 'LootLager-Umfrage', text: 'Hast du 2 Minuten für unser Unternehmen LootLager?', url: location.origin + location.pathname };
     try {
       if (navigator.share) {
         await navigator.share(daten);
@@ -290,7 +290,7 @@ async function laden() {
     return;
   }
   try {
-    const antwort = await fetch('/api/fragen');
+    const antwort = await fetch(`/api/fragen?version=${encodeURIComponent(VERSION)}`);
     if (!antwort.ok) throw new Error();
     fragen = await antwort.json();
   } catch {

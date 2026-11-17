@@ -5,6 +5,9 @@
 //   /team/auswertung               alle Versionen zusammen
 //   /                              Auswahl, falls jemand nur die Hauptadresse öffnet
 //
+// Jede Version hat außerdem einen eigenen Port (8080, 8081, 8082), damit sie eine eigene Domain bekommen kann.
+// Dort liegt die Umfrage direkt auf / und das Zentrum unter /auswertung.
+//
 // Die Versionen stehen in versionen.js, die Fragen in fragen.js.
 import http from 'node:http';
 import crypto from 'node:crypto';
@@ -12,12 +15,13 @@ import path from 'node:path';
 import { readFile, appendFile, mkdir, rename } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { oeffentlicheFragen, pruefeAntworten, istGueltig } from './fragen.js';
-import { versionen, TEAM, versionVon, zentrumVon, passwortVon, passwortVariable } from './versionen.js';
+import { versionen, TEAM, versionVon, versionVonPort, zentrumVon, passwortVon, passwortVariable } from './versionen.js';
 import { alsCsv, escapeHtml } from './auswertung.js';
 import { zentrumSeite, anmeldeSeite, auswahlSeite, adresse } from './seiten.js';
 
 const hier = path.dirname(fileURLToPath(import.meta.url));
-const PORT = Number(process.env.PORT) || 3000;
+// Jede Version hat ihren eigenen Port (versionen.js). Setzt Railway zusätzlich PORT, läuft dort die Auswahlseite.
+const ports = [...new Set([...versionen.map((v) => v.port), Number(process.env.PORT) || 0].filter(Boolean))];
 
 // Auf Railway bleibt eine Datei nur erhalten, wenn ein Volume angehängt ist.
 // Railway setzt dann RAILWAY_VOLUME_MOUNT_PATH automatisch.
@@ -271,6 +275,7 @@ async function zentrumBearbeiten(req, res, url, zentrum, ansicht) {
       alleSaetze: await antwortenFuer(zentrum),
       abfrage: url.searchParams,
       basisUrl: basisUrl(req),
+      eigenerPort: versionVonPort(req.socket.localPort)?.id ?? null,
       warnung: warnungText(),
     });
     if (seite) return html(res, 200, seite);
@@ -289,7 +294,14 @@ async function umfrageSeite(version) {
 
 async function bearbeiten(req, res) {
   const url = new URL(req.url, 'http://localhost');
-  const weg = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, '') : url.pathname;
+  let weg = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, '') : url.pathname;
+  // Auf dem eigenen Port einer Version liegt die Umfrage direkt auf "/" und das Zentrum unter "/auswertung".
+  const eigene = versionVonPort(req.socket.localPort);
+  if (eigene && weg === '/') weg = `/${eigene.id}`;
+  // Die Kurzadresse /auswertung führt weiter zur vollen Adresse (dort gilt auch das Anmelde-Cookie).
+  if (eigene && req.method === 'GET' && (weg === '/auswertung' || weg.startsWith('/auswertung/'))) {
+    return weiterleiten(res, `/${eigene.id}${weg}${url.search}`);
+  }
   const teile = weg.split('/').filter(Boolean);
 
   if (req.method === 'GET' && statisch[weg]) {
@@ -301,7 +313,7 @@ async function bearbeiten(req, res) {
 
   if (req.method === 'GET' && weg === '/') return html(res, 200, auswahlSeite());
   if (req.method === 'GET' && weg === '/gesund') return text(res, 200, 'ok');
-  if (req.method === 'GET' && weg === '/api/fragen') return json(res, 200, oeffentlicheFragen());
+  if (req.method === 'GET' && weg === '/api/fragen') return json(res, 200, oeffentlicheFragen(url.searchParams.get('version') ?? ''));
 
   if (req.method === 'POST' && weg === '/api/antwort') {
     const wer = geraet(req);
@@ -345,21 +357,27 @@ async function bearbeiten(req, res) {
   return text(res, 404, `Nicht gefunden: ${weg}`);
 }
 
-const server = http.createServer((req, res) => {
+function anfrage(req, res) {
   bearbeiten(req, res).catch((fehler) => {
     console.error(fehler);
     if (!res.headersSent) text(res, fehler.status === 413 ? 413 : 500, fehler.status === 413 ? 'Zu groß.' : 'Serverfehler');
     else res.end();
   });
-});
+}
 
-server.listen(PORT, () => {
-  console.log(`LootLager-Umfrage läuft auf Port ${PORT}`);
-  console.log(`Versionen: ${versionen.map((v) => `/${v.id}`).join(', ')} · Antworten liegen in: ${datenOrdner}`);
-  for (const zentrum of [TEAM, ...versionen]) {
-    if (!passwortVon(zentrum)) {
-      console.warn(`Hinweis: ${passwortVariable(zentrum)} ist nicht gesetzt, /${zentrum.id}/auswertung ist deshalb gesperrt.`);
-    }
+for (const port of ports) {
+  const version = versionVonPort(port);
+  http.createServer(anfrage)
+    .on('error', (fehler) => { console.error(`Port ${port} lässt sich nicht öffnen: ${fehler.message}`); process.exitCode = 1; })
+    .listen(port, () => console.log(version
+      ? `Port ${port}: Umfrage von ${version.name}, Auswertungszentrum unter /auswertung`
+      : `Port ${port}: Auswahlseite, alle Versionen unter /${versionen.map((v) => v.id).join(', /')}`));
+}
+
+console.log(`Antworten liegen in: ${datenOrdner}`);
+for (const zentrum of [TEAM, ...versionen]) {
+  if (!passwortVon(zentrum)) {
+    console.warn(`Hinweis: ${passwortVariable(zentrum)} ist nicht gesetzt, /${zentrum.id}/auswertung ist deshalb gesperrt.`);
   }
-  if (ohneVolume) console.warn('Achtung: Kein Railway-Volume angehängt. Antworten gehen beim nächsten Deploy verloren.');
-});
+}
+if (ohneVolume) console.warn('Achtung: Kein Railway-Volume angehängt. Antworten gehen beim nächsten Deploy verloren.');

@@ -7,6 +7,9 @@
 //   kontrolle – Aufmerksamkeits-Check: wer nicht "richtig" wählt, zählt in der Auswertung nicht mit
 //   text      – offene Frage, freiwillig
 //
+// "varianten": leicht andere Formulierung der Frage für einzelne Versionen (siehe versionen.js).
+// Nur der Fragetext ändert sich. Die Antworten bleiben gleich, damit das Team-Zentrum alles zusammenzählen kann.
+// "text" ist die Fassung von Nick und die, die im Auswertungszentrum steht.
 // "kurz" ist die Kurzbezeichnung der Frage für Tabellen und Menüs im Auswertungszentrum.
 //
 // Achtung: Wenn die Umfrage schon läuft, keine Antworttexte mehr ändern.
@@ -18,6 +21,10 @@ export const fragen = [
     kurz: 'Alter',
     typ: 'einfach',
     text: 'Wie alt bist du?',
+    varianten: {
+      noah: 'Zu welcher Altersgruppe gehörst du?',
+      luca: 'Zuerst kurz zu dir: Wie alt bist du?',
+    },
     optionen: ['unter 16', '16–20', '21–25', '26–30', 'über 30'],
   },
   {
@@ -25,6 +32,10 @@ export const fragen = [
     kurz: 'Zocken',
     typ: 'einfach',
     text: 'Wie oft zockst du?',
+    varianten: {
+      noah: 'Wie häufig spielst du Videospiele?',
+      luca: 'Wie oft sitzt du in einer normalen Woche am Zocken?',
+    },
     optionen: ['Täglich', 'Mehrmals pro Woche', 'Etwa einmal pro Woche', 'Seltener', 'Nie'],
   },
   {
@@ -32,6 +43,10 @@ export const fragen = [
     kurz: 'Plattform',
     typ: 'mehrfach',
     text: 'Worauf spielst du?',
+    varianten: {
+      noah: 'Auf welchen Geräten spielst du?',
+      luca: 'Womit zockst du?',
+    },
     hinweis: 'Mehrere Antworten möglich',
     optionen: ['PC', 'PlayStation', 'Xbox', 'Nintendo Switch', 'Handy', 'Gar nicht'],
     exklusiv: 'Gar nicht',
@@ -41,6 +56,10 @@ export const fragen = [
     kurz: 'Produkte',
     typ: 'mehrfach',
     text: 'Welche Produkte würdest du dir mit eigenem Design holen?',
+    varianten: {
+      noah: 'Welche dieser Produkte würdest du mit deinem eigenen Design kaufen?',
+      luca: 'Stell dir vor, du kannst das Design selbst bestimmen: Was davon würdest du bestellen?',
+    },
     hinweis: 'Mehrere Antworten möglich',
     optionen: [
       'XXL-Mauspad',
@@ -57,6 +76,10 @@ export const fragen = [
     kurz: 'Eigenes Design',
     typ: 'skala',
     text: 'Wie wichtig ist dir ein eigenes Design bei Gaming-Zubehör?',
+    varianten: {
+      noah: 'Wie wichtig ist es dir, dass dein Gaming-Zubehör ein eigenes Design hat?',
+      luca: 'Eigenes Design auf deinem Gaming-Zubehör: Wie wichtig ist dir das?',
+    },
     min: 'egal',
     max: 'sehr wichtig',
   },
@@ -65,6 +88,10 @@ export const fragen = [
     kurz: 'Preis Mauspad',
     typ: 'einfach',
     text: 'Wie viel würdest du für ein XXL-Mauspad mit deinem eigenen Design zahlen?',
+    varianten: {
+      noah: 'Was wäre dir ein XXL-Mauspad mit deinem eigenen Design wert?',
+      luca: 'Ein XXL-Mauspad mit deinem eigenen Motiv: Wie viel würdest du höchstens ausgeben?',
+    },
     optionen: ['bis 15 €', '16–25 €', '26–35 €', 'mehr als 35 €'],
   },
   {
@@ -72,6 +99,10 @@ export const fragen = [
     kurz: 'Kontrollfrage',
     typ: 'kontrolle',
     text: 'Kurzer Aufmerksamkeits-Check: Bitte tippe auf „Lila“.',
+    varianten: {
+      noah: 'Kleiner Test, ob du noch dabei bist: Wähle bitte „Lila“.',
+      luca: 'Nur zur Kontrolle: Tippe hier bitte auf „Lila“.',
+    },
     optionen: ['Rot', 'Grün', 'Lila', 'Blau'],
     richtig: 'Lila',
   },
@@ -80,6 +111,10 @@ export const fragen = [
     kurz: 'Kaufgrund',
     typ: 'einfach',
     text: 'Was ist dir beim Kauf von Gaming-Zubehör am wichtigsten?',
+    varianten: {
+      noah: 'Worauf achtest du beim Kauf von Gaming-Zubehör am meisten?',
+      luca: 'Wenn du Gaming-Zubehör kaufst: Was zählt für dich am meisten?',
+    },
     optionen: ['Niedriger Preis', 'Gute Qualität', 'Cooles Design', 'Schnelle Lieferung', 'Gute Bewertungen'],
   },
   {
@@ -87,6 +122,10 @@ export const fragen = [
     kurz: 'Kaufort',
     typ: 'mehrfach',
     text: 'Wo kaufst du Gaming-Zubehör meistens?',
+    varianten: {
+      noah: 'Wo bestellst oder kaufst du dein Gaming-Zubehör normalerweise?',
+      luca: 'Wo holst du dir dein Gaming-Zubehör am häufigsten?',
+    },
     hinweis: 'Mehrere Antworten möglich',
     optionen: [
       'Amazon',
@@ -102,6 +141,10 @@ export const fragen = [
     kurz: 'Werbekanal',
     typ: 'einfach',
     text: 'Wo würdest du am ehesten von einem neuen Gaming-Shop erfahren?',
+    varianten: {
+      noah: 'Über welchen Kanal würdest du einen neuen Gaming-Shop am ehesten entdecken?',
+      luca: 'Wo müsste ein neuer Gaming-Shop auftauchen, damit du ihn bemerkst?',
+    },
     optionen: ['TikTok', 'Instagram', 'YouTube', 'Twitch', 'Freunde', 'Google-Suche'],
   },
   {
@@ -109,6 +152,10 @@ export const fragen = [
     kurz: 'Wunsch',
     typ: 'text',
     text: 'Was müsste ein neuer Gaming-Shop bieten, damit du dort bestellst?',
+    varianten: {
+      noah: 'Was würde dich überzeugen, bei einem neuen Gaming-Shop zu bestellen?',
+      luca: 'Was fehlt dir bei den Gaming-Shops, die du kennst?',
+    },
     hinweis: 'Freiwillig. Zum Beispiel ein Produkt, das dir fehlt, ein Rabatt oder etwas ganz anderes',
     maxLaenge: 500,
   },
@@ -116,9 +163,10 @@ export const fragen = [
 
 export const kontrollfrage = fragen.find((f) => f.typ === 'kontrolle');
 
-// Version für den Browser: ohne die richtige Antwort der Kontrollfrage.
-export function oeffentlicheFragen() {
-  return fragen.map(({ richtig, kurz, ...rest }) => rest);
+// Fassung für den Browser: ohne die richtige Antwort der Kontrollfrage,
+// mit der Formulierung der jeweiligen Version.
+export function oeffentlicheFragen(versionId) {
+  return fragen.map(({ richtig, kurz, varianten, ...rest }) => ({ ...rest, text: varianten?.[versionId] ?? rest.text }));
 }
 
 export function istGueltig(antworten) {

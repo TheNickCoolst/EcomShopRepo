@@ -11,19 +11,21 @@ Unsere **Primärforschung**: eine kurze Online-Umfrage, die auf **Railway** läu
 
 ## Drei Versionen: Nick, Noah und Luca
 
-Die Umfrage gibt es dreimal. Jeder verteilt seinen eigenen Link, die Antworten werden getrennt gespeichert und jeder hat sein eigenes Auswertungszentrum mit eigenem Passwort. Alles läuft in **einem** Railway-Projekt.
+Die Umfrage gibt es dreimal. Jeder verteilt seinen eigenen Link, die Antworten werden getrennt gespeichert und jeder hat sein eigenes Auswertungszentrum mit eigenem Passwort. Alles läuft in **einem** Railway-Projekt, aber jede Version auf einem **eigenen Port**. So bekommt jede Version ihre eigene Domain.
 
-| Wer | Umfrage-Link | Auswertungszentrum | Passwort-Variable in Railway |
-|---|---|---|---|
-| Nick | `/nick` | `/nick/auswertung` | `PASSWORT_NICK` |
-| Noah | `/noah` | `/noah/auswertung` | `PASSWORT_NOAH` |
-| Luca | `/luca` | `/luca/auswertung` | `PASSWORT_LUCA` |
-| Team (alle zusammen) | – | `/team/auswertung` | `ADMIN_PASSWORT` |
+| Wer | Port | Umfrage | Auswertungszentrum | Passwort-Variable in Railway |
+|---|---|---|---|---|
+| Nick | 8080 | eigene Domain | eigene Domain + `/auswertung` | `PASSWORT_NICK` |
+| Noah | 8081 | eigene Domain | eigene Domain + `/auswertung` | `PASSWORT_NOAH` |
+| Luca | 8082 | eigene Domain | eigene Domain + `/auswertung` | `PASSWORT_LUCA` |
+| Team (alle zusammen) | jeder | – | jede Domain + `/team/auswertung` | `ADMIN_PASSWORT` |
+
+- **Die Fragen sind je Version leicht anders formuliert** (z. B. „Wie alt bist du?“ bei Nick, „Zu welcher Altersgruppe gehörst du?“ bei Noah). Die Antworten zum Antippen sind überall gleich, damit das Team-Zentrum alles zusammenzählen kann. Die Formulierungen stehen in [`fragen.js`](fragen.js) unter `varianten`. Im Auswertungszentrum steht immer die Fassung von Nick.
+- Auf jeder Domain funktionieren zusätzlich die Adressen `/nick`, `/noah` und `/luca`.
 
 - Das **Team-Zentrum** zeigt alle Antworten zusammen. Dort kann man zusätzlich nach Version filtern und die Versionen vergleichen. Für die Präsentation nehmt ihr am besten diese Zahlen, weil es mehr Antworten sind.
 - Hat eine Version kein eigenes Passwort, gilt für sie `ADMIN_PASSWORT`.
-- Wer nur die Hauptadresse ohne `/nick` öffnet, kann auswählen, von wem der Link kam.
-- Namen ändern oder eine Version ergänzen: in [`versionen.js`](versionen.js).
+- Namen, Ports ändern oder eine Version ergänzen: in [`versionen.js`](versionen.js).
 
 ## Das Auswertungszentrum
 
@@ -73,16 +75,17 @@ Die Einkaufspreise aus dem Großhandel stehen in US-Dollar. Tragt in `sekundaer.
 2. **New Project** → **Deploy from GitHub repo** → `EcomShopRepo` auswählen. Falls das Repo nicht in der Liste steht: Railway auf GitHub den Zugriff auf das Repo erlauben.
 3. Den neuen Dienst anklicken → **Settings** → **Source**:
    - **Root Directory**: `/umfrage` (wichtig, sonst findet Railway die App nicht)
-   - **Branch**: der Branch, auf dem der Ordner `umfrage` liegt (nach dem Mergen `main`)
+   - **Branch**: der Standard-Branch des Repos (dort landet der Ordner `umfrage` nach dem Mergen)
+   - **Config File** (Settings → Config-as-code): `/umfrage/railway.json`. Die Datei setzt Startbefehl, Healthcheck (`/gesund`) und sorgt dafür, dass Railway nur bei Änderungen im Ordner `umfrage` neu baut. Railway sucht die Datei nicht automatisch im Root Directory, deshalb den vollen Pfad eintragen.
 4. **Variables** → **New Variable**, vier Stück anlegen: `ADMIN_PASSWORT` (Team-Zentrum), `PASSWORT_NICK`, `PASSWORT_NOAH` und `PASSWORT_LUCA`. Jeder denkt sich sein eigenes Passwort aus, am besten mindestens 12 Zeichen.
 5. **Volume anlegen**, damit die Antworten nicht verloren gehen: Rechtsklick auf den Dienst (oder `Strg+K` bzw. `Cmd+K` → „Volume“) → **Attach Volume** → Mount Path: `/daten`.
    Ohne Volume löscht Railway die Antworten bei jedem neuen Deploy. Das Auswertungszentrum zeigt dann eine rote Warnung.
-6. **Settings** → **Networking** → **Generate Domain**. Railway zeigt euch eine Adresse wie `irgendwas.up.railway.app`. Die Umfrage-Links sind dann `irgendwas.up.railway.app/nick`, `/noah` und `/luca`.
+6. **Settings** → **Networking** → **Generate Domain**, und zwar **dreimal**. Railway fragt jedes Mal nach dem Port (Target Port): einmal `8080` (Nick), einmal `8081` (Noah), einmal `8082` (Luca). Ihr bekommt drei Adressen wie `irgendwas.up.railway.app`. Jede ist der Umfrage-Link einer Version. Eigene Domains (Custom Domain) lassen sich genauso je Port anlegen. Den Namen vor `.up.railway.app` könnt ihr per Stift-Symbol ändern, z. B. `lootlager-nick`. Steht der Port einer bestehenden Domain falsch, ebenfalls über das Stift-Symbol ändern.
 7. Falls Railway eine **Region** anbietet (Settings → Deploy): eine in Europa wählen, z. B. EU West (Amsterdam). Dann liegen die Antworten in der EU.
 
 **Testen, bevor ihr den Link teilt (jeder für seine Version):**
-1. Eigenen Link (z. B. `…up.railway.app/nick`) auf dem Handy öffnen und die Umfrage einmal komplett ausfüllen.
-2. `…up.railway.app/nick/auswertung` öffnen und mit dem eigenen Passwort anmelden. Die Testantwort muss dort stehen. Die Anmeldung gilt 12 Stunden. Nach 8 falschen Versuchen ist die Anmeldung für dieses Gerät 10 Minuten gesperrt.
+1. Eigene Domain auf dem Handy öffnen und die Umfrage einmal komplett ausfüllen.
+2. Eigene Domain mit `/auswertung` dahinter öffnen und mit dem eigenen Passwort anmelden. Die Testantwort muss dort stehen. Die Anmeldung gilt 12 Stunden. Nach 8 falschen Versuchen ist die Anmeldung für dieses Gerät 10 Minuten gesperrt.
 3. Im Menü „Export & Verwaltung“ ganz unten „Alle Antworten dieser Version löschen“ aufklappen, `LÖSCHEN` eintippen und bestätigen. Jetzt steht alles auf 0 und die echte Umfrage kann losgehen.
 4. Wer einmal mitgemacht hat, sieht beim nächsten Öffnen „Du hast schon mitgemacht“, auch bei den Links der anderen. Zum erneuten Testen unten auf „Jemand anderes nutzt dieses Handy …“ tippen.
 
@@ -103,7 +106,7 @@ cd umfrage
 ADMIN_PASSWORT=test PASSWORT_NICK=nick npm start
 ```
 
-Dann im Browser `http://localhost:3000/nick` öffnen, das Zentrum unter `http://localhost:3000/nick/auswertung` (Passwort `nick`), das Team-Zentrum unter `http://localhost:3000/team/auswertung` (Passwort `test`). Die Antworten landen lokal in `umfrage/daten/`. Dieser Ordner wird nicht mit hochgeladen.
+Dann im Browser öffnen: `http://localhost:8080` (Nick), `http://localhost:8081` (Noah), `http://localhost:8082` (Luca). Das Zentrum liegt jeweils unter `/auswertung` (Passwort für Nick: `nick`, sonst `test`), das Team-Zentrum unter `http://localhost:8080/team/auswertung` (Passwort `test`). Die Antworten landen lokal in `umfrage/daten/`. Dieser Ordner wird nicht mit hochgeladen.
 
 ## Dateien
 
