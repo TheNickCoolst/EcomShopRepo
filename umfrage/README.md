@@ -76,7 +76,7 @@ Die Einkaufspreise aus dem Großhandel stehen in US-Dollar. Tragt in `sekundaer.
 3. Den neuen Dienst anklicken → **Settings** → **Source**:
    - **Root Directory**: `/umfrage` (wichtig, sonst findet Railway die App nicht)
    - **Branch**: der Standard-Branch des Repos (dort landet der Ordner `umfrage` nach dem Mergen)
-   - **Config File** (Settings → Config-as-code): `/umfrage/railway.json`. Die Datei setzt Startbefehl, Healthcheck (`/gesund`) und sorgt dafür, dass Railway nur bei Änderungen im Ordner `umfrage` neu baut. Railway sucht die Datei nicht automatisch im Root Directory, deshalb den vollen Pfad eintragen.
+   - **Settings → Deploy**: Start Command `node server.js`, Healthcheck Path `/gesund`. Unter **Build → Watch Paths** `/umfrage/**`, dann baut Railway nur bei Änderungen im Ordner `umfrage` neu.
 4. **Variables** → **New Variable**, vier Stück anlegen: `ADMIN_PASSWORT` (Team-Zentrum), `PASSWORT_NICK`, `PASSWORT_NOAH` und `PASSWORT_LUCA`. Jeder denkt sich sein eigenes Passwort aus, am besten mindestens 12 Zeichen.
 5. **Volume anlegen**, damit die Antworten nicht verloren gehen: Rechtsklick auf den Dienst (oder `Strg+K` bzw. `Cmd+K` → „Volume“) → **Attach Volume** → Mount Path: `/daten`.
    Ohne Volume löscht Railway die Antworten bei jedem neuen Deploy. Das Auswertungszentrum zeigt dann eine rote Warnung.
