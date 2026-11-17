@@ -229,7 +229,7 @@ async function absenden() {
 function teilenKnopf() {
   const b = knopf('Umfrage mit Freunden teilen', 'knopf knopf--hell');
   b.addEventListener('click', async () => {
-    const daten = { title: 'LootLager-Umfrage', text: 'Hast du 2 Minuten für unser Schulprojekt?', url: location.origin };
+    const daten = { title: 'LootLager-Umfrage', text: 'Hast du 2 Minuten für unser Unternehmen LootLager?', url: location.origin };
     try {
       if (navigator.share) {
         await navigator.share(daten);
@@ -247,7 +247,7 @@ function dankeZeigen() {
   karte.append(
     el('p', 'gross', '🎉'),
     el('h2', '', 'Danke, das war’s schon!'),
-    el('p', '', 'Deine Antworten sind gespeichert und helfen unserem Projekt sehr.'),
+    el('p', '', 'Deine Antworten sind gespeichert und helfen unserem Unternehmen sehr.'),
     teilenKnopf(),
   );
   zeigen(karte);
