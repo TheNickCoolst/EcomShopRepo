@@ -200,6 +200,16 @@ export function kernaussagen(a) {
   };
   const aussagen = [];
 
+  // Leitfrage: Ist es sinnvoll, den Onlineshop so einzurichten?
+  const vergleich = finde('vergleich');
+  const kaufen = vergleich && anteil(vergleich, ['Ja, sicher', 'Eher ja']);
+  if (kaufen != null) {
+    aussagen.push({
+      wert: prozent.format(kaufen),
+      text: 'würden bei LootLager bestellen, wenn sie unseren Preis mit den Spezial-Shops vergleichen (sicher oder eher ja). Das beantwortet unsere Leitfrage.',
+    });
+  }
+
   const alter = finde('alter');
   const zielgruppe = alter && anteil(alter, ['16–20', '21–25', '26–30']);
   if (zielgruppe != null) {

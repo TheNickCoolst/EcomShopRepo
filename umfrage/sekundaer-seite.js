@@ -84,8 +84,9 @@ function umfrageBezug(produkt, saetze, balkenListe) {
       teile.push(`<p><strong>${prozent.format(zeile.anzahl / ergebnis.n)}</strong> der Befragten (${zeile.anzahl} von ${ergebnis.n}) würden sich dieses Produkt mit eigenem Design holen.</p>`);
     }
   }
-  const preisFrage = produkt.preisFrage && fragen.find((f) => f.id === produkt.preisFrage);
-  if (preisFrage) {
+  for (const frageId of [produkt.preisFrage, produkt.kaufFrage]) {
+    const preisFrage = frageId && fragen.find((f) => f.id === frageId);
+    if (!preisFrage) continue;
     const ergebnis = frageAuswerten(saetze, preisFrage);
     if (ergebnis.n > 0) {
       teile.push(`<p class="leise">${e(preisFrage.text)} (${ergebnis.n} Antworten)</p>`);

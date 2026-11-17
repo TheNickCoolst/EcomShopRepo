@@ -27,6 +27,7 @@ export const produkte = [
     unserAngebot: '900 × 400 mm, mit eigenem Motiv',
     umfrageOption: 'XXL-Mauspad',
     preisFrage: 'preis',
+    kaufFrage: 'vergleich',
     mitbewerber: [
       { anbieter: 'propads.gg', produkt: 'Custom Mousepad XXL 900 × 400 mm', preis: 49.99, eigenesDesign: true, angebot: 'Dicke, Rand und Oberfläche wählbar, Produktion 2–3 Tage, Versand gratis ab 55 €', bewertung: '411 Bewertungen, ca. 95 % davon 5 Sterne', quelle: 'https://www.propads.gg/en/products/custom-mousepad-xxl-900x400mm' },
       { anbieter: 'Sunnywall', produkt: 'Gaming-Mauspad XXL selbst gestalten, 90 × 40 cm', preis: 49.95, eigenesDesign: true, angebot: 'eigenes Foto oder Logo, genähter Rand, Lieferzeit 1–3 Werktage, zzgl. Versand', bewertung: '4,4 von 5 (5 Bewertungen)', quelle: 'https://www.sunnywall.de/custom-xxl-mauspad-90x40.html' },
