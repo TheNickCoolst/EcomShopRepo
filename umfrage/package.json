@@ -1,0 +1,14 @@
+{
+  "name": "lootlager-umfrage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Umfrage zur Marktforschung für den fiktiven Shop LootLager, läuft auf Railway",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

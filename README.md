@@ -10,5 +10,6 @@ Gruppenprojekt: Wir gründen einen (fiktiven) Onlineshop – die **LootLager UG 
 - Shop: [shop/](shop/) – zum Ansehen `shop/index.html` öffnen. Mit Logo, Name, Domain, 5 Produkten, Warenkorb und Test-Kasse
 - Anbieter: **Netlify**, gebaut mit Claude Code (Begründung in [PLANUNG.md](PLANUNG.md), Abschnitt 5). `netlify.toml` veröffentlicht den Ordner `shop`
 - Passwortschutz: Online ist der Shop nur mit Passwort erreichbar (kennt die Gruppe, steht absichtlich nicht hier) ([netlify/edge-functions/passwortschutz.js](netlify/edge-functions/passwortschutz.js)). Er ist damit nicht öffentlich, deshalb kein echtes Impressum. Funktioniert nur, wenn Netlify mit GitHub verbunden ist, nicht beim Hochladen per Drag-and-drop
+- Marktforschung: Online-Umfrage (2 Minuten, handytauglich, mit Auswertung) für Railway im Ordner [umfrage/](umfrage/README.md). Planung in [PLANUNG.md](PLANUNG.md), Abschnitt 10
 - Logo: [assets/](assets/)
 - KI-Bilder für Shop und Präsentation (Gemini), mit allen Prompts: [assets/ki-bilder/](assets/ki-bilder/PROMPTS.md)
