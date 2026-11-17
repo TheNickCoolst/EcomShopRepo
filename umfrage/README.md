@@ -75,11 +75,12 @@ Die Einkaufspreise aus dem Großhandel stehen in US-Dollar. Tragt in `sekundaer.
 2. **New Project** → **Deploy from GitHub repo** → `EcomShopRepo` auswählen. Falls das Repo nicht in der Liste steht: Railway auf GitHub den Zugriff auf das Repo erlauben.
 3. Den neuen Dienst anklicken → **Settings** → **Source**:
    - **Root Directory**: `/umfrage` (wichtig, sonst findet Railway die App nicht)
-   - **Branch**: der Branch, auf dem der Ordner `umfrage` liegt (nach dem Mergen `main`)
+   - **Branch**: der Standard-Branch des Repos (dort landet der Ordner `umfrage` nach dem Mergen)
+   - **Config File** (Settings → Config-as-code): `/umfrage/railway.json`. Die Datei setzt Startbefehl, Healthcheck (`/gesund`) und sorgt dafür, dass Railway nur bei Änderungen im Ordner `umfrage` neu baut. Railway sucht die Datei nicht automatisch im Root Directory, deshalb den vollen Pfad eintragen.
 4. **Variables** → **New Variable**, vier Stück anlegen: `ADMIN_PASSWORT` (Team-Zentrum), `PASSWORT_NICK`, `PASSWORT_NOAH` und `PASSWORT_LUCA`. Jeder denkt sich sein eigenes Passwort aus, am besten mindestens 12 Zeichen.
 5. **Volume anlegen**, damit die Antworten nicht verloren gehen: Rechtsklick auf den Dienst (oder `Strg+K` bzw. `Cmd+K` → „Volume“) → **Attach Volume** → Mount Path: `/daten`.
    Ohne Volume löscht Railway die Antworten bei jedem neuen Deploy. Das Auswertungszentrum zeigt dann eine rote Warnung.
-6. **Settings** → **Networking** → **Generate Domain**, und zwar **dreimal**. Railway fragt jedes Mal nach dem Port (Target Port): einmal `8080` (Nick), einmal `8081` (Noah), einmal `8082` (Luca). Ihr bekommt drei Adressen wie `irgendwas.up.railway.app`. Jede ist der Umfrage-Link einer Version. Eigene Domains (Custom Domain) lassen sich genauso je Port anlegen.
+6. **Settings** → **Networking** → **Generate Domain**, und zwar **dreimal**. Railway fragt jedes Mal nach dem Port (Target Port): einmal `8080` (Nick), einmal `8081` (Noah), einmal `8082` (Luca). Ihr bekommt drei Adressen wie `irgendwas.up.railway.app`. Jede ist der Umfrage-Link einer Version. Eigene Domains (Custom Domain) lassen sich genauso je Port anlegen. Den Namen vor `.up.railway.app` könnt ihr per Stift-Symbol ändern, z. B. `lootlager-nick`. Steht der Port einer bestehenden Domain falsch, ebenfalls über das Stift-Symbol ändern.
 7. Falls Railway eine **Region** anbietet (Settings → Deploy): eine in Europa wählen, z. B. EU West (Amsterdam). Dann liegen die Antworten in der EU.
 
 **Testen, bevor ihr den Link teilt (jeder für seine Version):**
