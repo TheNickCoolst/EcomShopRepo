@@ -593,3 +593,24 @@ Die Lehrkraft lässt bei Folie 1 irgendein Gruppenmitglied vorstellen. Deshalb m
 - [ ] Gruppennummer 4 noch einmal prüfen
 - [ ] Rollen und Aufteilung der Folien bestätigen (Abschnitt 8)
 - [ ] Spickzettel lernen (Abschnitte 2, 3 und 5) und Probelauf mit Stoppuhr
+
+---
+
+## 10. Marktforschung (bis 20.11.2026)
+
+Aus der Mitschrift vom 17.11.2026:
+
+| Art | Was wir machen | Stand |
+|---|---|---|
+| **Primärforschung** (wir erheben selbst neue Daten) | Online-Umfrage auf **Railway**: kurz (höchstens 3 Minuten), geschlossene Fragen, 1 Kontrollfrage, 1 offene Frage, handytauglich, schnell auswertbar | ✅ gebaut im Ordner [`umfrage/`](umfrage/README.md), muss noch auf Railway |
+| **Sekundärforschung** (wir nutzen Daten, die es schon gibt) | Preise, Reaktionen (Bewertungen) und Angebote der Mitbewerber, dazu unser Einkaufspreis (EK) | offen |
+
+**Die Umfrage auf einen Blick:** 11 Fragen, ca. 2 Minuten, anonym. Die Fragen und wozu wir sie stellen stehen in [`umfrage/README.md`](umfrage/README.md). Die Auswertung (`/auswertung`, mit Passwort) zeigt sofort Balken pro Frage, die häufigste Antwort pro Frage und die typische Dauer. Antworten mit falscher Kontrollfrage werden automatisch aussortiert. Für Excel gibt es einen CSV-Download.
+
+**Noch offen:**
+- [ ] Umfrage auf Railway online stellen (Anleitung in [`umfrage/README.md`](umfrage/README.md))
+- [ ] Umfrage einmal testen, Testantworten löschen, Link oder QR-Code verteilen
+- [ ] Sekundärforschung: Preise und Angebote der Mitbewerber, Bewertungen, Einkaufspreise
+- [ ] Ergebnisse auswerten und für die Präsentation aufbereiten
+- [ ] Unternehmensgründung, 3 Folien am Beispiel GmbH: Ablauf der Gründung, ungefähre Kosten
+- [ ] Nach dem Projekt: CSV sichern und das Railway-Projekt löschen

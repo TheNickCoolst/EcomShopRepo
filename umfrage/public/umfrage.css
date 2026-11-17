@@ -1,0 +1,208 @@
+/* LootLager-Umfrage – Farben wie im Shop: Violett, Türkis, Dunkelblau */
+:root {
+  --violett: #7c3aed;
+  --violett-dunkel: #5b21b6;
+  --violett-hell: #f5f1ff;
+  --tuerkis: #22d3ee;
+  --nacht: #111827;
+  --text: #111827;
+  --text-leise: #566072;
+  --linie: #e6e1f5;
+  --weiss: #fff;
+  --rot: #b42318;
+  --rund: 18px;
+  --schrift: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --schrift-titel: ui-rounded, "SF Pro Rounded", "Arial Rounded MT Bold", "Nunito", "Segoe UI", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--schrift);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--text);
+  background:
+    radial-gradient(60rem 30rem at 110% -10%, rgb(34 211 238 / 0.18), transparent 60%),
+    radial-gradient(50rem 30rem at -20% 0%, rgb(124 58 237 / 0.16), transparent 60%),
+    var(--violett-hell);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, p { margin: 0; }
+h1, h2 { font-family: var(--schrift-titel); font-weight: 800; line-height: 1.2; text-wrap: balance; }
+h1 { font-size: clamp(1.6rem, 6vw, 2rem); }
+h2 { font-size: clamp(1.3rem, 5vw, 1.6rem); }
+h1:focus, h2:focus { outline: none; }
+button, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--tuerkis); outline-offset: 3px; }
+
+.kopf {
+  display: flex;
+  justify-content: center;
+  padding: 18px 16px 6px;
+}
+.kopf img { height: 44px; width: auto; border-radius: 10px; }
+
+.buehne {
+  width: min(100% - 32px, 560px);
+  margin: 12px auto 40px;
+}
+
+.karte {
+  display: grid;
+  gap: 16px;
+  padding: 24px 20px;
+  background: var(--weiss);
+  border: 1px solid var(--linie);
+  border-radius: var(--rund);
+  box-shadow: 0 12px 34px rgb(17 24 39 / 0.08);
+}
+.karte--mitte { text-align: center; justify-items: center; padding-block: 36px; }
+
+.marke {
+  color: var(--violett);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.fakten {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fakten li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--violett-hell);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.kleingedruckt { font-size: 0.85rem; color: var(--text-leise); }
+.hinweis { color: var(--text-leise); margin-top: -8px; }
+.fehler { color: var(--rot); font-weight: 600; }
+.gross { font-size: 3rem; line-height: 1; }
+
+/* Knöpfe */
+.knopf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--violett), var(--violett-dunkel));
+  color: var(--weiss);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+.knopf:active { transform: scale(0.98); }
+.knopf:disabled { opacity: 0.45; cursor: not-allowed; }
+.knopf--gross { width: 100%; font-size: 1.1rem; }
+.knopf--hell { background: var(--violett-hell); color: var(--violett-dunkel); }
+
+.link {
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  color: var(--violett-dunkel);
+  font-weight: 600;
+  cursor: pointer;
+}
+.link--klein { font-size: 0.85rem; color: var(--text-leise); text-decoration: underline; }
+
+/* Fortschritt */
+.fortschritt { display: grid; gap: 8px; }
+.fortschritt__zeile { display: flex; justify-content: space-between; align-items: center; }
+.fortschritt__text { font-size: 0.9rem; color: var(--text-leise); font-weight: 600; }
+.fortschritt__spur { height: 8px; border-radius: 999px; background: var(--violett-hell); overflow: hidden; }
+.fortschritt__fuellung {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--violett), var(--tuerkis));
+  transition: width 0.3s ease;
+}
+
+/* Antwortmöglichkeiten */
+.optionen { display: grid; gap: 10px; }
+.optionen.gesperrt, .skala.gesperrt { pointer-events: none; }
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 54px;
+  padding: 12px 16px;
+  border: 2px solid var(--linie);
+  border-radius: 14px;
+  background: var(--weiss);
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+@media (hover: hover) {
+  .option:hover { border-color: #c4b5fd; }
+}
+.option[aria-pressed="true"] {
+  border-color: var(--violett);
+  background: var(--violett-hell);
+  color: var(--violett-dunkel);
+}
+
+/* Häkchen-Kästchen bei Mehrfachauswahl */
+.option--mehrfach::before {
+  content: "";
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #c4b5fd;
+  border-radius: 6px;
+  background: var(--weiss);
+}
+.option--mehrfach[aria-pressed="true"]::before {
+  border-color: var(--violett);
+  background: var(--violett) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center / 16px no-repeat;
+}
+
+/* Skala 1–5 */
+.skala { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.option--skala { justify-content: center; padding: 0; font-size: 1.25rem; min-height: 58px; text-align: center; }
+.skala__legende {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: -6px;
+  font-size: 0.9rem;
+  color: var(--text-leise);
+}
+
+/* Offene Frage */
+.textfeld {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 14px;
+  border: 2px solid var(--linie);
+  border-radius: 14px;
+  resize: vertical;
+  font-size: 1rem;
+}
+.textfeld:focus { border-color: var(--violett); outline: none; }
+.zeichen { margin-top: -8px; font-size: 0.85rem; color: var(--text-leise); text-align: right; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
