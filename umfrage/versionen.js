@@ -2,20 +2,23 @@
 //   - einen eigenen Link:               /nick, /noah, /luca
 //   - eigene Antworten:                 daten/antworten-nick.jsonl usw.
 //   - ein eigenes Auswertungszentrum:   /nick/auswertung usw., mit eigenem Passwort
+//   - einen eigenen Port:               8080, 8081, 8082. So kann jede Version in Railway eine eigene Domain bekommen.
+//     Auf ihrem Port liegt die Umfrage direkt auf der Hauptadresse und das Zentrum unter /auswertung.
 // Dazu kommt das Team-Zentrum /team/auswertung, das alle Antworten zusammen zeigt.
 //
 // Wer einen Namen ändert oder eine Version ergänzt: "id" nur aus Kleinbuchstaben und Ziffern.
 // Das Passwort einer Version steht in Railway in der Variable PASSWORT_<ID in Großbuchstaben>.
 
 export const versionen = [
-  { id: 'nick', name: 'Nick' },
-  { id: 'noah', name: 'Noah' },
-  { id: 'luca', name: 'Luca' },
+  { id: 'nick', name: 'Nick', port: 8080 },
+  { id: 'noah', name: 'Noah', port: 8081 },
+  { id: 'luca', name: 'Luca', port: 8082 },
 ];
 
 export const TEAM = { id: 'team', name: 'Team', team: true };
 
 export const versionVon = (id) => versionen.find((v) => v.id === id) ?? null;
+export const versionVonPort = (port) => versionen.find((v) => v.port === port) ?? null;
 
 // Ein Zentrum ist entweder eine der Versionen oder das Team-Zentrum.
 export const zentrumVon = (id) => (id === TEAM.id ? TEAM : versionVon(id));

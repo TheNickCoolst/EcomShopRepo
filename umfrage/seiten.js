@@ -169,9 +169,9 @@ function zaehlHinweis(a, zustand, filter) {
   return `<p class="leise">${teile.join(' ')}</p>`;
 }
 
-function linkKarte(zentrum, basisUrl) {
+function linkKarte(zentrum, basisUrl, eigenerPort) {
   const zeile = (v) => {
-    const link = `${basisUrl}/${v.id}`;
+    const link = v.id === eigenerPort ? basisUrl : `${basisUrl}/${v.id}`;
     return `<li><span class="link-zeile__name">${zentrum.team ? `Version ${e(v.name)}` : 'Dein Umfrage-Link'}</span>
       <code>${e(link)}</code>
       <button class="knopf knopf--klein" type="button" data-kopieren="${e(link)}">Link kopieren</button></li>`;
@@ -186,7 +186,7 @@ function linkKarte(zentrum, basisUrl) {
   </section>`;
 }
 
-function uebersicht({ zentrum, alleSaetze, saetze, zustand, filter, basisUrl }) {
+function uebersicht({ zentrum, alleSaetze, saetze, zustand, filter, basisUrl, eigenerPort }) {
   const a = auswerten(alleSaetze, saetze, zentrum);
   const aussagen = kernaussagen(a);
   const blick = a.ergebnisse
@@ -245,7 +245,7 @@ function uebersicht({ zentrum, alleSaetze, saetze, zustand, filter, basisUrl }) 
           })), { klasse: 'balken--anzahl' })}
           <p class="leise">Erste Antwort ${e(datumZeit.format(new Date(a.erste)))} Uhr, letzte ${e(datumZeit.format(new Date(a.letzte)))} Uhr.</p>
         </section>` : ''}
-        ${linkKarte(zentrum, basisUrl)}
+        ${linkKarte(zentrum, basisUrl, eigenerPort)}
       </div>
     </div>`;
 }
@@ -390,7 +390,7 @@ function einzelne({ zentrum, saetze }) {
   </section>`;
 }
 
-function exportAnsicht({ zentrum, alleSaetze, basisUrl }) {
+function exportAnsicht({ zentrum, alleSaetze, basisUrl, eigenerPort }) {
   return `
     <section class="karte">
       <h2>Antworten herunterladen</h2>
@@ -406,7 +406,7 @@ function exportAnsicht({ zentrum, alleSaetze, basisUrl }) {
         <button class="knopf" type="button" data-drucken>Diese Seite drucken</button>
       </p>
     </section>
-    ${linkKarte(zentrum, basisUrl)}
+    ${linkKarte(zentrum, basisUrl, eigenerPort)}
     ${zentrum.team ? `<section class="karte">
       <h2>Antworten löschen</h2>
       <p>Im Team-Zentrum kann nichts gelöscht werden. Jede Version setzt ihre eigenen Antworten in ihrem eigenen Zentrum zurück.</p>
@@ -425,13 +425,13 @@ function exportAnsicht({ zentrum, alleSaetze, basisUrl }) {
 // --- Öffentliche Funktionen -----------------------------------------------------------
 
 // Baut eine Ansicht des Zentrums. Gibt null zurück, wenn es die Ansicht nicht gibt.
-export function zentrumSeite({ zentrum, ansicht, alleSaetze, abfrage, basisUrl, warnung }) {
+export function zentrumSeite({ zentrum, ansicht, alleSaetze, abfrage, basisUrl, eigenerPort, warnung }) {
   const eintrag = ansichten.find((a) => a.id === ansicht);
   if (!eintrag) return null;
   const filter = filterLesen(abfrage.get('filter'), zentrum);
   const zustand = { alle: abfrage.get('alle') === '1' ? '1' : '', filter: filter?.schluessel ?? '' };
   const saetze = auswahl(alleSaetze, { auchUngueltige: Boolean(zustand.alle), filter });
-  const daten = { zentrum, alleSaetze, saetze, zustand, filter, abfrage, basisUrl };
+  const daten = { zentrum, alleSaetze, saetze, zustand, filter, abfrage, basisUrl, eigenerPort };
   const stand = `Stand: ${e(datumZeit.format(new Date()))} Uhr`;
   const mitFilter = (versteckt) => filterLeiste({ zentrum, ansicht, zustand, filter, versteckt });
 
