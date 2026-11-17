@@ -200,7 +200,7 @@ function uebersicht({ zentrum, alleSaetze, saetze, zustand, filter, basisUrl, ei
   return `
     <section class="kacheln" aria-label="Kennzahlen">
       <div class="kachel"><span class="kachel__name">Teilnahmen</span><strong class="kachel__wert">${a.gesamt}</strong></div>
-      <div class="kachel"><span class="kachel__name">Gültig</span><strong class="kachel__wert">${a.gueltig}</strong><span class="kachel__info">Kontrollfrage richtig</span></div>
+      <div class="kachel"><span class="kachel__name">Gültig</span><strong class="kachel__wert">${a.gueltig}</strong><span class="kachel__info">Kontrollfragen richtig</span></div>
       <div class="kachel"><span class="kachel__name">Aussortiert</span><strong class="kachel__wert">${a.aussortiert}</strong><span class="kachel__info">Kontrollfrage falsch</span></div>
       <div class="kachel"><span class="kachel__name">Typische Dauer</span><strong class="kachel__wert">${minuten(a.dauerMedian)}</strong><span class="kachel__info">Median, Durchschnitt ${minuten(a.dauerSchnitt)}</span></div>
     </section>

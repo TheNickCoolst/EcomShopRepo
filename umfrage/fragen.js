@@ -95,6 +95,20 @@ export const fragen = [
     optionen: ['bis 15 €', '16–25 €', '26–35 €', 'mehr als 35 €'],
   },
   {
+    // Sekundärforschung in der Umfrage: Die Preise stammen aus sekundaer.js (Mauspad, Spezial-Shops
+    // für eigene Designs: Deskyou 39,95 € bis propads.gg 49,99 €). Ändern sich die Preise dort, hier mit anpassen.
+    // Diese Frage beantwortet die Leitfrage: Ist es sinnvoll, den Onlineshop so einzurichten?
+    id: 'vergleich',
+    kurz: 'Kaufabsicht',
+    typ: 'einfach',
+    text: 'Spezial-Shops verlangen für ein XXL-Mauspad mit eigenem Design ca. 40 bis 50 €. Bei LootLager kostet es 24,99 €. Würdest du bei uns bestellen?',
+    varianten: {
+      noah: 'Ein XXL-Mauspad mit eigenem Design kostet in Spezial-Shops ca. 40 bis 50 €, bei LootLager 24,99 €. Würdest du bei uns bestellen?',
+      luca: 'Zum Vergleich: Andere Shops nehmen für ein XXL-Mauspad mit eigenem Design ca. 40 bis 50 €, wir 24,99 €. Würdest du bei LootLager bestellen?',
+    },
+    optionen: ['Ja, sicher', 'Eher ja', 'Eher nicht', 'Nein'],
+  },
+  {
     id: 'kontrolle',
     kurz: 'Kontrollfrage',
     typ: 'kontrolle',
@@ -137,6 +151,18 @@ export const fragen = [
     exklusiv: 'Noch nie welches gekauft',
   },
   {
+    id: 'kontrolle2',
+    kurz: 'Kontrollfrage 2',
+    typ: 'kontrolle',
+    text: 'Noch ein kurzer Check: Wie viele Beine hat eine Katze?',
+    varianten: {
+      noah: 'Zweiter Test, ob du noch dabei bist: Wie viele Beine hat eine Katze?',
+      luca: 'Fast geschafft. Nur zur Kontrolle: Wie viele Beine hat eine Katze?',
+    },
+    optionen: ['2', '3', '4', '6'],
+    richtig: '4',
+  },
+  {
     id: 'kanal',
     kurz: 'Werbekanal',
     typ: 'einfach',
@@ -161,7 +187,8 @@ export const fragen = [
   },
 ];
 
-export const kontrollfrage = fragen.find((f) => f.typ === 'kontrolle');
+export const kontrollfragen = fragen.filter((f) => f.typ === 'kontrolle');
+export const kontrollfrage = kontrollfragen[0];
 
 // Fassung für den Browser: ohne die richtige Antwort der Kontrollfrage,
 // mit der Formulierung der jeweiligen Version.
@@ -170,7 +197,7 @@ export function oeffentlicheFragen(versionId) {
 }
 
 export function istGueltig(antworten) {
-  return !kontrollfrage || antworten[kontrollfrage.id] === kontrollfrage.richtig;
+  return kontrollfragen.every((f) => antworten[f.id] === f.richtig);
 }
 
 // Prüft eine eingesandte Antwort. Gibt { antworten } zurück oder { fehler }.
